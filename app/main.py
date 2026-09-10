@@ -28,7 +28,13 @@ async def upload_expense(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="File size exceeds the maximum limit of 5MB.")
     nparray = np.frombuffer(content, np.uint8)
     image = cv.imdecode(nparray, cv.IMREAD_COLOR)
+    image = cv.resize(image, (120, 120))
+    print(image.shape)
+    print(image.dtype)
+    print(image.size)
     cv.imshow("Uploaded Image", image)
+    cv.waitKey(0)
+    
     cv.imwrite("screenshot.png", image)
     return {"id": 1, "amount": 100.0, "description": "Sample expense uploaded successfully."}
 
