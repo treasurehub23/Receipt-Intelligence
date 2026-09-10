@@ -34,20 +34,7 @@ async def upload_expense(file: UploadFile = File(...)):
     print(image.size)
     cv.imshow("Uploaded Image", image)
     cv.waitKey(0)
-    
+
     cv.imwrite("screenshot.png", image)
     return {"id": 1, "amount": 100.0, "description": "Sample expense uploaded successfully."}
 
-cap = cv.VideoCapture(0)
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        print("Failed to capture image from webcam.")
-        break
-    video = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-    cv.imshow("Webcam Image", video)
-    if cv.waitKey(1) & 0xFF == ord("q"):
-        break
-
-cap.release()
-cv.destroyAllWindows()
