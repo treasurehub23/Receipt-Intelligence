@@ -15,7 +15,7 @@ class Expense(BaseModel):
 
 @app.post("/upload")
 async def upload_expense(file: UploadFile = File(...)):
-    accepted_types = ["image/jpeg", "image/png"]
+    accepted_types = ["image/jpeg", "image/png", "image/jpg"]
 
     if file.content_type not in accepted_types:
         raise HTTPException(status_code=400, detail="Invalid file type. Only JPEG and PNG are accepted.")
