@@ -20,7 +20,7 @@ async def upload_expense(file: UploadFile = File(...)):
     if file.content_type not in accepted_types:
         raise HTTPException(status_code=400, detail="Invalid file type. Only JPEG and PNG are accepted.")
 
-
+    print("File received")
     content = await file.read()  # Read the file content (you can process it as needed)
 
     max_Size = 5 * 1024 * 1024  
