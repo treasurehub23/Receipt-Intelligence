@@ -3,6 +3,7 @@ from pydantic import BaseModel
 import cv2 as cv
 import numpy as np
 import easyocr
+import pytesseract as tesseract
 from pdf2image import convert_from_bytes
 app = FastAPI()
 
@@ -37,7 +38,9 @@ async def upload_expense(file: UploadFile = File(...)):
         image = cv.imdecode(img_array, cv.IMREAD_COLOR)
         
     print("File received")
-    reader = easyocr.Reader(["en"])
-    result = reader.readtext(image)   
-    print(type(result)) 
-    return [{"bounding_boxes": [[int(x), int(y)] for x, y in bounding_boxes], "text": text, "confidence_scores": float(confidence_scores)} for bounding_boxes, text, confidence_scores in result] 
+    # reader = easyocr.Reader(["en"])
+    # result = reader.readtext(image)   
+    # print(type(result)) 
+    # return [{"bounding_boxes": [[int(x), int(y)] for x, y in bounding_boxes], "text": text, "confidence_scores": float(confidence_scores)} for bounding_boxes, text, confidence_scores in result] 
+    text = tesseract.image_to_string(image, config='--psm 4')
+    return text
