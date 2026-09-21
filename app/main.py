@@ -5,6 +5,8 @@ import numpy as np
 import easyocr
 import pytesseract as tesseract
 from pdf2image import convert_from_bytes
+from preprocessing.image import preprocess_image
+from ocr.reader import extract_text
 app = FastAPI()
 
 
@@ -16,6 +18,7 @@ class Expense(BaseModel):
     id: int
     amount: float
     description: str
+
 
 @app.post("/upload")
 async def upload_expense(file: UploadFile = File(...)):
@@ -36,11 +39,9 @@ async def upload_expense(file: UploadFile = File(...)):
     else:
         img_array = np.frombuffer(content, np.uint8)
         image = cv.imdecode(img_array, cv.IMREAD_COLOR)
-        
-    print("File received")
-    # reader = easyocr.Reader(["en"])
-    # result = reader.readtext(image)   
-    # print(type(result)) 
-    # return [{"bounding_boxes": [[int(x), int(y)] for x, y in bounding_boxes], "text": text, "confidence_scores": float(confidence_scores)} for bounding_boxes, text, confidence_scores in result] 
-    text = tesseract.image_to_string(image, config='--psm 4')
+
+    preprocessed_image = preprocess_image(image)
+
+    print("Image received.")
+    text = extract_text(preprocessed_image)
     return text
