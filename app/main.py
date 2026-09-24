@@ -1,11 +1,9 @@
 from fastapi import FastAPI, Depends, File, UploadFile, HTTPException
 from pydantic import BaseModel
-import cv2 as cv
-import numpy as np
-import easyocr
-import pytesseract as tesseract
 from pdf2image import convert_from_bytes
 from preprocessing.image import preprocess_image
+import cv2 as cv
+import numpy as np
 from ocr.reader import extract_text
 app = FastAPI()
 
