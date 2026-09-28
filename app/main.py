@@ -4,10 +4,15 @@ from pdf2image import convert_from_bytes
 from preprocessing.image import preprocess_image
 import cv2 as cv
 import numpy as np
-from ocr.reader import extract_text
+from ocr.easyocr_reader import extract_text
+#from ocr.tesseract_reader import extract_text
+from parsing.receipt_parser import parse_receipt
+import time
 app = FastAPI()
 
-
+@app.get("/")
+def home():
+    return {"message": "I'm aliveeee"}
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
@@ -41,5 +46,11 @@ async def upload_expense(file: UploadFile = File(...)):
     preprocessed_image = preprocess_image(image)
 
     print("Image received.")
+    start_time = time.perf_counter()
     text = extract_text(preprocessed_image)
-    return text
+    end_time = time.perf_counter()
+    print(text["source"])
+    print(end_time-start_time)
+    parsed_text = parse_receipt(text)
+    return parsed_text
+

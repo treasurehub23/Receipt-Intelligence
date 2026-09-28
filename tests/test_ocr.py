@@ -1,7 +1,7 @@
 import cv2 as cv
 
 from preprocessing.image import preprocess_image
-from ocr.reader import extract_text
+from ocr.easyocr_reader import extract_text
 
 
 def test_ocr_returns_text():

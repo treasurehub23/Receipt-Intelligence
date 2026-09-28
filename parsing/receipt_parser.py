@@ -1,3 +1,5 @@
+
+from __future__ import annotations
 """Extract the total and currency from raw OCR text.
 
 Approach: don't hunt for "the" total with one regex. Instead
@@ -5,7 +7,6 @@ Approach: don't hunt for "the" total with one regex. Instead
   2. score each candidate (keyword strength, position, sanity checks),
   3. pick the best and report how confident we are.
 """
-from __future__ import annotations
 
 import re
 from collections import defaultdict
@@ -196,7 +197,7 @@ def find_currency(text: str, default: str = "USD") -> CurrencyResult:
 
 
 # ---------------------------------------------------------------- one call
-def extract_money(text: str, default_currency: str = "USD") -> dict:
+def extract_info(text: str, default_currency: str = "USD") -> dict:
     total = find_total(text)
     cur = find_currency(text, default_currency)
     return {
@@ -205,4 +206,19 @@ def extract_money(text: str, default_currency: str = "USD") -> dict:
         "total_line": total.source_line,
         "currency": cur.code,
         "currency_conf": cur.confidence,
+    }
+
+def parse_receipt(ocr_result):
+    if ocr_result["source"] == "easyocr":
+        raw_text = "\n".join(item["text"] for item in ocr_result["text"])
+    else:
+        raw_text = ocr_result["text"]
+    money = extract_info(raw_text)
+    return {
+        "raw_text": raw_text,
+        "total": money["total"],
+        "total_conf": money["total_conf"],
+        "total_line": money["total_line"],
+        "currency": money["currency"],
+        "currency_conf": money["currency_conf"],
     }
