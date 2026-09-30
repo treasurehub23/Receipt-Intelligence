@@ -8,11 +8,11 @@ SEP = r"[-/.]"
 
 
 DATE_PATTERNS: list[re.Pattern] = [
-    re.compile(rf"\b\d{{4}}{SEP}\d{{1,2}}{SEP}\d{{1,2}}\b"),              # 2026-03-14
-    re.compile(rf"\b\d{{1,2}}{SEP}\d{{1,2}}{SEP}\d{{4}}\b"),               # 14/03/2026
-    re.compile(rf"\b\d{{1,2}}{SEP}\d{{1,2}}{SEP}\d{{2}}\b"),               # 14/03/26
-    re.compile(rf"\b\d{{1,2}}[\s-]+{MONTHS}[\s,.-]+\d{{2,4}}\b", re.I),    # 14 Mar 2026
-    re.compile(rf"\b{MONTHS}\.?\s+\d{{1,2}}(?:st|nd|rd|th)?,?\s+\d{{2,4}}\b", re.I),  # Mar 14, 2026
+    re.compile(rf"\b\d{{4}}{SEP}\d{{1,2}}{SEP}\d{{1,2}}\b"),
+    re.compile(rf"\b\d{{1,2}}{SEP}\d{{1,2}}{SEP}\d{{4}}\b"),
+    re.compile(rf"\b\d{{1,2}}{SEP}\d{{1,2}}{SEP}\d{{2}}\b"),
+    re.compile(rf"\b\d{{1,2}}[\s-]+{MONTHS}[\s,.-]+\d{{2,4}}\b", re.I),
+    re.compile(rf"\b{MONTHS}\.?\s+\d{{1,2}}(?:st|nd|rd|th)?,?\s+\d{{2,4}}\b", re.I),
 ]
 DATE_KEYWORD = re.compile(r"\bDATE\b|\bDT\b|\bISSUED\b|\bPURCHASED\b", re.I)
 
@@ -49,13 +49,12 @@ def find_date(
     if n == 0:
         return DateResult(None, 0.0, reason="empty text")
  
-    best: tuple[float, date, str, str] | None = None  # score, date, token, reason
+    best: tuple[float, date, str, str] | None = None
  
     for i, line in enumerate(lines):
         for pattern in DATE_PATTERNS:
             for m in pattern.finditer(line):
                 token = m.group(0)
-                # year-first (2026-03-14) is unambiguous; DMY would reject it
                 order = "YMD" if re.match(r"\d{4}\D", token) else date_order
                 parsed = dateparser.parse(
                     token,
@@ -77,10 +76,10 @@ def find_date(
                     score += 1.0
                     notes.append("keyword")
                 if LOOKS_LIKE_TIME.search(line):
-                    score += 0.5  # receipts print date and time together
+                    score += 0.5
                     notes.append("time nearby")
                 if i < max(3, n // 3) or i > n * 0.6:
-                    score += 0.3  # dates cluster near header or footer
+                    score += 0.3
                 if best is None or score > best[0]:
                     best = (score, d, token, ", ".join(notes) or "pattern match")
  
@@ -88,9 +87,9 @@ def find_date(
         return DateResult(None, 0.0, reason="no plausible date found")
  
     score, d, token, reason = best
-    conf = 0.55 + 0.2 * min(score - 1.0, 1.5)  # 0.55 .. 0.85
+    conf = 0.55 + 0.2 * min(score - 1.0, 1.5)
     if re.search(MONTHS, token, re.I) or re.match(r"\d{4}", token):
-        conf += 0.1  # month name / year-first: no day-month ambiguity
+        conf += 0.1
     if is_date_ambiguous(token):
         conf -= 0.2
         reason += f", ambiguous day/month (read as {date_order})"

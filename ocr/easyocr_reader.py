@@ -4,12 +4,7 @@ reader = easyocr.Reader(["en"])
 
 
 def _group_into_lines(result, y_tolerance_ratio=0.6):
-    """EasyOCR returns one box per detected word/phrase, not per printed
-    line. Group boxes sitting on roughly the same row (by vertical
-    center), then read each row left-to-right, so
-    'Rice 5kg   2 x 1500.00   3000.00' comes back as ONE line instead of
-    three separate fragments the parser can never reunite.
-    """
+  
     if not result:
         return []
 

@@ -1,9 +1,13 @@
 import cv2 as cv
-import numpy as np
 
 
 def preprocess_image(image):
-    gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+    if image.ndim == 2:
+        gray = image
+    elif image.shape[2] == 4:
+        gray = cv.cvtColor(image, cv.COLOR_BGRA2GRAY)
+    else:
+        gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
     denoised = cv.GaussianBlur(gray, (5, 5), 0)
 

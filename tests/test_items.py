@@ -1,11 +1,32 @@
 from datetime import date
 from decimal import Decimal
-from pathlib import Path
+
 from parsing import parse_receipt
 from parsing.items_parser import find_line_items
 
-SAMPLE = Path(__file__).resolve().parent.parent / "sample_eval" / "ocr"
 TODAY = date(2026, 9, 28)
+
+R01_TEXT = """SHOPRITE SUPERMARKET
+Ikeja City Mall, Alausa
+Tel: 0803 123 4567
+Date: 14/03/2026  14:32
+2 x Indomie Noodles      700.00
+Peak Milk 400g         2,850.00
+Bread (Large)          1,200.00
+Subtotal               4,750.00
+VAT 7.5%                 356.25
+TOTAL                  5,106.25
+"""
+
+R04_TEXT = """QUICKMART
+Order #4432
+Mar 9, 2026
+Sandwich          6.50
+Coffee            3.25
+Sub-total         9.75
+Tax               0.78
+Amount Due       $10.53
+"""
 
 
 def test_items_stop_at_totals_and_skip_summary_lines():
@@ -81,8 +102,8 @@ def test_table_header_word_is_not_an_item_description():
     assert [i.description for i in find_line_items(text)] == ["Rice"]
 
 
-
-    r = parse_receipt((SAMPLE / "r01.txt").read_text(), default_currency="NGN", today=TODAY)
+def test_full_pipeline_on_sample_receipt():
+    r = parse_receipt(R01_TEXT, default_currency="NGN", today=TODAY)
     assert r.merchant == "SHOPRITE SUPERMARKET"
     assert r.purchase_date == date(2026, 3, 14)
     assert r.total == Decimal("5106.25")
@@ -99,5 +120,5 @@ def test_pipeline_never_crashes_on_garbage():
 
 
 def test_result_serializes_to_json():
-    r = parse_receipt((SAMPLE / "r04.txt").read_text(), today=TODAY)
+    r = parse_receipt(R04_TEXT, today=TODAY)
     assert '"total":"10.53"' in r.model_dump_json()

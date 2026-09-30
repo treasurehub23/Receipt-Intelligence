@@ -5,7 +5,6 @@ from preprocessing.image import preprocess_image
 import cv2 as cv
 import numpy as np
 from ocr.easyocr_reader import extract_text
-#from ocr.tesseract_reader import extract_text
 from parsing.total_parser import parse_money
 from parsing.items_parser import find_line_items
 from parsing import parse_receipt

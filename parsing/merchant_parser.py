@@ -29,8 +29,6 @@ COMPANY_HINT = re.compile(
     r"STATIONERY|BOOKSTORE|COMPANY|CO\.)\b",
     re.I,
 )
-# Words that describe a business but don't name it. A line made ONLY of these
-# ("Restaurant", "Pharmacy Ltd") is a subtitle, not the merchant.
 GENERIC_WORDS = {
     "RESTAURANT", "CAFE", "PHARMACY", "BAKERY", "KITCHEN", "HOTEL", "SHOP",
     "STORE", "STORES", "SUPERMARKET", "MART", "COMPANY", "LIMITED", "LTD",
@@ -49,7 +47,7 @@ class MerchantResult:
  
  
 def _clean(line: str) -> str:
-    line = re.sub(r"[^\w&'\-\.\s]", " ", line)      # strip OCR symbol noise
+    line = re.sub(r"[^\w&'\-\.\s]", " ", line)
     line = re.sub(r"\s+", " ", line).strip(" -._")
     return line
  
@@ -65,24 +63,24 @@ def _score(line: str, index: int) -> float | None:
         return None
     digits = sum(c.isdigit() for c in cleaned)
     if digits > letters // 2:
-        return None  # mostly numbers: not a name
+        return None
     if re.match(r"^\d", cleaned) and ADDRESS_WORDS.search(cleaned):
-        return None  # "12 Allen Avenue": a street address, never a merchant
+        return None
  
-    score = 2.0 - 0.3 * index                       # earlier lines win
+    score = 2.0 - 0.3 * index
     alpha_ratio = letters / max(len(cleaned.replace(" ", "")), 1)
-    score += alpha_ratio                            # clean text beats garbled text
+    score += alpha_ratio
     if cleaned.isupper():
-        score += 0.4                                # shop names are usually caps
+        score += 0.4
     words = re.findall(r"[A-Za-z]+", cleaned.upper())
     if words and all(w in GENERIC_WORDS for w in words):
-        score -= 1.5                                # only a business type, no name
+        score -= 1.5
     elif COMPANY_HINT.search(cleaned):
         score += 0.8
     if ADDRESS_WORDS.search(cleaned):
-        score -= 1.0                                # "12 Allen Avenue" is an address
+        score -= 1.0
     if re.match(r"^\d", cleaned):
-        score -= 0.8                                # names rarely start with a number
+        score -= 0.8
     return score
  
  
@@ -106,11 +104,11 @@ def find_merchant(text: str) -> MerchantResult:
  
     conf = 0.35 + 0.15 * best_score
     if len(scored) > 1 and best_score - scored[1][0] < 0.3:
-        conf -= 0.1   # runner-up nearly as good -> less sure
+        conf -= 0.1
     if best_idx == 0:
         conf += 0.1
     has_signal = name.isupper() or bool(COMPANY_HINT.search(best_line))
     if not has_signal:
-        conf = min(conf, 0.55)   # no caps, no company word: could be any stray text
+        conf = min(conf, 0.55)
     return MerchantResult(name, round(max(0.1, min(conf, 0.9)), 2), best_line.strip(), "top-line scoring")
  

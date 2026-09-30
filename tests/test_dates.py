@@ -10,7 +10,6 @@ def d(text, **kw):
 
 
 def test_iso_date_works_even_with_dmy_setting():
-    # regression: dateparser rejects year-first dates under DATE_ORDER=DMY
     assert d("Date: 2018-05-22 Time 10:15").value == date(2018, 5, 22)
 
 

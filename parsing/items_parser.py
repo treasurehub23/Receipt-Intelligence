@@ -12,10 +12,9 @@ from parsing.total_parser import SUBTOTAL, TOTAL_KEYS, _normalize, extract_amoun
 class LineItem(BaseModel):
     description: str
     quantity: int = 1
-    price: Decimal          # price as printed on the line (line total)
+    price: Decimal
 
 
-# "2 x Rice 3,000.00" | "2 Rice 3000" | "Rice 1500.00" | "Rice  2 @ 750  1500"
 QTY_PREFIX = re.compile(r"^\s*(\d{1,3})\s*[xX*]?\s+(?=[A-Za-z])")
 TRAILING_QTY = re.compile(r"\s+\d{1,3}\s*[xX@]\s*[\d.,]+\s*$")
 DATE_LIKE = re.compile(r"\d{1,4}[-/.]\d{1,2}[-/.]\d{1,4}")
@@ -23,11 +22,6 @@ PHONE_LIKE = re.compile(r"\+?\d[\d\s()-]{7,}\d")
 
 
 def _looks_like_phone(line: str) -> bool:
-    # A real phone number uses single spaces/hyphens, e.g. "0803 123 4567".
-    # Item lines use WIDE gaps to separate the name from the price
-    # ("Rice 5kg      2 x 1500.00      3000.00"), and without splitting on
-    # those gaps first, the phone check spans across columns and eats
-    # ordinary item lines. Split on wide gaps, then check each piece.
     return any(PHONE_LIKE.search(part) for part in re.split(r"\s{2,}", line))
 NUMERIC_TOKEN = re.compile(r"^[\d.,%-]+$")
 
@@ -49,12 +43,12 @@ HEADER_WORDS = {"CODE", "QTY", "PRICE", "AMOUNT", "AMT", "ITEM", "DESC", "DESCRI
 
 def _is_plausible_item_desc(desc: str, letters: int) -> bool:
     if letters < 3 or letters < len(desc) // 2:
-        return False                                   # not real text
+        return False
     tokens = desc.split()
     if not tokens or len(tokens) > MAX_DESC_WORDS:
-        return False                                   # address/header lines run long
+        return False
     if tokens[0].upper().strip(".:") in HEADER_WORDS:
-        return False                                   # "Code 300-C0001" -> a table header, not an item
+        return False
     return True
 
 
@@ -133,7 +127,6 @@ def find_line_items(text: str) -> list[LineItem]:
         price_token = _price_at_end(stripped)
 
         if price_token is not None:
-            # Case 1: description and price on the SAME line.
             amounts = extract_amounts(price_token)
             if amounts and amounts[-1] > 0:
                 cut = stripped.rfind(price_token)
@@ -144,8 +137,6 @@ def find_line_items(text: str) -> list[LineItem]:
             i += 1
             continue
 
-        # Case 2: description on THIS line, code/qty/price/amount on the NEXT
-        # line (common receipt layout: item name above, numbers below).
         desc, qty = _clean_description(stripped)
         letters = sum(c.isalpha() for c in desc)
         has_description = _is_plausible_item_desc(desc, letters)
