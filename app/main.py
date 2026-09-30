@@ -6,7 +6,9 @@ import cv2 as cv
 import numpy as np
 from ocr.easyocr_reader import extract_text
 #from ocr.tesseract_reader import extract_text
-from parsing.receipt_parser import parse_receipt
+from parsing.total_parser import parse_money
+from parsing.items_parser import find_line_items
+from parsing import parse_receipt
 import time
 app = FastAPI()
 
@@ -51,6 +53,6 @@ async def upload_expense(file: UploadFile = File(...)):
     end_time = time.perf_counter()
     print(text["source"])
     print(end_time-start_time)
-    parsed_text = parse_receipt(text)
+    parsed_text = parse_receipt(text["source"], default_currency="USD", today=None)
     return parsed_text
 

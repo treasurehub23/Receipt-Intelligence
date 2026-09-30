@@ -90,7 +90,13 @@ def _line_score(line: str) -> float | None:
             return weight
     return 0.0
 
-
+def is_summary_line(line: str) -> bool:
+    """True for total/subtotal/tax/cash/change style lines (not purchased items)."""
+    u = _normalize(line)
+    if SUBTOTAL.search(u) or HARD_BAD.search(u) or TAX.search(u):
+        return True
+    return any(pattern.search(u) for pattern, _ in TOTAL_KEYS)
+ 
 @dataclass
 class TotalResult:
     amount: Decimal | None
@@ -208,7 +214,7 @@ def extract_info(text: str, default_currency: str = "USD") -> dict:
         "currency_conf": cur.confidence,
     }
 
-def parse_receipt(ocr_result):
+def parse_money(ocr_result):
     if ocr_result["source"] == "easyocr":
         raw_text = "\n".join(item["text"] for item in ocr_result["text"])
     else:
