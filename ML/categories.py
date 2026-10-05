@@ -18,11 +18,22 @@ CATEGORIES = [
     "other",
 ]
 
+# Merchant names below confirmed against real Nigerian bank-transaction data
+# (merchant_category_code / MCC - the standard banks use to classify
+# businesses), via electricsheepafrica/nigerian-banking-retail-transactions
+# on HuggingFace. These are verified merchant->category pairs, not guesses:
+# Airtel/MTN/Glo/9mobile=4814(telecom), DSTV=4899(cable), AEDC/EKEDC=4900
+# (electricity), Shoprite/Spar/Grand Square=5311/5411(grocery), NNPC/Conoil/
+# Mobil/Oando=5541(fuel), Jumia Fashion/Yudala/Slot=5651(retail/electronics),
+# The Place/Bukka Hut/Mama Cass=5812(restaurant), MedPlus/HealthPlus=5912
+# (pharmacy), Jiji/Jumia=5999(misc retail), MegaPlaza Parking=7523(parking).
+
 CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
     "groceries": {
         "merchants": [
-            "Shoprite", "Spar", "Justrite", "Ebeano Supermarket", "Prince Ebeano",
-            "Market Square", "Everyday Supermarket", "Grand Square", "Addide Supermarket",
+            "Shoprite", "Spar", "Grand Square",                       # verified (MCC 5311/5411)
+            "Justrite", "Ebeano Supermarket", "Prince Ebeano",
+            "Market Square", "Everyday Supermarket", "Addide Supermarket",
             "Fresh Market", "Food Co", "Whole Foods", "Trader Joe's", "Safeway", "Kroger",
         ],
         "items": [
@@ -34,9 +45,10 @@ CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
     },
     "dining": {
         "merchants": [
+            "The Place", "Bukka Hut", "Mama Cass",                    # verified (MCC 5812)
             "Chicken Republic", "Mr Biggs", "Domino's Pizza", "KFC", "Cold Stone",
             "Tastee Fried Chicken", "Sweet Sensation", "Kilimanjaro", "Ocean Basket",
-            "The Place", "Cafe Neo", "Starbucks", "McDonald's", "Burger King", "Chipotle",
+            "Cafe Neo", "Starbucks", "McDonald's", "Burger King", "Chipotle",
             "Nando's", "Genesis Restaurant",
         ],
         "items": [
@@ -47,8 +59,8 @@ CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
     },
     "transport": {
         "merchants": [
-            "Uber", "Bolt", "Total Filling Station", "Mobil", "NNPC", "Oando",
-            "Conoil", "Shell", "Lagos BRT", "Chevron Station",
+            "NNPC", "Conoil", "Mobil", "Oando", "MegaPlaza Parking",   # verified (MCC 5541/7523)
+            "Uber", "Bolt", "Total Filling Station", "Shell", "Lagos BRT", "Chevron Station",
         ],
         "items": [
             "fuel", "petrol", "diesel", "ride fare", "parking fee", "toll",
@@ -57,9 +69,9 @@ CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
     },
     "utilities": {
         "merchants": [
-            "IKEDC", "EKEDC", "AEDC", "PHCN", "NEPA", "DSTV", "GOtv", "Startimes",
-            "MTN", "Airtel", "Glo", "9mobile", "Lagos Water Corporation", "Spectranet",
-            "Smile", "IPNX",
+            "AEDC", "EKEDC", "DSTV", "MTN", "Airtel", "Glo", "9mobile",  # verified (MCC 4814/4899/4900)
+            "IKEDC", "PHCN", "NEPA", "GOtv", "Startimes",
+            "Lagos Water Corporation", "Spectranet", "Smile", "IPNX",
         ],
         "items": [
             "electricity bill", "prepaid meter token", "cable subscription",
@@ -69,7 +81,8 @@ CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
     },
     "shopping": {
         "merchants": [
-            "Jumia", "Konga", "Slot", "Game Stores", "H&M", "Zara", "Next",
+            "Jumia", "Jumia Fashion", "Yudala", "Slot", "Jiji",          # verified (MCC 5651/5732/5999)
+            "Konga", "Game Stores", "H&M", "Zara", "Next",
             "Genesis Deluxe Mall", "Ounce Store", "Tastee Fashion", "Best Buy",
             "Amazon", "Target", "Walmart",
         ],
@@ -80,7 +93,8 @@ CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
     },
     "health": {
         "merchants": [
-            "MedPlus", "HealthPlus", "Alpha Pharmacy", "Reddington Hospital",
+            "MedPlus", "HealthPlus",                                    # verified (MCC 5912)
+            "Alpha Pharmacy", "Reddington Hospital",
             "Lagoon Hospital", "St. Nicholas Hospital", "Emzor Pharmacy",
             "CVS Pharmacy", "Walgreens", "City Clinic",
         ],
