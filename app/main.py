@@ -8,6 +8,8 @@ from ocr.easyocr_reader import extract_text
 from parsing.total_parser import parse_money
 from parsing.items_parser import find_line_items
 from parsing import parse_receipt
+from ML.features import parsed_receipt_to_text
+from ML.classify import classify
 import time
 app = FastAPI()
 
@@ -48,10 +50,21 @@ async def upload_expense(file: UploadFile = File(...)):
 
     print("Image received.")
     start_time = time.perf_counter()
-    text = extract_text(preprocessed_image)
+    ocr_result = extract_text(preprocessed_image)
     end_time = time.perf_counter()
-    print(text["source"])
+    print(ocr_result["source"])
     print(end_time-start_time)
-    parsed_text = parse_receipt(text["source"], default_currency="USD", today=None)
-    return parsed_text
+    raw_text = "\n".join(item["text"] for item in ocr_result["text"])
+    parsed = parse_receipt(raw_text, default_currency="NGN")
+    feature_text = parsed_receipt_to_text(parsed)
+    category, category_conf = classify(feature_text)
+    print(category, category_conf)
+ 
+    response = parsed.model_dump()
+   
+    response["category"] = category
+    response["category_confidence"] = category_conf
+    return response
+ 
+    
 
