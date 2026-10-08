@@ -1,18 +1,27 @@
 from logging.config import fileConfig
-
+import psycopg2
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
+from dotenv import load_dotenv
+from alembic import context
 
+load_dotenv()
 import alembic.context as context
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # so it can find models.py
-
-from db.models import Base
+import db.models  # Import your models here
+from db.models import Expense
+from db.database import Base
 target_metadata = Base.metadata   # was: target_metadata = None
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
 
+db_url = os.getenv("DATABASE_URL")
+if db_url:
+    # Setting it dynamically bypasses configparser interpolation
+    escaped_db_url = db_url.replace("%", "%%")
+    config.set_main_option("sqlalchemy.url", escaped_db_url)
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 if config.config_file_name is not None:
@@ -22,7 +31,6 @@ if config.config_file_name is not None:
 # for 'autogenerate' support
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
-target_metadata = None
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
