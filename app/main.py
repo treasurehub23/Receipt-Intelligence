@@ -12,7 +12,7 @@ from db.database import get_db
 from db.models import Expense
 from sqlalchemy import select, func
 from sqlalchemy.orm import Session
-from schemas import ExpenseOut
+from schemas import ExpenseOut, ExpenseListResponse
 from datetime import datetime, date, timedelta, time
 app = FastAPI()
 
@@ -86,6 +86,29 @@ async def upload_expense(file: UploadFile = File(...), db: Session = Depends(get
 
 
 @app.get("expenses")
-def get_expenses(db: Session = Depends(get_db)):
-    expenses = db.query(Expense).all()
+def get_expenses(
+    db: Session = Depends(get_db),
+    start_date: date = Query(default=None),
+    end_date: date = Query(default=None),
+    category: str = Query(default=None),
+    page: int = Query(default=1, ge=1),
+    page_size: int = Query(default=10, ge=1, le=100),
+    ):
+    expenses = select(Expense)
+
+    conditions = []
+    if category:
+        conditions.append(Expense.category == category)
+    if start_date:
+        conditions.append(Expense.purchase_date >= datetime.combine(start_date, time.min))
+    if end_date:
+        conditions.append(Expense.purchase_date <= datetime.combine(end_date, time.max))        
+    if page and page_size:
+        offset = (page - 1) * page_size
+        expenses = expenses.offset(offset).limit(page_size)
+    if conditions:
+        expenses = expenses.where(*conditions)
+    expenses = db.execute(expenses).scalars().all()
+    total_count = db.execute(select(func.count()).select_from(Expense)).scalar()
+
     return 

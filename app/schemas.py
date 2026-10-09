@@ -14,3 +14,9 @@ class ExpenseOut(BaseModel):
     category:Optional[str]
     line_items:Optional[list]
     created_at:datetime
+
+class ExpenseListResponse(BaseModel):
+    items: list[ExpenseOut]
+    total: int
+    page: int
+    page_size: int
