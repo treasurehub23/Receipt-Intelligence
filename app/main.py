@@ -85,7 +85,7 @@ async def upload_expense(file: UploadFile = File(...), db: Session = Depends(get
     return response
 
 
-@app.get("expenses")
+@app.get("/expenses")
 def get_expenses(
     db: Session = Depends(get_db),
     start_date: date = Query(default=None),
@@ -103,12 +103,24 @@ def get_expenses(
         conditions.append(Expense.purchase_date >= datetime.combine(start_date, time.min))
     if end_date:
         conditions.append(Expense.purchase_date <= datetime.combine(end_date, time.max))        
-    if page and page_size:
-        offset = (page - 1) * page_size
-        expenses = expenses.offset(offset).limit(page_size)
     if conditions:
         expenses = expenses.where(*conditions)
-    expenses = db.execute(expenses).scalars().all()
-    total_count = db.execute(select(func.count()).select_from(Expense)).scalar()
+    
+    count_query = select(func.count()).select_from(Expense)
+    if conditions:
+        count_query = count_query.where(*conditions)
+        total_count = db.execute(count_query).scalar()
+    if page and page_size:
+        offset = (page - 1) * page_size
+        expenses = expenses.order_by(Expense.created_at.desc())
+        expenses = expenses.offset(offset).limit(page_size)    
 
-    return 
+    items_list = db.scalars(expenses).all()
+    response = ExpenseListResponse(
+        items=[ExpenseOut.model_validate(item) for item in items_list],
+        total=total_count,
+        page=page,
+        page_size=page_size
+    )
+    return response
+ 

@@ -17,6 +17,6 @@ class ExpenseOut(BaseModel):
 
 class ExpenseListResponse(BaseModel):
     items: list[ExpenseOut]
-    total: int
+    total: int | None
     page: int
     page_size: int
