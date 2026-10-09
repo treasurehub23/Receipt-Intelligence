@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, File, UploadFile, HTTPException
+from fastapi import FastAPI, Depends, File, UploadFile, HTTPException, Query
 from pdf2image import convert_from_bytes
 from preprocessing.image import preprocess_image
 import cv2 as cv
@@ -7,10 +7,13 @@ from ocr.easyocr_reader import extract_text
 from parsing import parse_receipt
 from ML.features import parsed_receipt_to_text
 from ML.classify import classify
-import time
+import time as time_module
 from db.database import get_db
 from db.models import Expense
+from sqlalchemy import select, func
 from sqlalchemy.orm import Session
+from schemas import ExpenseOut
+from datetime import datetime, date, timedelta, time
 app = FastAPI()
 
 @app.get("/")
@@ -43,9 +46,9 @@ async def upload_expense(file: UploadFile = File(...), db: Session = Depends(get
     preprocessed_image = preprocess_image(image)
 
     print("Image received.")
-    start_time = time.perf_counter()
+    start_time = time_module.perf_counter()
     ocr_result = extract_text(preprocessed_image)
-    end_time = time.perf_counter()
+    end_time = time_module.perf_counter()
     print(ocr_result["source"])
     print(end_time-start_time)
     raw_text = "\n".join(item["text"] for item in ocr_result["text"])
@@ -59,7 +62,7 @@ async def upload_expense(file: UploadFile = File(...), db: Session = Depends(get
         total=parsed.total,
         currency=parsed.currency,
         merchant_confidence=parsed.confidence.merchant,
-        date_confidence=parsed.confidence.purchase_date,
+        purchase_date_confidence=parsed.confidence.purchase_date,
         total_confidence=parsed.confidence.total,
         currency_confidence=parsed.confidence.currency,
         category=category,
@@ -80,6 +83,9 @@ async def upload_expense(file: UploadFile = File(...), db: Session = Depends(get
     response["category_confidence"] = category_conf
     response["created_at"] = str(expense.created_at)
     return response
- 
-    
 
+
+@app.get("expenses")
+def get_expenses(db: Session = Depends(get_db)):
+    expenses = db.query(Expense).all()
+    return 
