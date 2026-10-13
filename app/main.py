@@ -12,7 +12,7 @@ from db.database import get_db
 from db.models import Expense
 from sqlalchemy import select, func
 from sqlalchemy.orm import Session
-from schemas import ExpenseOut, ExpenseListResponse
+from schemas import ExpenseOut, ExpenseListResponse, AnalyticsSummary, CategoryBreakdown, MonthBreakdown
 from datetime import datetime, date, timedelta, time
 app = FastAPI()
 
@@ -109,18 +109,41 @@ def get_expenses(
     count_query = select(func.count()).select_from(Expense)
     if conditions:
         count_query = count_query.where(*conditions)
-        total_count = db.execute(count_query).scalar()
+    total_count = db.execute(count_query).scalar()
     if page and page_size:
         offset = (page - 1) * page_size
         expenses = expenses.order_by(Expense.created_at.desc())
         expenses = expenses.offset(offset).limit(page_size)    
-
+    total_pages = (total_count + page_size - 1) // page_size if total_count else 0
     items_list = db.scalars(expenses).all()
     response = ExpenseListResponse(
         items=[ExpenseOut.model_validate(item) for item in items_list],
         total=total_count,
         page=page,
-        page_size=page_size
+        page_size=page_size,
+        total_pages=total_pages
     )
     return response
- 
+
+@app.get("/analytics/summary")
+def get_expense_summary(db: Session = Depends(get_db), category: str = Query(default=None), start_date: date = Query(default=None), end_date: date = Query(default=None)):
+    expenses = select(Expense)
+
+    conditions = []
+    if category:
+        conditions.append(Expense.category == category)
+    if start_date:
+        conditions.append(Expense.purchase_date >= datetime.combine(start_date, time.min))
+    if end_date:
+        conditions.append(Expense.purchase_date <= datetime.combine(end_date, time.max))        
+    if conditions:
+        expenses = expenses.where(*conditions)
+    
+    # Total spend and count
+    total_query = select(func.sum(Expense.total), func.count(Expense.id))
+    if conditions:
+        total_query = total_query.where(*conditions)
+    total_spend, expense_count = db.execute(total_query).one()
+
+    # Breakdown by category
+    category_query = select(Expense.category, func.sum(Expense.total), func.count(Expense.id)).group_by(Expense.category).order_by(func.sum(Expense.total).desc())
