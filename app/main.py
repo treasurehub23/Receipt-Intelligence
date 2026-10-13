@@ -1,8 +1,12 @@
 from fastapi import FastAPI, Depends, File, UploadFile, HTTPException, Query
+from narwhals import Decimal
 from pdf2image import convert_from_bytes
 from preprocessing.image import preprocess_image
 import cv2 as cv
 import numpy as np
+from decimal import Decimal
+from typing import cast
+import hashlib
 from ocr.easyocr_reader import extract_text
 from parsing import parse_receipt
 from ML.features import parsed_receipt_to_text
@@ -10,7 +14,7 @@ from ML.classify import classify
 import time as time_module
 from db.database import get_db
 from db.models import Expense
-from sqlalchemy import select, func
+from sqlalchemy import select, func, extract
 from sqlalchemy.orm import Session
 from schemas import ExpenseOut, ExpenseListResponse, AnalyticsSummary, CategoryBreakdown, MonthBreakdown
 from datetime import datetime, date, timedelta, time
@@ -27,6 +31,7 @@ def health_check():
 async def upload_expense(file: UploadFile = File(...), db: Session = Depends(get_db)):
     accepted_types = ["image/jpeg", "image/png", "image/jpg", "application/pdf"]
     content = await file.read()
+    image_hash = hashlib.sha256(content).hexdigest()
     max_Size = 5 * 1024 * 1024 
     if len(content) > max_Size:
         raise HTTPException(status_code=400, detail="File size exceeds the maximum limit of 5MB.")
@@ -144,6 +149,66 @@ def get_expense_summary(db: Session = Depends(get_db), category: str = Query(def
     if conditions:
         total_query = total_query.where(*conditions)
     total_spend, expense_count = db.execute(total_query).one()
+    total_spend = Decimal("0.00") if total_spend is None else total_spend
 
     # Breakdown by category
     category_query = select(Expense.category, func.sum(Expense.total), func.count(Expense.id)).group_by(Expense.category).order_by(func.sum(Expense.total).desc())
+    if conditions:
+        category_query = category_query.where(*conditions)
+    category_results = [
+    CategoryBreakdown(
+        category=cat or "Uncategorized",
+        total=total if total is not None else Decimal("0.00"),
+        count=count,
+    )
+    for cat, total, count in db.execute(category_query).all()
+]
+    year_expr = extract("year", Expense.purchase_date)
+    month_expr = extract("month", Expense.purchase_date)
+    month_query = (
+        select(year_expr, month_expr, func.sum(Expense.total), func.count(Expense.id))
+        .where(Expense.purchase_date.isnot(None))   # can't group what has no date
+        .group_by(year_expr, month_expr)
+        .order_by(year_expr.desc(), month_expr.desc())
+    )
+    if conditions:
+        month_query = month_query.where(*conditions)
+    by_month = [
+    MonthBreakdown(
+        year=int(year),
+        month=int(month),
+        total=total if total is not None else Decimal("0.00"),
+        count=count,
+    )
+    for year, month, total, count in db.execute(month_query).all()
+]
+ 
+    return AnalyticsSummary(
+        total_spend=total_spend,
+        expense_count=expense_count,
+        by_category=category_results,
+        by_month=by_month,
+    )
+"""Build PATCH /expenses/{id}
+
+Allow a user to correct an expense's category without uploading the receipt again.
+
+Accept the expense ID as a path parameter.
+
+Accept the corrected category in the request body.
+
+Return 404 if the expense doesn't exist.
+
+Save the change and return the updated expense."""
+
+@app.patch("/expenses/{expense_id}")
+def update_expense_category(expense_id: int, new_category: str, db: Session = Depends(get_db)):
+    expense = db.get(Expense, expense_id)
+    if not expense:
+        raise HTTPException(status_code=404, detail="Expense not found")
+    
+    expense.category = new_category
+    db.commit()
+    db.refresh(expense)
+    
+    return ExpenseOut.model_validate(expense)
