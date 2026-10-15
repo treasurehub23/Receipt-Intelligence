@@ -1,7 +1,7 @@
 from decimal import Decimal
 from datetime import datetime
 from typing import Optional, List
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, EmailStr
 
 class ExpenseOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -44,4 +44,13 @@ class AnalyticsSummary(BaseModel):
 
 class ExpenseCategoryUpdate(BaseModel):
     category: str = Field(min_length=1, max_length=255)
+
+class RegisterUserRequest(BaseModel):
+    email: EmailStr = Field(..., min_length=5, max_length=255)
+    password: str = Field(..., min_length=8, max_length=255)
+
+class RegisterUserResponse(BaseModel):
+    id: int
+    email: str
+    created_at: datetime
 

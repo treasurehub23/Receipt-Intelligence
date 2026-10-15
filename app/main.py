@@ -2,7 +2,7 @@ from datetime import date, datetime, time
 from decimal import Decimal
 import hashlib
 import time as time_module
-
+import bcrypt
 import cv2 as cv
 import numpy as np
 from fastapi import Depends, FastAPI, File, HTTPException, Query, UploadFile
@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session
 from ML.classify import classify
 from ML.features import parsed_receipt_to_text
 from db.database import get_db
-from db.models import Expense
+from db.models import Expense, User
 from ocr.easyocr_reader import extract_text
 from parsing import parse_receipt
 from preprocessing.image import preprocess_image
@@ -25,6 +25,8 @@ from schemas import (
     ExpenseListResponse,
     ExpenseOut,
     MonthBreakdown,
+    RegisterUserRequest,
+    RegisterUserResponse,
 )
 
 app = FastAPI()
@@ -313,3 +315,47 @@ def update_expense_category(
         raise
 
     return expense
+
+@app.post("/auth/register", response_model=RegisterUserResponse)
+def register_user(
+    payload: RegisterUserRequest,
+    db: Session = Depends(get_db),
+):
+    # Check if user already exists
+    existing_user = db.query(User).filter(User.email == payload.email).first()
+    if existing_user:
+        raise HTTPException(status_code=400, detail="User already exists")
+
+    # Hash the password
+    hashed_password = bcrypt.hashpw(payload.password.encode(), bcrypt.gensalt()).decode()
+
+    # Create new user
+    new_user = User(
+        email=payload.email,
+        hashed_password=hashed_password,
+    )
+    db.add(new_user)
+    try:
+        db.commit()
+        db.refresh(new_user)
+    except Exception:
+        db.rollback()
+        raise
+
+    return RegisterUserResponse(
+        id=new_user.id,
+        email=new_user.email,
+        created_at=new_user.created_at,
+    )
+
+
+@app.post("/auth/login")
+def login_user(
+    payload: RegisterUserRequest,
+    db: Session = Depends(get_db),
+):
+    user = db.query(User).filter(User.email == payload.email).first()
+    if not user or not bcrypt.checkpw(payload.password.encode(), user.hashed_password.encode()):
+        raise HTTPException(status_code=401, detail="Invalid email or password")
+
+    return {"message": "Login successful", "user_id": user.id}
