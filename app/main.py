@@ -18,7 +18,7 @@ from db.models import Expense, User
 from ocr.easyocr_reader import extract_text
 from parsing import parse_receipt
 from preprocessing.image import preprocess_image
-from schemas import (
+from app.schemas import (
     AnalyticsSummary,
     CategoryBreakdown,
     ExpenseCategoryUpdate,
@@ -324,7 +324,7 @@ def register_user(
     # Check if user already exists
     existing_user = db.query(User).filter(User.email == payload.email).first()
     if existing_user:
-        raise HTTPException(status_code=400, detail="User already exists")
+        raise HTTPException(status_code=409, detail="User already exists")
 
     # Hash the password
     hashed_password = bcrypt.hashpw(payload.password.encode(), bcrypt.gensalt()).decode()
@@ -338,9 +338,9 @@ def register_user(
     try:
         db.commit()
         db.refresh(new_user)
-    except Exception:
+    except IntegrityError:
         db.rollback()
-        raise
+        raise HTTPException(status_code=409, detail="User with this email already exists.")
 
     return RegisterUserResponse(
         id=new_user.id,
