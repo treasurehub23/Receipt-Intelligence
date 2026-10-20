@@ -16,6 +16,7 @@ from sqlalchemy.orm import Session
 
 from ML.classify import classify
 from ML.features import parsed_receipt_to_text
+from app.security import get_current_user
 from db.database import get_db
 from db.models import Expense
 from ocr.easyocr_reader import extract_text
@@ -180,11 +181,12 @@ def get_expenses(
     category: str | None = Query(default=None),
     page: int = Query(default=1, ge=1),
     page_size: int = Query(default=10, ge=1, le=100),
+    user = Depends(get_current_user)
 ):
     conditions = get_expense_filters(category, start_date, end_date)
 
-    query = select(Expense).order_by(Expense.created_at.desc())
-    count_query = select(func.count()).select_from(Expense)
+    query = select(Expense).where(Expense.user_id == user.id).order_by(Expense.created_at.desc())
+    count_query = select(func.count()).select_from(Expense).where(Expense.user_id == user.id)
     if conditions:
         query = query.where(*conditions)
         count_query = count_query.where(*conditions)
@@ -210,8 +212,10 @@ def update_expense_category(
     expense_id: int,
     payload: ExpenseCategoryUpdate,
     db: Session = Depends(get_db),
+    user = Depends(get_current_user)
 ):
-    expense = db.get(Expense, expense_id)
+    query = select(Expense).where(Expense.id == expense_id, Expense.user_id == user.id)
+    expense = db.scalar(query)
     if expense is None:
         raise HTTPException(status_code=404, detail="Expense not found")
 
@@ -232,3 +236,21 @@ def update_expense_category(
         raise
 
     return expense
+
+@router.delete("/{expense_id}", status_code=204)
+def delete_expense(
+    expense_id: int,
+    db: Session = Depends(get_db),
+    user = Depends(get_current_user)
+):
+    query = select(Expense).where(Expense.id == expense_id, Expense.user_id == user.id)
+    expense = db.scalar(query)
+    if expense is None:
+        raise HTTPException(status_code=404, detail="Expense not found")
+
+    db.delete(expense)
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise

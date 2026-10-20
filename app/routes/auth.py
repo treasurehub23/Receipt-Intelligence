@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 import bcrypt
-
+from app.security import create_access_token, get_current_user
 from db.database import get_db
 from db.models import User
 from app.schemas import RegisterUserRequest, RegisterUserResponse
@@ -47,9 +47,11 @@ def register_user(
 def login_user(
     payload: RegisterUserRequest,
     db: Session = Depends(get_db),
-):
+)->dict:
     user = db.query(User).filter(User.email == payload.email).first()
     if not user or not bcrypt.checkpw(payload.password.encode(), user.hashed_password.encode()):
         raise HTTPException(status_code=401, detail="Invalid email or password")
+    info = {"sub": str(user.id)}
+    token = create_access_token(info)
 
-    return {"message": "Login successful", "user_id": user.id}
+    return {"access_token": token, "token_type": "bearer", "expires_in": token.exp} 

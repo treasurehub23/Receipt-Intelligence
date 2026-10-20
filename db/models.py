@@ -1,4 +1,4 @@
-from sqlalchemy import  Integer, String, DateTime, Float, Numeric, func
+from sqlalchemy import  Integer, String, DateTime, Float, Numeric, func, ForeignKey
 from sqlalchemy.orm import mapped_column, Mapped
 from typing import Optional
 from db.database import Base
@@ -9,7 +9,7 @@ JSON = String  # Use String to store JSON data as tex
 class Expense (Base):
     __tablename__ = "expenses"
     id:Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
-
+    user_id = mapped_column(Integer, ForeignKey("user.id"), nullable=False)
     merchant:Mapped[Optional[str]] = mapped_column(String(255), nullable=True)
     purchase_date:Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     total:Mapped[Optional[Numeric]] = mapped_column(Numeric(precision=10, scale=2), nullable=True)
@@ -35,7 +35,7 @@ class Expense (Base):
 
 class User(Base):
     __tablename__ = "users"
-    id:Mapped[int] = mapped_column(Integer, unique=True, primary_key=True, autoincrement=True)
+    id:Mapped[int] = mapped_column(Integer,unique=True, primary_key=True, autoincrement=True)
     email:Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
     hashed_password:Mapped[str] = mapped_column(String(255), nullable=False)
     created_at:Mapped[datetime] = mapped_column(DateTime, server_default=func.now(), nullable=False)

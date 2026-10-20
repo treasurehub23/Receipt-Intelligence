@@ -6,7 +6,7 @@ from db.models import Expense
 from sqlalchemy import select, func, extract
 from datetime import date
 from decimal import Decimal
-from expenses import get_expense_filters
+from app.routes.expenses import get_expense_filters
 
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
 
