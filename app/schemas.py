@@ -1,8 +1,6 @@
 from decimal import Decimal
 from datetime import datetime
-from typing import Optional, List
-from pydantic import BaseModel, ConfigDict, Field, EmailStr
-
+from pydantic import BaseModel, ConfigDict, Field, EmailStr, field_validator
 class ExpenseOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
@@ -44,6 +42,15 @@ class AnalyticsSummary(BaseModel):
 
 class ExpenseCategoryUpdate(BaseModel):
     category: str = Field(min_length=1, max_length=255)
+    @field_validator("category")
+    @classmethod
+    def validate_category(cls, value: str) -> str:
+        value = value.strip()
+
+        if not value:
+            raise ValueError("Category cannot be empty or whitespace.")
+
+        return value
 
 class RegisterUserRequest(BaseModel):
     email: EmailStr = Field(..., min_length=5, max_length=255)

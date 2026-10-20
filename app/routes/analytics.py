@@ -7,6 +7,8 @@ from sqlalchemy import select, func, extract
 from datetime import date
 from decimal import Decimal
 from app.routes.expenses import get_expense_filters
+from app.security import get_current_user
+
 
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
 
@@ -16,10 +18,11 @@ def get_expense_summary(
     category: str | None = Query(default=None),
     start_date: date | None = Query(default=None),
     end_date: date | None = Query(default=None),
+    user = Depends(get_current_user)
 ):
     conditions = get_expense_filters(category, start_date, end_date)
 
-    total_query = select(func.sum(Expense.total), func.count(Expense.id))
+    total_query = select(func.sum(Expense.total), func.count(Expense.id)).where(Expense.user_id == user.id)
     if conditions:
         total_query = total_query.where(*conditions)
     total_spend, expense_count = db.execute(total_query).one()

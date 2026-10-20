@@ -52,6 +52,6 @@ def login_user(
     if not user or not bcrypt.checkpw(payload.password.encode(), user.hashed_password.encode()):
         raise HTTPException(status_code=401, detail="Invalid email or password")
     info = {"sub": str(user.id)}
-    token = create_access_token(info)
+    token, expire = create_access_token(info)
 
-    return {"access_token": token, "token_type": "bearer", "expires_in": token.exp} 
+    return {"access_token": token, "token_type": "bearer", "expires_in": expire} 

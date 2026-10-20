@@ -23,6 +23,9 @@ from ocr.easyocr_reader import extract_text
 from parsing import parse_receipt
 from preprocessing.image import preprocess_image
 from app.schemas import (ExpenseCategoryUpdate, ExpenseListResponse, ExpenseOut)
+import logging
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/expenses", tags=["Expenses"])
 
@@ -72,66 +75,145 @@ def get_expense_filters(
     return conditions
 
 
+logger = logging.getLogger(__name__)
 
 @router.post("/upload")
 async def upload_expense(
     file: UploadFile = File(...),
     db: Session = Depends(get_db),
+    user = Depends(get_current_user)
 ):
+    # 1. Validate the uploaded file.
     if file.content_type not in ACCEPTED_CONTENT_TYPES:
         raise HTTPException(
-            status_code=400,
+            status_code=415,
             detail="Invalid file type. Upload a JPEG, PNG, or PDF.",
         )
 
     content = await file.read()
-    if not content:
-        raise HTTPException(status_code=400, detail="Uploaded file is empty")
-    if len(content) > MAX_UPLOAD_BYTES:
-        raise HTTPException(status_code=413, detail="File exceeds the 5 MB limit")
 
+    if not content:
+        raise HTTPException(
+            status_code=400,
+            detail="Uploaded file is empty.",
+        )
+
+    if len(content) > MAX_UPLOAD_BYTES:
+        raise HTTPException(
+            status_code=413,
+            detail="File exceeds the 5 MB limit.",
+        )
+
+    # 2. Generate a hash and check for a duplicate belonging to this user.
     image_hash = hashlib.sha256(content).hexdigest()
+
     existing_expense = db.scalar(
-        select(Expense).where(Expense.image_hash == image_hash)
+        select(Expense).where(
+            Expense.image_hash == image_hash,
+            Expense.user_id == user.id,
+        )
     )
+
     if existing_expense is not None:
+        logger.info(
+            "Duplicate receipt upload detected for user_id=%s",
+            user.id,
+        )
         return build_expense_response(existing_expense, duplicate=True)
 
-    if file.content_type == "application/pdf":
-        pages = convert_from_bytes(content, dpi=300)
-        if not pages:
-            raise HTTPException(status_code=400, detail="PDF contains no pages")
+    # 3. Convert the uploaded file into images.
+    try:
+        if file.content_type == "application/pdf":
+            pages = convert_from_bytes(content, dpi=300)
 
-        # Process every PDF page instead of accidentally keeping only the last.
-        images = []
-        for page in pages:
-            page_array = np.array(page.convert("RGB"))
-            page_image = cv.cvtColor(page_array, cv.COLOR_RGB2BGR)
-            images.append(preprocess_image(page_image))
-    else:
-        img_array = np.frombuffer(content, np.uint8)
-        image = cv.imdecode(img_array, cv.IMREAD_COLOR)
-        if image is None:
-            raise HTTPException(status_code=400, detail="Could not decode image")
-        images = [preprocess_image(image)]
+            if not pages:
+                raise HTTPException(
+                    status_code=400,
+                    detail="PDF contains no pages.",
+                )
 
-    print("Image received.")
-    start_time = time_module.perf_counter()
-    page_texts = []
-    ocr_sources = []
-    for image in images:
-        ocr_result = extract_text(image)
-        page_texts.append("\n".join(item["text"] for item in ocr_result["text"]))
-        ocr_sources.append(ocr_result.get("source", "unknown"))
-    print("OCR sources:", ocr_sources)
-    print("OCR duration:", time_module.perf_counter() - start_time)
+            images = []
 
-    raw_text = "\n".join(page_texts)
-    parsed = parse_receipt(raw_text, default_currency="NGN")
-    feature_text = parsed_receipt_to_text(parsed)
-    category, category_conf = classify(feature_text)
+            for page in pages:
+                page_array = np.array(page.convert("RGB"))
+                page_image = cv.cvtColor(
+                    page_array,
+                    cv.COLOR_RGB2BGR,
+                )
+                images.append(preprocess_image(page_image))
 
+        else:
+            img_array = np.frombuffer(content, np.uint8)
+            image = cv.imdecode(img_array, cv.IMREAD_COLOR)
+
+            if image is None:
+                raise HTTPException(
+                    status_code=400,
+                    detail="Could not decode image.",
+                )
+
+            images = [preprocess_image(image)]
+
+        # 4. Extract text from every page.
+        start_time = time_module.perf_counter()
+        page_texts = []
+        ocr_sources = []
+
+        for image in images:
+            ocr_result = extract_text(image)
+
+            page_texts.append(
+                "\n".join(
+                    item["text"]
+                    for item in ocr_result["text"]
+                    if item.get("text", "").strip()
+                )
+            )
+
+            ocr_sources.append(ocr_result.get("source", "unknown"))
+
+        duration = time_module.perf_counter() - start_time
+
+        logger.info(
+            "OCR completed for user_id=%s in %.2f seconds; sources=%s",
+            user.id,
+            duration,
+            ocr_sources,
+        )
+
+        raw_text = "\n".join(page_texts)
+
+        if not raw_text.strip():
+            raise HTTPException(
+                status_code=422,
+                detail=(
+                    "Could not read text from this receipt. "
+                    "Try uploading a clearer image."
+                ),
+            )
+
+        # 5. Parse the receipt and classify the expense.
+        parsed = parse_receipt(raw_text, default_currency="NGN")
+
+        feature_text = parsed_receipt_to_text(parsed)
+        category, category_conf = classify(feature_text)
+
+    except HTTPException:
+        raise
+
+    except Exception:
+        logger.exception(
+            "Receipt processing failed for user_id=%s",
+            user.id,
+        )
+        raise HTTPException(
+            status_code=500,
+            detail="Receipt processing failed. Please try again.",
+        )
+
+    # 6. Build the expense record.
     expense = Expense(
+        user_id=user.id,
         merchant=parsed.merchant,
         purchase_date=parsed.purchase_date,
         total=parsed.total,
@@ -144,35 +226,75 @@ async def upload_expense(
         category_confidence=category_conf,
         original_predicted_category=category,
         image_hash=image_hash,
-        line_items=[item.model_dump(mode="json") for item in parsed.line_items],
+        line_items=[
+            item.model_dump(mode="json")
+            for item in parsed.line_items
+        ],
         raw_text=parsed.raw_text,
     )
 
+    # 7. Save the expense and handle database conflicts.
     db.add(expense)
+
     try:
         db.commit()
         db.refresh(expense)
+
     except IntegrityError:
         db.rollback()
-        # A concurrent request may have inserted the same file after our lookup.
+
+        # Check whether this user's receipt was saved concurrently.
         existing_expense = db.scalar(
-            select(Expense).where(Expense.image_hash == image_hash)
-        )
-        if existing_expense is not None:
-            return build_expense_response(existing_expense, duplicate=True)
-        raise HTTPException(
-            status_code=409,
-            detail="Could not save expense because of a database conflict",
+            select(Expense).where(
+                Expense.image_hash == image_hash,
+                Expense.user_id == user.id,
+            )
         )
 
+        if existing_expense is not None:
+            return build_expense_response(
+                existing_expense,
+                duplicate=True,
+            )
+
+        logger.exception(
+            "Database integrity error while saving receipt for user_id=%s",
+            user.id,
+        )
+
+        raise HTTPException(
+            status_code=409,
+            detail="Could not save expense because of a database conflict.",
+        )
+
+    except Exception:
+        db.rollback()
+
+        logger.exception(
+            "Database error while saving receipt for user_id=%s",
+            user.id,
+        )
+
+        raise HTTPException(
+            status_code=500,
+            detail="Could not save the expense. Please try again.",
+        )
+
+    # 8. Return the created expense.
     response = parsed.model_dump(mode="json")
     response["id"] = expense.id
     response["category"] = category
     response["category_confidence"] = category_conf
     response["created_at"] = expense.created_at.isoformat()
     response["duplicate"] = False
-    return response
 
+    logger.info(
+        "Expense created successfully: expense_id=%s user_id=%s",
+        expense.id,
+        user.id,
+    )
+
+    return response
 @router.get("", response_model=ExpenseListResponse)
 def get_expenses(
     db: Session = Depends(get_db),
