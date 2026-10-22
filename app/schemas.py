@@ -5,15 +5,19 @@ class ExpenseOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
     id: int
-    merchant: str | None = None
+    user_id: int
+    receipt_id: int | None = None
+    description: str
+    quantity: float | None = None
+    unit_price: Decimal | None = None
+    total_price: Decimal
     purchase_date: datetime | None = None
-    total: Decimal | None = None
-    currency: str | None = None
+    currency: str
     category: str | None = None
-    category_confidence: float | None = None
     original_predicted_category: str | None = None
-    line_items: list | None = None
+    category_confidence: float | None = None
     created_at: datetime
+
 
 class ExpenseListResponse(BaseModel):
     items: list[ExpenseOut]

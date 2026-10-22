@@ -10,7 +10,7 @@ import alembic.context as context
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # so it can find models.py
 import db.models  # Import your models here
-from db.models import Expense
+from db.models import User, Receipt, ExpenseItem
 from db.database import Base
 target_metadata = Base.metadata   # was: target_metadata = None
 # this is the Alembic Config object, which provides

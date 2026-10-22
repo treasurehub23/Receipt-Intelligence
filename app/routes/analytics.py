@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session      
 from app.schemas import AnalyticsSummary, CategoryBreakdown, MonthBreakdown
 from db.database import get_db
-from db.models import Expense
+from db.models import User, Receipt, ExpenseItem
 from sqlalchemy import select, func, extract
 from datetime import date
 from decimal import Decimal
@@ -22,7 +22,7 @@ def get_expense_summary(
 ):
     conditions = get_expense_filters(category, start_date, end_date)
 
-    total_query = select(func.sum(Expense.total), func.count(Expense.id)).where(Expense.user_id == user.id)
+    total_query = select(func.sum(ExpenseItem.total), func.count(ExpenseItem.id)).where(ExpenseItem.user_id == user.id)
     if conditions:
         total_query = total_query.where(*conditions)
     total_spend, expense_count = db.execute(total_query).one()
@@ -30,12 +30,12 @@ def get_expense_summary(
 
     category_query = (
         select(
-            Expense.category,
-            func.sum(Expense.total),
-            func.count(Expense.id),
+            ExpenseItem.category,
+            func.sum(ExpenseItem.total),
+            func.count(ExpenseItem.id),
         )
-        .group_by(Expense.category)
-        .order_by(func.sum(Expense.total).desc())
+        .group_by(ExpenseItem.category)
+        .order_by(func.sum(ExpenseItem.total).desc())
     )
     if conditions:
         category_query = category_query.where(*conditions)
@@ -49,16 +49,16 @@ def get_expense_summary(
         for category, total, count in db.execute(category_query).all()
     ]
 
-    year_expr = extract("year", Expense.purchase_date)
-    month_expr = extract("month", Expense.purchase_date)
+    year_expr = extract("year", ExpenseItem.purchase_date)
+    month_expr = extract("month", ExpenseItem.purchase_date)
     month_query = (
         select(
             year_expr,
             month_expr,
-            func.sum(Expense.total),
-            func.count(Expense.id),
+            func.sum(ExpenseItem.total),
+            func.count(ExpenseItem.id),
         )
-        .where(Expense.purchase_date.is_not(None))
+        .where(ExpenseItem.purchase_date.is_not(None))
         .group_by(year_expr, month_expr)
         .order_by(year_expr.desc(), month_expr.desc())
     )

@@ -2,8 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from datetime import date, datetime, time
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 import hashlib
+import json
 import time as time_module
 import bcrypt
 import cv2 as cv
@@ -13,13 +14,13 @@ from pdf2image import convert_from_bytes
 from sqlalchemy import extract, func, select
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
-
+from ocr.groq_reader import read_receipt_with_groq
 from ML.classify import classify
-from ML.features import parsed_receipt_to_text
+#from ML.features import parsed_receipt_to_text
 from app.security import get_current_user
 from db.database import get_db
-from db.models import Expense
-from ocr.easyocr_reader import extract_text
+from db.models import ExpenseItem, Receipt, User
+#from ocr.easyocr_reader import extract_text
 from parsing import parse_receipt
 from preprocessing.image import preprocess_image
 from app.schemas import (ExpenseCategoryUpdate, ExpenseListResponse, ExpenseOut)
@@ -38,7 +39,7 @@ ACCEPTED_CONTENT_TYPES = {
 }
 
 
-def build_expense_response(expense: Expense, *, duplicate: bool = False) -> dict:
+def build_expense_response(expense: ExpenseItem, *, duplicate: bool = False) -> dict:
     """Return the common response fields for a saved expense."""
     response = {
         "id": expense.id,
@@ -63,31 +64,40 @@ def get_expense_filters(
     """Build shared filters for expense listing and analytics."""
     conditions = []
     if category:
-        conditions.append(Expense.category == category)
+        conditions.append(ExpenseItem.category == category)
     if start_date:
         conditions.append(
-            Expense.purchase_date >= datetime.combine(start_date, time.min)
+            ExpenseItem.purchase_date >= datetime.combine(start_date, time.min)
         )
     if end_date:
         conditions.append(
-            Expense.purchase_date <= datetime.combine(end_date, time.max)
+            ExpenseItem.purchase_date <= datetime.combine(end_date, time.max)
         )
     return conditions
 
 
 logger = logging.getLogger(__name__)
 
+
 @router.post("/upload")
 async def upload_expense(
     file: UploadFile = File(...),
     db: Session = Depends(get_db),
-    user = Depends(get_current_user)
+    user: User = Depends(get_current_user),
 ):
+    logger.info("UPLOAD ENDPOINT ENTERED")
     # 1. Validate the uploaded file.
-    if file.content_type not in ACCEPTED_CONTENT_TYPES:
+    accepted_types = {
+        "image/jpeg",
+        "image/png",
+        "image/jpg",
+        "application/pdf",
+    }
+
+    if file.content_type not in accepted_types:
         raise HTTPException(
             status_code=415,
-            detail="Invalid file type. Upload a JPEG, PNG, or PDF.",
+            detail="Only JPEG, PNG, and PDF files are accepted.",
         )
 
     content = await file.read()
@@ -95,34 +105,41 @@ async def upload_expense(
     if not content:
         raise HTTPException(
             status_code=400,
-            detail="Uploaded file is empty.",
+            detail="The uploaded file is empty.",
         )
 
-    if len(content) > MAX_UPLOAD_BYTES:
+    if len(content) > 5 * 1024 * 1024:
         raise HTTPException(
             status_code=413,
-            detail="File exceeds the 5 MB limit.",
+            detail="File size must not exceed 5 MB.",
         )
 
-    # 2. Generate a hash and check for a duplicate belonging to this user.
+    # 2. Check whether this user has already uploaded this file.
     image_hash = hashlib.sha256(content).hexdigest()
 
-    existing_expense = db.scalar(
-        select(Expense).where(
-            Expense.image_hash == image_hash,
-            Expense.user_id == user.id,
+    existing_receipt = db.scalar(
+        select(Receipt).where(
+            Receipt.user_id == user.id,
+            Receipt.image_hash == image_hash,
         )
     )
 
-    if existing_expense is not None:
-        logger.info(
-            "Duplicate receipt upload detected for user_id=%s",
-            user.id,
-        )
-        return build_expense_response(existing_expense, duplicate=True)
+    if existing_receipt:
+        existing_items = db.scalars(
+            select(ExpenseItem).where(
+                ExpenseItem.receipt_id == existing_receipt.id,
+                ExpenseItem.user_id == user.id,
+            )
+        ).all()
+        logger.info("Duplicate receipt check completed")
+        return {
+            "message": "This receipt has already been uploaded.",
+            "receipt": existing_receipt,
+            "items": existing_items,
+        }
 
-    # 3. Convert the uploaded file into images.
     try:
+        # 3. Convert the uploaded file into images.
         if file.content_type == "application/pdf":
             pages = convert_from_bytes(content, dpi=300)
 
@@ -154,54 +171,211 @@ async def upload_expense(
 
             images = [preprocess_image(image)]
 
-        # 4. Extract text from every page.
+        # 4. Extract structured receipt data with Groq.
         start_time = time_module.perf_counter()
-        page_texts = []
-        ocr_sources = []
+        page_results = []
 
         for image in images:
-            ocr_result = extract_text(image)
+            success, encoded_image = cv.imencode(".jpg", image)
 
-            page_texts.append(
-                "\n".join(
-                    item["text"]
-                    for item in ocr_result["text"]
-                    if item.get("text", "").strip()
+            if not success:
+                raise HTTPException(
+                    status_code=400,
+                    detail="Could not prepare receipt image.",
                 )
+            logger.info("Calling Groq for page %s", len(page_results) + 1)
+            result = read_receipt_with_groq(
+                encoded_image.tobytes(),
+                content_type="image/jpeg",
             )
-
-            ocr_sources.append(ocr_result.get("source", "unknown"))
-
+            logger.info("Groq returned: %s", result)
+            page_results.append(result)
+        logger.info("Groq response: %s", result)
         duration = time_module.perf_counter() - start_time
 
         logger.info(
-            "OCR completed for user_id=%s in %.2f seconds; sources=%s",
+            "Receipt extraction completed for user_id=%s "
+            "in %.2f seconds across %s page(s)",
             user.id,
             duration,
-            ocr_sources,
+            len(page_results),
         )
 
-        raw_text = "\n".join(page_texts)
-
-        if not raw_text.strip():
+        if not page_results:
             raise HTTPException(
                 status_code=422,
-                detail=(
-                    "Could not read text from this receipt. "
-                    "Try uploading a clearer image."
-                ),
+                detail="No receipt data could be extracted.",
             )
 
-        # 5. Parse the receipt and classify the expense.
-        parsed = parse_receipt(raw_text, default_currency="NGN")
+        # Combine line items from all pages.
+        # Receipt-level details come from the first page.
+        groq_result = page_results[0].copy()
+        groq_result["line_items"] = []
 
-        feature_text = parsed_receipt_to_text(parsed)
-        category, category_conf = classify(feature_text)
+        for page_result in page_results:
+            groq_result["line_items"].extend(
+                page_result.get("line_items", [])
+            )
+
+        if not groq_result["line_items"]:
+            raise HTTPException(
+                status_code=422,
+                detail="No line items could be extracted from this receipt.",
+            )
+
+        # Preserve the structured extraction for debugging.
+        raw_text = json.dumps(
+            groq_result,
+            ensure_ascii=False,
+            default=str,
+        )
+
+        # 5. Convert extracted receipt fields.
+        date_value = groq_result.get("purchase_date")
+        purchase_date = None
+
+        if date_value:
+            try:
+                purchase_date = datetime.strptime(
+                    date_value,
+                    "%Y-%m-%d",
+                ).date()
+            except (ValueError, TypeError):
+                raise HTTPException(
+                    status_code=422,
+                    detail="Receipt date could not be interpreted.",
+                )
+
+        purchase_datetime = (
+            datetime.combine(purchase_date, time.min)
+            if purchase_date is not None
+            else None
+        )
+
+        merchant = groq_result.get("merchant")
+        currency = groq_result.get("currency")
+        total_value = groq_result.get("total")
+
+        receipt_total = (
+            Decimal(str(total_value))
+            if total_value is not None
+            else None
+        )
+
+        # 6. Create the receipt and its expense items.
+        receipt = Receipt(
+            user_id=user.id,
+            merchant=merchant,
+            purchase_date=purchase_datetime,
+            total=receipt_total,
+            currency=currency,
+            image_hash=image_hash,
+            raw_text=raw_text,
+        )
+
+        db.add(receipt)
+
+        # Obtain the receipt ID before creating its items.
+        db.flush()
+
+        expense_items = []
+
+        for line_item in groq_result["line_items"]:
+            description = line_item.get("description")
+            quantity_value = line_item.get("quantity")
+            item_total_value = line_item.get("total_price")
+
+            # Ignore incomplete line items.
+            if (
+                not description
+                or quantity_value is None
+                or item_total_value is None
+            ):
+                continue
+
+            try:
+                quantity = Decimal(str(quantity_value))
+                line_total = Decimal(str(item_total_value))
+            except (ValueError, TypeError, InvalidOperation):
+                continue
+
+            if (
+                not quantity.is_finite()
+                or not line_total.is_finite()
+                or quantity <= 0
+                or line_total < 0
+            ):
+                continue
+
+            unit_price = (
+                line_total / quantity
+            ).quantize(Decimal("0.01"))
+
+            # Classify each item, not the entire receipt.
+            category, category_conf = classify(description)
+
+            expense_item = ExpenseItem(
+                user_id=user.id,
+                receipt_id=receipt.id,
+                description=description,
+                quantity=quantity,
+                unit_price=unit_price,
+                total_price=line_total,
+                purchase_date=purchase_datetime,
+                currency=currency or "NGN",
+                category=category,
+                original_predicted_category=category,
+                category_confidence=float(category_conf),
+            )
+
+            expense_items.append(expense_item)
+
+        if not expense_items:
+            raise HTTPException(
+                status_code=422,
+                detail="No valid expense items could be extracted.",
+            )
+
+        db.add_all(expense_items)
+
+        # Save the receipt and all its items together.
+        db.commit()
+
+        db.refresh(receipt)
+
+        for item in expense_items:
+            db.refresh(item)
+
+        logger.info(
+            "Receipt saved for user_id=%s, receipt_id=%s, items=%s",
+            user.id,
+            receipt.id,
+            len(expense_items),
+        )
+
+        return {
+            "message": "Receipt uploaded and processed successfully.",
+            "receipt": receipt,
+            "items": expense_items,
+        }
 
     except HTTPException:
+        db.rollback()
         raise
 
+    except IntegrityError:
+        db.rollback()
+        logger.exception(
+            "Database integrity error for user_id=%s",
+            user.id,
+        )
+        raise HTTPException(
+            status_code=409,
+            detail="The receipt could not be saved because of a data conflict.",
+        )
+
     except Exception:
+        db.rollback()
         logger.exception(
             "Receipt processing failed for user_id=%s",
             user.id,
@@ -211,90 +385,9 @@ async def upload_expense(
             detail="Receipt processing failed. Please try again.",
         )
 
-    # 6. Build the expense record.
-    expense = Expense(
-        user_id=user.id,
-        merchant=parsed.merchant,
-        purchase_date=parsed.purchase_date,
-        total=parsed.total,
-        currency=parsed.currency,
-        merchant_confidence=parsed.confidence.merchant,
-        purchase_date_confidence=parsed.confidence.purchase_date,
-        total_confidence=parsed.confidence.total,
-        currency_confidence=parsed.confidence.currency,
-        category=category,
-        category_confidence=category_conf,
-        original_predicted_category=category,
-        image_hash=image_hash,
-        line_items=[
-            item.model_dump(mode="json")
-            for item in parsed.line_items
-        ],
-        raw_text=parsed.raw_text,
-    )
+    finally:
+        await file.close()
 
-    # 7. Save the expense and handle database conflicts.
-    db.add(expense)
-
-    try:
-        db.commit()
-        db.refresh(expense)
-
-    except IntegrityError:
-        db.rollback()
-
-        # Check whether this user's receipt was saved concurrently.
-        existing_expense = db.scalar(
-            select(Expense).where(
-                Expense.image_hash == image_hash,
-                Expense.user_id == user.id,
-            )
-        )
-
-        if existing_expense is not None:
-            return build_expense_response(
-                existing_expense,
-                duplicate=True,
-            )
-
-        logger.exception(
-            "Database integrity error while saving receipt for user_id=%s",
-            user.id,
-        )
-
-        raise HTTPException(
-            status_code=409,
-            detail="Could not save expense because of a database conflict.",
-        )
-
-    except Exception:
-        db.rollback()
-
-        logger.exception(
-            "Database error while saving receipt for user_id=%s",
-            user.id,
-        )
-
-        raise HTTPException(
-            status_code=500,
-            detail="Could not save the expense. Please try again.",
-        )
-
-    # 8. Return the created expense.
-    response = parsed.model_dump(mode="json")
-    response["id"] = expense.id
-    response["category"] = category
-    response["category_confidence"] = category_conf
-    response["created_at"] = expense.created_at.isoformat()
-    response["duplicate"] = False
-
-    logger.info(
-        "Expense created successfully: expense_id=%s user_id=%s",
-        expense.id,
-        user.id,
-    )
-
-    return response
 @router.get("", response_model=ExpenseListResponse)
 def get_expenses(
     db: Session = Depends(get_db),
@@ -303,20 +396,42 @@ def get_expenses(
     category: str | None = Query(default=None),
     page: int = Query(default=1, ge=1),
     page_size: int = Query(default=10, ge=1, le=100),
-    user = Depends(get_current_user)
+    user=Depends(get_current_user),
 ):
-    conditions = get_expense_filters(category, start_date, end_date)
+    conditions = get_expense_filters(
+        category,
+        start_date,
+        end_date,
+    )
 
-    query = select(Expense).where(Expense.user_id == user.id).order_by(Expense.created_at.desc())
-    count_query = select(func.count()).select_from(Expense).where(Expense.user_id == user.id)
+    query = (
+        select(ExpenseItem)
+        .where(ExpenseItem.user_id == user.id)
+        .order_by(ExpenseItem.created_at.desc())
+    )
+
+    count_query = (
+        select(func.count())
+        .select_from(ExpenseItem)
+        .where(ExpenseItem.user_id == user.id)
+    )
+
     if conditions:
         query = query.where(*conditions)
         count_query = count_query.where(*conditions)
 
     total_count = db.scalar(count_query) or 0
     offset = (page - 1) * page_size
-    items = db.scalars(query.offset(offset).limit(page_size)).all()
-    expenses = [ExpenseOut.model_validate(item) for item in items]
+
+    items = db.scalars(
+        query.offset(offset).limit(page_size)
+    ).all()
+
+    expenses = [
+        ExpenseOut.model_validate(item)
+        for item in items
+    ]
+
     total_pages = (total_count + page_size - 1) // page_size
 
     return ExpenseListResponse(
@@ -326,9 +441,6 @@ def get_expenses(
         page_size=page_size,
         total_pages=total_pages,
     )
-
-
-
 @router.patch("/{expense_id}", response_model=ExpenseOut)
 def update_expense_category(
     expense_id: int,
@@ -336,7 +448,7 @@ def update_expense_category(
     db: Session = Depends(get_db),
     user = Depends(get_current_user)
 ):
-    query = select(Expense).where(Expense.id == expense_id, Expense.user_id == user.id)
+    query = select(ExpenseItem).where(ExpenseItem.id == expense_id, ExpenseItem.user_id == user.id)
     expense = db.scalar(query)
     if expense is None:
         raise HTTPException(status_code=404, detail="Expense not found")
@@ -365,7 +477,7 @@ def delete_expense(
     db: Session = Depends(get_db),
     user = Depends(get_current_user)
 ):
-    query = select(Expense).where(Expense.id == expense_id, Expense.user_id == user.id)
+    query = select(ExpenseItem).where(ExpenseItem.id == expense_id, ExpenseItem.user_id == user.id)
     expense = db.scalar(query)
     if expense is None:
         raise HTTPException(status_code=404, detail="Expense not found")
