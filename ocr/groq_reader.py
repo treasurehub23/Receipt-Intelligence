@@ -66,13 +66,17 @@ def read_receipt_with_groq(
         temperature=0,
         max_completion_tokens=2048,
     )
-
+    print(
+    "RAW GROQ CONTENT:",
+    repr(response.choices[0].message.content),
+    flush=True,
+)
     content = response.choices[0].message.content
     if not isinstance(content, str):
         raise ValueError("Groq returned no receipt content.")
 
     result = json.loads(content)
-
+    print("PARSED GROQ DATA:", repr(result), flush=True)
     # Basic validation before the result reaches the database.
     if not isinstance(result, dict):
         raise ValueError("Groq returned an invalid receipt object.")
