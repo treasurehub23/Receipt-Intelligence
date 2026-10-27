@@ -56,7 +56,7 @@ class ExpenseUpdate(BaseModel):
     unit_price: Decimal | None = Field(
         default=None, gt=0, max_digits=10, decimal_places=2
     )
-    _quantity: int | None = Field(
+    quantity: int | None = Field(
         default=None, gt=0, alias="quantity"
     )
 
