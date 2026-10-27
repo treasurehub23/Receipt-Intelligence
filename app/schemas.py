@@ -44,18 +44,36 @@ class AnalyticsSummary(BaseModel):
     by_month: list[MonthBreakdown]
 
 
-class ExpenseCategoryUpdate(BaseModel):
-    category: str = Field(min_length=1, max_length=255)
-    @field_validator("category")
-    @classmethod
-    def validate_category(cls, value: str) -> str:
-        value = value.strip()
 
-        if not value:
-            raise ValueError("Category cannot be empty or whitespace.")
+class ExpenseUpdate(BaseModel):
+    category: str | None = Field(
+        default=None, min_length=1, max_length=255
+    )
+    purchase_date: datetime | None = None
+    description: str | None = Field(
+        default=None, min_length=1, max_length=500
+    )
+    unit_price: Decimal | None = Field(
+        default=None, gt=0, max_digits=10, decimal_places=2
+    )
+    _quantity: int | None = Field(
+        default=None, gt=0, alias="quantity"
+    )
+
+    @field_validator("category", mode="before")
+    @classmethod
+    def validate_category(cls, value):
+        if value is None:
+            raise ValueError("Category cannot be null.")
+
+        if isinstance(value, str):
+            value = value.strip()
+            if not value:
+                raise ValueError("Category cannot be empty or whitespace.")
 
         return value
 
+    
 class RegisterUserRequest(BaseModel):
     email: EmailStr = Field(..., min_length=5, max_length=255)
     password: str = Field(..., min_length=8, max_length=255)
