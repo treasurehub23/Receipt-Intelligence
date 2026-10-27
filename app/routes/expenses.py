@@ -788,7 +788,6 @@ def update_expense_category(
     db: Session = Depends(get_db),
     user = Depends(get_current_user)
 ):
-    if us
     query = select(ExpenseItem).where(ExpenseItem.id == expense_id, ExpenseItem.user_id == user.id)
     expense = db.scalar(query)
     if expense is None:
