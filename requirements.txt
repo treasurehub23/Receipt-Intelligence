@@ -17,7 +17,7 @@ cuda-pathfinder==1.8.1
 cuda-toolkit==13.0.3.0
 cycler==0.12.1
 dateparser==1.4.3
-dotenv==1.2.4
+
 debugpy==1.8.22
 distro==1.9.0
 dnspython==2.9.0
