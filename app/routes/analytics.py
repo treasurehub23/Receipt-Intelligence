@@ -22,7 +22,7 @@ def get_expense_summary(
 ):
     conditions = get_expense_filters(category, start_date, end_date)
 
-    total_query = select(func.sum(ExpenseItem.total), func.count(ExpenseItem.id)).where(ExpenseItem.user_id == user.id)
+    total_query = select(func.sum(ExpenseItem.total_price), func.count(ExpenseItem.id)).where(ExpenseItem.user_id == user.id)
     if conditions:
         total_query = total_query.where(*conditions)
     total_spend, expense_count = db.execute(total_query).one()
@@ -31,12 +31,13 @@ def get_expense_summary(
     category_query = (
         select(
             ExpenseItem.category,
-            func.sum(ExpenseItem.total),
+            func.sum(ExpenseItem.total_price),
             func.count(ExpenseItem.id),
         )
         .group_by(ExpenseItem.category)
-        .order_by(func.sum(ExpenseItem.total).desc())
+        .order_by(func.sum(ExpenseItem.total_price).desc())
     )
+    category_query = category_query.where(ExpenseItem.user_id == user.id)
     if conditions:
         category_query = category_query.where(*conditions)
 
@@ -55,13 +56,14 @@ def get_expense_summary(
         select(
             year_expr,
             month_expr,
-            func.sum(ExpenseItem.total),
+            func.sum(ExpenseItem.total_price),
             func.count(ExpenseItem.id),
         )
         .where(ExpenseItem.purchase_date.is_not(None))
         .group_by(year_expr, month_expr)
         .order_by(year_expr.desc(), month_expr.desc())
     )
+    month_query = month_query.where(ExpenseItem.user_id == user.id)
     if conditions:
         month_query = month_query.where(*conditions)
 
