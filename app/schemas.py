@@ -1,5 +1,5 @@
 from decimal import Decimal
-from datetime import datetime
+from datetime import datetime, date
 from pydantic import BaseModel, ConfigDict, Field, EmailStr, field_validator
 class ExpenseOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -94,3 +94,6 @@ class RegisterUserResponse(BaseModel):
     email: str
     created_at: datetime
 
+
+class ReceiptComplete(BaseModel):
+    purchase_date: date

@@ -20,7 +20,7 @@ from ML.classify import classify
 from app.security import get_current_user
 from db.database import get_db
 from db.models import ExpenseItem, Receipt, User
-from app.schemas import (ExpenseUpdate, ExpenseListResponse, ExpenseOut)
+from app.schemas import (ExpenseUpdate, ReceiptComplete, ExpenseOut)
 import logging
 
 logger = logging.getLogger(__name__)
@@ -453,6 +453,122 @@ async def upload_expense(
 
     finally:
         await file.close()
+
+
+@router.post("/{receipt_id}/complete")
+def complete_pending_receipt(
+    receipt_id: int,
+    payload: ReceiptComplete,
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    try:
+        receipt = db.scalar(
+            select(Receipt).where(
+                Receipt.id == receipt_id,
+                Receipt.user_id == user.id,
+            )
+        )
+
+        if receipt is None:
+            raise HTTPException(
+                status_code=404,
+                detail="Receipt not found.",
+            )
+
+        if receipt.status != "pending_date":
+            raise HTTPException(
+                status_code=409,
+                detail="This receipt is not awaiting a purchase date.",
+            )
+
+        purchase_date = payload.purchase_date
+        purchase_datetime = datetime.combine(
+            purchase_date,
+            time.min,
+        )
+
+        try:
+            groq_result = json.loads(receipt.raw_text or "")
+        except (json.JSONDecodeError, TypeError):
+            raise HTTPException(
+                status_code=422,
+                detail="Stored receipt extraction is invalid.",
+            )
+
+        line_items = groq_result.get("line_items")
+
+        if not isinstance(line_items, list):
+            raise HTTPException(
+                status_code=422,
+                detail="Stored receipt has no valid line items.",
+            )
+
+        expense_items = build_expense_items(
+            line_items=line_items,
+            user_id=user.id,
+            receipt_id=receipt.id,
+            purchase_datetime=purchase_datetime,
+            currency=receipt.currency,
+        )
+
+        if not expense_items:
+            raise HTTPException(
+                status_code=422,
+                detail="No valid expense items could be created.",
+            )
+
+        receipt.purchase_date = purchase_datetime
+        receipt.status = "completed"
+
+        db.add_all(expense_items)
+        db.commit()
+        db.refresh(receipt)
+
+        for item in expense_items:
+            db.refresh(item)
+
+        logger.info(
+            "Pending receipt completed: user_id=%s receipt_id=%s item_count=%s",
+            user.id,
+            receipt.id,
+            len(expense_items),
+        )
+
+        return {
+            "message": "Receipt completed successfully.",
+            "receipt": receipt,
+            "items": expense_items,
+        }
+
+    except HTTPException:
+        db.rollback()
+        raise
+
+    except IntegrityError:
+        db.rollback()
+        logger.exception(
+            "Integrity error completing receipt_id=%s user_id=%s",
+            receipt_id,
+            user.id,
+        )
+        raise HTTPException(
+            status_code=409,
+            detail="A database conflict prevented receipt completion.",
+        )
+
+    except Exception:
+        db.rollback()
+        logger.exception(
+            "Failed to complete receipt_id=%s user_id=%s",
+            receipt_id,
+            user.id,
+        )
+        raise HTTPException(
+            status_code=500,
+            detail="Could not complete receipt. Please try again.",
+        )
+
 
 @router.patch("/{expense_id}", response_model=ExpenseOut)
 def update_expense(
