@@ -17,13 +17,9 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from ocr.groq_reader import read_receipt_with_groq
 from ML.classify import classify
-#from ML.features import parsed_receipt_to_text
 from app.security import get_current_user
 from db.database import get_db
 from db.models import ExpenseItem, Receipt, User
-#from ocr.easyocr_reader import extract_text
-from parsing import parse_receipt
-from preprocessing.image import preprocess_image
 from app.schemas import (ExpenseUpdate, ExpenseListResponse, ExpenseOut)
 import logging
 
@@ -75,6 +71,75 @@ def get_expense_filters(
             ExpenseItem.purchase_date <= datetime.combine(end_date, time.max)
         )
     return conditions
+
+
+def build_expense_items(
+    line_items: list,
+    user_id: int,
+    receipt_id: int,
+    purchase_datetime: datetime | None,
+    currency: str | None,
+) -> list[ExpenseItem]:
+    expense_items = []
+
+    for line_item in line_items:
+        if not isinstance(line_item, dict):
+            continue
+
+        description = line_item.get("description")
+        quantity_value = line_item.get("quantity")
+        item_total_value = line_item.get("total_price")
+
+        if (
+            not isinstance(description, str)
+            or not description.strip()
+            or quantity_value is None
+            or item_total_value is None
+        ):
+            continue
+
+        try:
+            quantity = Decimal(str(quantity_value))
+            line_total = Decimal(str(item_total_value))
+        except (ValueError, TypeError, InvalidOperation):
+            continue
+
+        if (
+            not quantity.is_finite()
+            or not line_total.is_finite()
+            or quantity <= 0
+            or line_total < 0
+        ):
+            continue
+
+        if quantity != quantity.to_integral_value():
+            continue
+
+        quantity = int(quantity)
+
+        unit_price = (
+            line_total / Decimal(quantity)
+        ).quantize(Decimal("0.01"))
+
+        category, category_conf = classify(description.strip())
+
+        expense_item = ExpenseItem(
+            user_id=user_id,
+            receipt_id=receipt_id,
+            description=description.strip(),
+            quantity=quantity,
+            unit_price=unit_price,
+            total_price=line_total,
+            purchase_date=purchase_datetime,
+            currency=currency or "NGN",
+            category=category,
+            original_predicted_category=category,
+            category_confidence=float(category_conf),
+        )
+
+        expense_items.append(expense_item)
+
+    return expense_items
 
 
 logger = logging.getLogger(__name__)
@@ -256,6 +321,12 @@ async def upload_expense(
             else None
         )
 
+        receipt_status = (
+            "completed"
+            if purchase_date is not None
+            else "pending_date"
+        )
+
         merchant = groq_result.get("merchant")
         currency = groq_result.get("currency")
         total_value = groq_result.get("total")
@@ -291,6 +362,7 @@ async def upload_expense(
             user_id=user.id,
             merchant=merchant,
             purchase_date=purchase_datetime,
+            status = receipt_status,
             total=receipt_total,
             currency=currency,
             image_hash=image_hash,
@@ -300,74 +372,38 @@ async def upload_expense(
         db.add(receipt)
         db.flush()
 
-        expense_items = []
-
-        for line_item in groq_result["line_items"]:
-            if not isinstance(line_item, dict):
-                continue
-
-            description = line_item.get("description")
-            quantity_value = line_item.get("quantity")
-            item_total_value = line_item.get("total_price")
-
-            if (
-                not isinstance(description, str)
-                or not description.strip()
-                or quantity_value is None
-                or item_total_value is None
-            ):
-                continue
-
-            try:
-                quantity = Decimal(str(quantity_value))
-                line_total = Decimal(str(item_total_value))
-            except (ValueError, TypeError, InvalidOperation):
-                continue
-
-            if (
-                not quantity.is_finite()
-                or not line_total.is_finite()
-                or quantity <= 0
-                or line_total < 0
-            ):
-                continue
-
-            # If your quantity column is Integer, validate that
-            # quantity is whole before assigning it.
-            if quantity != quantity.to_integral_value():
-                continue
-
-            quantity = int(quantity)
-
-            unit_price = (
-                line_total / Decimal(quantity)
-            ).quantize(Decimal("0.01"))
-
-            # Classify each item individually.
-            category, category_conf = classify(description.strip())
-
-            expense_item = ExpenseItem(
-                user_id=user.id,
-                receipt_id=receipt.id,
-                description=description.strip(),
-                quantity=quantity,
-                unit_price=unit_price,
-                total_price=line_total,
-                purchase_date=purchase_datetime,
-                currency=currency or "NGN",
-                category=category,
-                original_predicted_category=category,
-                category_confidence=float(category_conf),
-            )
-
-            expense_items.append(expense_item)
-
+        expense_items = build_expense_items(
+            line_items=groq_result["line_items"],
+            user_id=user.id,
+            receipt_id=receipt.id,
+            purchase_datetime=purchase_datetime,
+            currency=currency,
+        )
         if not expense_items:
             raise HTTPException(
                 status_code=422,
                 detail="Groq returned no valid expense items.",
             )
 
+        if purchase_date is None:
+            db.add(receipt)
+            db.commit()
+            db.refresh(receipt)
+
+            logger.info(
+                "Receipt pending date: user_id=%s receipt_id=%s",
+                user.id,
+                receipt.id,
+            )
+
+            return {
+                "message": "Receipt extracted. Purchase date is required.",
+                "status": "pending_date",
+                "receipt_id": receipt.id,
+                "extracted_data": groq_result,
+            }
+
+        db.add(receipt)
         db.add_all(expense_items)
         db.commit()
 

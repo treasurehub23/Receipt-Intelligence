@@ -76,7 +76,12 @@ class Receipt(Base):
         back_populates="receipt",
         passive_deletes=True,
     )
-
+    status: Mapped[str] = mapped_column(
+    String(20),
+    nullable=False,
+    default="completed",
+    server_default="completed",
+)
 
 class ExpenseItem(Base):
     __tablename__ = "expense_items"

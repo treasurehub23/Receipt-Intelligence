@@ -7,7 +7,7 @@ class ExpenseOut(BaseModel):
     id: int
     user_id: int
     receipt_id: int | None = None
-    description: str
+    description: str | None
     quantity: float | None = None
     unit_price: Decimal | None = None
     total_price: Decimal
@@ -72,7 +72,18 @@ class ExpenseUpdate(BaseModel):
                 raise ValueError("Category cannot be empty or whitespace.")
 
         return value
+    @field_validator("description", mode="before")
+    @classmethod
+    def validate_description(cls, value):
+        if value is None:
+            raise ValueError("Description cannot be null.")
 
+        if isinstance(value, str):
+            value = value.strip()
+            if not value:
+                raise ValueError("Description cannot be empty or whitespace.")
+
+        return value
     
 class RegisterUserRequest(BaseModel):
     email: EmailStr = Field(..., min_length=5, max_length=255)

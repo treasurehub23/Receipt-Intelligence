@@ -114,9 +114,12 @@ The API has been deployed to Render. Core functionality includes authentication,
 ### Expenses
 - **POST /expenses/upload** - Accepts a receipt in jpeg, jpg, png or pdf format. The endpoint extracts receipt information, classifies the expense and saves it in the database. It returns a list of expense item objects.
 
-- **PATCH /expenses/{expense_id}** - Receives an expense-id and  retrieves the expense object from the database. The endpoint allows the update of specific fields - category, purchase date, tota
+- **PATCH /expenses/{expense_id}** - Receives an expense-id and  retrieves the expense object from the database. The endpoint allows the update of specific fields - category, purchase date, quantity, unit price and description. It returns the updated expense object.
 
 - **DELETE /expenses/{expense_id}** - Receives an expense-id. The endpoint retrieves the expense object and deletes it from the the database. It returns status code 204 when successful. 
+
+### Analytics
+- **GET /analytics/summary** -Retrieves a summary of the authenticated user's expenses, including total spending, expense count, spending breakdown by category, and monthly spending. Supports optional category, start_date, and end_date query parameters to filter the results by category and purchase date range. 
 ## API Documentation
 
 FastAPI provides interactive API documentation, allowing users to inspect endpoints and send requests.
