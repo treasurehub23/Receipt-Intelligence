@@ -1,0 +1,58 @@
+
+.insights {
+  padding: 24px;
+  color: #202124;
+}
+
+.insights-header {
+  margin-bottom: 24px;
+}
+
+.insights-header h2 {
+  margin-bottom: 6px;
+}
+
+.insights-header p,
+.insight-card p,
+.insight-card small {
+  color: #666;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.insight-card {
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  min-width: 0;
+}
+
+.insight-label {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.insight-card h3 {
+  font-size: 25px;
+  overflow-wrap: anywhere;
+  margin: 12px 0;
+}
+
+.insight-card small {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .insights {
+    padding: 16px;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}

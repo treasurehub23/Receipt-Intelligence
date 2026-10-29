@@ -145,6 +145,53 @@ def build_expense_items(
 logger = logging.getLogger(__name__)
 
 
+@router.get("/", response_model=list[ExpenseOut])
+def list_expenses(
+    offset: int = Query(default=0, ge=0),
+    page_size: int = Query(default=20, ge=1, le=100),
+    category: str | None = Query(default=None),
+    start_date: date | None = Query(default=None),
+    end_date: date | None = Query(default=None),
+    db: Session = Depends(get_db),
+    user: User = Depends(get_current_user),
+):
+    # Reject an invalid date range.
+    if start_date and end_date and start_date > end_date:
+        raise HTTPException(
+            status_code=422,
+            detail="start_date must not be after end_date.",
+        )
+
+    # Start with expenses belonging to the logged-in user.
+    query = select(ExpenseItem).where(
+        ExpenseItem.user_id == user.id
+    )
+
+    # Apply the existing category and date filters.
+    conditions = get_expense_filters(
+        category,
+        start_date,
+        end_date,
+    )
+
+    if conditions:
+        query = query.where(*conditions)
+
+    # Return the newest expenses first.
+    query = query.order_by(
+        ExpenseItem.purchase_date.desc().nullslast(),
+        ExpenseItem.created_at.desc(),
+        ExpenseItem.id.desc(),
+    )
+
+    # Paginate and return actual ExpenseItem objects.
+    expenses = db.scalars(
+        query.offset(offset).limit(page_size)
+    ).all()
+
+    return expenses
+
+
 @router.post("/upload")
 async def upload_expense(
     file: UploadFile = File(...),

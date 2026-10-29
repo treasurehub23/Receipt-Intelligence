@@ -97,3 +97,17 @@ class RegisterUserResponse(BaseModel):
 
 class ReceiptComplete(BaseModel):
     purchase_date: date
+
+class SpendingInsights(BaseModel):
+    current_period_start: date
+    current_period_end: date
+    previous_period_start: date
+    previous_period_end: date
+
+    current_spend: Decimal
+    previous_spend: Decimal
+    percentage_change: float | None
+    spending_direction: str
+
+    top_category: str | None
+    top_category_spend: Decimal
