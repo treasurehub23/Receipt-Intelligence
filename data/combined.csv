@@ -1,641 +1,2141 @@
 text,category,source
-GENERAL STORE repair service donation,other,synthetic
-onions,groceries,synthetic
-BURGER KING,dining,synthetic
-CORNER SHOP gift item,other,synthetic
-shoes,shopping,synthetic
-ADDIDE SUPERMARKET fish (raw) frozen food bread,groceries,synthetic
-NETFLIX arcade credit concert ticket movie ticket,entertainment,synthetic
-GENESIS RESTAURANT pounded yam,dining,synthetic
-rice,groceries,synthetic
-WALGREENS antibiotics vitamin c,health,synthetic
-SPECTRANET,utilities,synthetic
-data bundle,utilities,synthetic
-SPAR,groceries,synthetic
-CVS PHARMACY bandage consultation fee lab test,health,synthetic
-photocopy gift item,other,synthetic
-TASTEE FASHION perfume home decor,shopping,synthetic
-LOCAL STORE miscellaneous item,other,synthetic
-AMAZON PRIME VIDEO streaming subscription video game game console,entertainment,synthetic
-CHEVRON STATION parking fee vehicle service petrol,transport,synthetic
-GENESIS CINEMAS amusement park ticket game console concert ticket,entertainment,synthetic
-DSTV,utilities,synthetic
-SHELL car wash tyre,transport,synthetic
-OUNCE STORE electronics shirt,shopping,synthetic
-THE PLACE smoothie burger,dining,synthetic
-IKEDC data bundle electricity bill internet subscription,utilities,synthetic
-repair service,other,synthetic
-ALPHA PHARMACY antibiotics hand sanitizer malaria test,health,synthetic
-FOOD CO sugar cooking oil,groceries,synthetic
-NETFLIX movie ticket,entertainment,synthetic
-FRESH MARKET chicken (raw),groceries,synthetic
-MEDPLUS bandage,health,synthetic
-service fee gift item miscellaneous item,other,synthetic
-yam,groceries,synthetic
-SILVERBIRD CINEMAS popcorn video game,entertainment,synthetic
-SPOTIFY game console concert ticket movie ticket,entertainment,synthetic
-LOCAL STORE photocopy stationery,other,synthetic
-MOBIL car wash engine oil parking fee,transport,synthetic
-GOTV data bundle prepaid meter token,utilities,synthetic
-PRINCE EBEANO flour,groceries,synthetic
-WHOLE FOODS yam tomatoes,groceries,synthetic
-BOLT diesel engine oil fuel,transport,synthetic
-streaming subscription game console,entertainment,synthetic
-KONGA headphones trousers,shopping,synthetic
-GENESIS CINEMAS arcade credit amusement park ticket,entertainment,synthetic
-SWEET SENSATION suya,dining,synthetic
-GENESIS RESTAURANT coffee jollof rice soft drink,dining,synthetic
-GENERAL STORE service fee photocopy stationery,other,synthetic
-GENESIS DELUXE MALL shirt,shopping,synthetic
-KROGER,groceries,synthetic
-AMC THEATRES popcorn streaming subscription,entertainment,synthetic
-TARGET perfume shirt,shopping,synthetic
-9MOBILE gas refill prepaid meter token,utilities,synthetic
-MISC VENDOR service fee repair service,other,synthetic
-ALPHA PHARMACY,health,synthetic
-NNPC toll tyre,transport,synthetic
-KROGER cheese,groceries,synthetic
-SWEET SENSATION,dining,synthetic
-DSTV water bill data bundle,utilities,synthetic
-AMAZON shoes,shopping,synthetic
-OANDO diesel fuel,transport,synthetic
-CONOIL parking fee toll,transport,synthetic
-TRADER JOE'S yam garri,groceries,synthetic
-NNPC engine oil petrol,transport,synthetic
-JUMIA cosmetics,shopping,synthetic
-concert ticket,entertainment,synthetic
-parking fee toll petrol,transport,synthetic
-GENESIS CINEMAS popcorn arcade credit amusement park ticket,entertainment,synthetic
-MR BIGGS shawarma jollof rice pizza,dining,synthetic
-LOCAL STORE repair service service fee,other,synthetic
-IKEDC airtime water bill data bundle,utilities,synthetic
-SPECTRANET water bill cable subscription electricity bill,utilities,synthetic
-shoes home decor,shopping,synthetic
-JUMIA FASHION wristwatch cosmetics,shopping,synthetic
-SHELL tyre ride fare,transport,synthetic
-NEPA,utilities,synthetic
-EMZOR PHARMACY paracetamol antibiotics face mask,health,synthetic
-AMC THEATRES movie ticket game console,entertainment,synthetic
-ZARA cosmetics,shopping,synthetic
-GENESIS CINEMAS amusement park ticket popcorn video game,entertainment,synthetic
-LAGOS BRT petrol,transport,synthetic
-NANDO'S chapman,dining,synthetic
-SPAR vegetables cooking oil,groceries,synthetic
-pounded yam burger,dining,synthetic
-YUDALA cosmetics,shopping,synthetic
-BEST BUY,shopping,synthetic
-GENESIS CINEMAS arcade credit movie ticket,entertainment,synthetic
-MISC VENDOR service fee,other,synthetic
-OANDO parking fee,transport,synthetic
-DSTV prepaid meter token airtime,utilities,synthetic
-COLD STONE shawarma pizza,dining,synthetic
-KROGER spaghetti,groceries,synthetic
-MISC VENDOR photocopy donation service fee,other,synthetic
-ST. NICHOLAS HOSPITAL paracetamol consultation fee,health,synthetic
-MISC VENDOR stationery repair service,other,synthetic
-9MOBILE water bill internet subscription cable subscription,utilities,synthetic
-LAGOON HOSPITAL,health,synthetic
-REDDINGTON HOSPITAL hand sanitizer,health,synthetic
-IKEDC electricity bill airtime data bundle,utilities,synthetic
-NNPC fuel,transport,synthetic
-JUMIA perfume cosmetics,shopping,synthetic
-PRINCE EBEANO onions,groceries,synthetic
-ADDIDE SUPERMARKET onions,groceries,synthetic
-AIRTEL prepaid meter token,utilities,synthetic
-SAFEWAY,groceries,synthetic
-PRINCE EBEANO fish (raw) onions,groceries,synthetic
-MEDPLUS hand sanitizer face mask,health,synthetic
-IPNX airtime water bill cable subscription,utilities,synthetic
-NNPC car wash petrol,transport,synthetic
-REGAL CINEMAS streaming subscription,entertainment,synthetic
-KONGA bag,shopping,synthetic
-MISC VENDOR repair service photocopy,other,synthetic
-TASTEE FASHION shirt bag,shopping,synthetic
-WHOLE FOODS indomie noodles fruits,groceries,synthetic
-LAGOON HOSPITAL prescription consultation fee,health,synthetic
-STARBUCKS pounded yam suya,dining,synthetic
-DSTV gas refill airtime water bill,utilities,synthetic
-REDDINGTON HOSPITAL bandage vitamin c,health,synthetic
-NETFLIX popcorn video game,entertainment,synthetic
-SHOWMAX game console arcade credit concert ticket,entertainment,synthetic
-MTN prepaid meter token water bill,utilities,synthetic
-SHOPRITE tomatoes bread,groceries,synthetic
-CHIPOTLE,dining,synthetic
-SHOPRITE,groceries,synthetic
-REGAL CINEMAS video game,entertainment,synthetic
-CVS PHARMACY hand sanitizer malaria test,health,synthetic
-LOCAL STORE printing,other,synthetic
-GOTV,utilities,synthetic
-TASTEE FRIED CHICKEN combo meal coffee,dining,synthetic
-IPNX electricity bill prepaid meter token,utilities,synthetic
-OANDO ride fare petrol,transport,synthetic
-CONOIL fuel,transport,synthetic
-miscellaneous item donation,other,synthetic
-SWEET SENSATION soft drink fried rice,dining,synthetic
-NEXT wristwatch cosmetics,shopping,synthetic
-soft drink coffee,dining,synthetic
-LAGOS WATER CORPORATION airtime data bundle,utilities,synthetic
-MEGAPLAZA PARKING petrol,transport,synthetic
-REDDINGTON HOSPITAL face mask,health,synthetic
-GOTV gas refill,utilities,synthetic
-LOCAL STORE printing gift item photocopy,other,synthetic
-MTN data bundle,utilities,synthetic
-COLD STONE egusi soup,dining,synthetic
-ST. NICHOLAS HOSPITAL,health,synthetic
-face mask,health,synthetic
-WHOLE FOODS bread eggs pepper,groceries,synthetic
-WHOLE FOODS cheese rice yam,groceries,synthetic
-STARTIMES water bill prepaid meter token,utilities,synthetic
-GENERAL STORE printing photocopy,other,synthetic
-SLOT trousers,shopping,synthetic
-YUDALA,shopping,synthetic
-TASTEE FASHION perfume bag home decor,shopping,synthetic
-REGAL CINEMAS arcade credit,entertainment,synthetic
-jollof rice,dining,synthetic
-CORNER SHOP repair service,other,synthetic
-JUMIA FASHION shoes perfume cosmetics,shopping,synthetic
-COLD STONE jollof rice,dining,synthetic
-bread,groceries,synthetic
-CAFE NEO pounded yam,dining,synthetic
-NETFLIX streaming subscription video game,entertainment,synthetic
-pounded yam,dining,synthetic
-EMZOR PHARMACY first aid hand sanitizer,health,synthetic
-LAGOON HOSPITAL consultation fee bandage lab test,health,synthetic
-IKEDC electricity bill prepaid meter token,utilities,synthetic
-FRESH MARKET eggs cheese frozen food,groceries,synthetic
-GLO,utilities,synthetic
-AIRTEL prepaid meter token airtime,utilities,synthetic
-REDDINGTON HOSPITAL lab test consultation fee,health,synthetic
-TASTEE FASHION home decor,shopping,synthetic
-KILIMANJARO,dining,synthetic
-LAGOS BRT engine oil fuel ride fare,transport,synthetic
-DOMINO'S PIZZA burger smoothie,dining,synthetic
-concert ticket amusement park ticket streaming subscription,entertainment,synthetic
-JUMIA,shopping,synthetic
-TRADER JOE'S indomie noodles onions,groceries,synthetic
-MCDONALD'S grilled fish pizza,dining,synthetic
-DOMINO'S PIZZA suya,dining,synthetic
-NNPC petrol ride fare tyre,transport,synthetic
-LAGOS BRT parking fee fuel ride fare,transport,synthetic
-EVERYDAY SUPERMARKET milk spaghetti,groceries,synthetic
-SPECTRANET cable subscription,utilities,synthetic
-SPAR vegetables butter,groceries,synthetic
-AMAZON PRIME VIDEO arcade credit movie ticket,entertainment,synthetic
-GOTV prepaid meter token,utilities,synthetic
-CHEVRON STATION tyre diesel vehicle service,transport,synthetic
-NNPC diesel petrol,transport,synthetic
-LOCAL STORE donation service fee photocopy,other,synthetic
-TASTEE FRIED CHICKEN chapman,dining,synthetic
-GENESIS DELUXE MALL trousers headphones,shopping,synthetic
-WHOLE FOODS,groceries,synthetic
-first aid,health,synthetic
-MTN cable subscription prepaid meter token,utilities,synthetic
-EMZOR PHARMACY vitamin c face mask antibiotics,health,synthetic
-FRESH MARKET spaghetti tomatoes bread,groceries,synthetic
-GENESIS DELUXE MALL home decor,shopping,synthetic
-CVS PHARMACY,health,synthetic
-AIRTEL prepaid meter token data bundle electricity bill,utilities,synthetic
-MTN,utilities,synthetic
-IPNX,utilities,synthetic
-JUMIA home decor perfume charger,shopping,synthetic
-CHEVRON STATION tyre vehicle service,transport,synthetic
-LAGOON HOSPITAL antibiotics,health,synthetic
-NETFLIX video game popcorn concert ticket,entertainment,synthetic
-ZARA phone case cosmetics charger,shopping,synthetic
-AMAZON PRIME VIDEO,entertainment,synthetic
-GRAND SQUARE fruits,groceries,synthetic
-DSTV airtime data bundle cable subscription,utilities,synthetic
-gas refill water bill cable subscription,utilities,synthetic
-soft drink,dining,synthetic
-LOCAL STORE repair service,other,synthetic
-AMAZON PRIME VIDEO arcade credit amusement park ticket,entertainment,synthetic
-MISC VENDOR gift item printing,other,synthetic
-SPOTIFY,entertainment,synthetic
-grilled fish shawarma,dining,synthetic
-CORNER SHOP donation,other,synthetic
-phone case shoes,shopping,synthetic
-MEGAPLAZA PARKING,transport,synthetic
-ST. NICHOLAS HOSPITAL lab test malaria test,health,synthetic
-TASTEE FRIED CHICKEN pounded yam suya grilled fish,dining,synthetic
-UBER petrol diesel,transport,synthetic
-KROGER chicken (raw),groceries,synthetic
-CHEVRON STATION diesel,transport,synthetic
-car wash parking fee,transport,synthetic
-GENESIS RESTAURANT chapman,dining,synthetic
-ADDIDE SUPERMARKET bread flour milk,groceries,synthetic
-lab test first aid,health,synthetic
-face mask malaria test bandage,health,synthetic
-repair service gift item stationery,other,synthetic
-TASTEE FRIED CHICKEN burger grilled fish,dining,synthetic
-WHOLE FOODS cheese yam indomie noodles,groceries,synthetic
-TARGET shoes,shopping,synthetic
-GENESIS CINEMAS concert ticket,entertainment,synthetic
-NEPA electricity bill gas refill internet subscription,utilities,synthetic
-MISC VENDOR service fee printing miscellaneous item,other,synthetic
-petrol ride fare fuel,transport,synthetic
-JUSTRITE eggs fruits,groceries,synthetic
-WALGREENS face mask consultation fee prescription,health,synthetic
-TARGET perfume charger,shopping,synthetic
-MEGAPLAZA PARKING engine oil petrol,transport,synthetic
-CVS PHARMACY antibiotics paracetamol,health,synthetic
-CORNER SHOP miscellaneous item,other,synthetic
-EVERYDAY SUPERMARKET,groceries,synthetic
-SPOTIFY amusement park ticket arcade credit,entertainment,synthetic
-KONGA perfume bag electronics,shopping,synthetic
-game console,entertainment,synthetic
-donation miscellaneous item,other,synthetic
-ZARA home decor,shopping,synthetic
-UBER vehicle service parking fee,transport,synthetic
-BEST BUY charger,shopping,synthetic
-CHEVRON STATION car wash toll petrol,transport,synthetic
-cosmetics,shopping,synthetic
-IKEDC airtime,utilities,synthetic
-GENERAL STORE printing,other,synthetic
-CITY CLINIC consultation fee lab test,health,synthetic
-TOTAL FILLING STATION,transport,synthetic
-SPECTRANET internet subscription,utilities,synthetic
-HEALTHPLUS malaria test hand sanitizer vitamin c,health,synthetic
-FILMHOUSE CINEMAS video game arcade credit game console,entertainment,synthetic
-IKEDC prepaid meter token internet subscription,utilities,synthetic
-STARBUCKS chicken and chips chapman,dining,synthetic
-SILVERBIRD CINEMAS game console,entertainment,synthetic
-LOCAL STORE photocopy,other,synthetic
-JIJI wristwatch perfume,shopping,synthetic
-BEST BUY wristwatch phone case headphones,shopping,synthetic
-fish (raw),groceries,synthetic
-SMILE,utilities,synthetic
-GENESIS CINEMAS video game arcade credit,entertainment,synthetic
-BUKKA HUT pizza coffee,dining,synthetic
-LOCAL STORE service fee,other,synthetic
-YUDALA shoes wristwatch trousers,shopping,synthetic
-PHCN,utilities,synthetic
-AMC THEATRES,entertainment,synthetic
-MARKET SQUARE sugar pepper,groceries,synthetic
-EMZOR PHARMACY vitamin c face mask,health,synthetic
-EMZOR PHARMACY face mask malaria test vitamin c,health,synthetic
-DOMINO'S PIZZA,dining,synthetic
-MOBIL,transport,synthetic
-COLD STONE pizza sandwich burger,dining,synthetic
-CVS PHARMACY antibiotics first aid,health,synthetic
-SHELL tyre,transport,synthetic
-BOLT,transport,synthetic
-OANDO fuel toll engine oil,transport,synthetic
-LOCAL STORE gift item stationery,other,synthetic
-LOCAL STORE donation,other,synthetic
-MR BIGGS smoothie,dining,synthetic
-SWEET SENSATION combo meal sandwich burger,dining,synthetic
-combo meal grilled fish,dining,synthetic
-CITY CLINIC consultation fee,health,synthetic
-amusement park ticket game console,entertainment,synthetic
-EBEANO SUPERMARKET onions beans garri,groceries,synthetic
-internet subscription electricity bill,utilities,synthetic
-WHOLE FOODS tomatoes sugar chicken (raw),groceries,synthetic
-WALGREENS vitamin c prescription,health,synthetic
-stationery,other,synthetic
-CONOIL vehicle service,transport,synthetic
-ST. NICHOLAS HOSPITAL hand sanitizer face mask,health,synthetic
-MCDONALD'S pounded yam smoothie,dining,synthetic
-REGAL CINEMAS popcorn movie ticket arcade credit,entertainment,synthetic
-STARBUCKS jollof rice grilled fish combo meal,dining,synthetic
-SWEET SENSATION chapman,dining,synthetic
-JUMIA headphones home decor,shopping,synthetic
-AIRTEL electricity bill data bundle,utilities,synthetic
-GAME STORES headphones shirt,shopping,synthetic
-MEGAPLAZA PARKING tyre vehicle service,transport,synthetic
-OUNCE STORE charger home decor shirt,shopping,synthetic
-COLD STONE sandwich soft drink,dining,synthetic
-SPAR spaghetti flour sugar,groceries,synthetic
-ALPHA PHARMACY face mask hand sanitizer,health,synthetic
-AMAZON PRIME VIDEO streaming subscription amusement park ticket movie ticket,entertainment,synthetic
-MEDPLUS,health,synthetic
-CORNER SHOP stationery,other,synthetic
-MISC VENDOR photocopy repair service,other,synthetic
-hand sanitizer antibiotics lab test,health,synthetic
-cosmetics headphones,shopping,synthetic
-CORNER SHOP printing donation,other,synthetic
-GENERAL STORE stationery repair service,other,synthetic
-REDDINGTON HOSPITAL vitamin c face mask hand sanitizer,health,synthetic
-9MOBILE gas refill prepaid meter token internet subscription,utilities,synthetic
-headphones,shopping,synthetic
-BUKKA HUT,dining,synthetic
-FRESH MARKET cheese,groceries,synthetic
-EVERYDAY SUPERMARKET fish (raw) vegetables,groceries,synthetic
-GENESIS CINEMAS arcade credit concert ticket,entertainment,synthetic
-9MOBILE gas refill,utilities,synthetic
-MOBIL car wash,transport,synthetic
-BOLT car wash parking fee,transport,synthetic
-DOMINO'S PIZZA suya shawarma combo meal,dining,synthetic
-GENESIS RESTAURANT combo meal,dining,synthetic
-CONOIL engine oil,transport,synthetic
-NEXT cosmetics bag phone case,shopping,synthetic
-UBER diesel,transport,synthetic
-GRAND SQUARE indomie noodles onions vegetables,groceries,synthetic
-OCEAN BASKET burger,dining,synthetic
-WHOLE FOODS butter milk,groceries,synthetic
-CHICKEN REPUBLIC soft drink chicken and chips combo meal,dining,synthetic
-ST. NICHOLAS HOSPITAL antibiotics,health,synthetic
-SHOWMAX video game concert ticket amusement park ticket,entertainment,synthetic
-FOOD CO cereal fruits,groceries,synthetic
-SMILE cable subscription gas refill water bill,utilities,synthetic
-SPECTRANET gas refill internet subscription cable subscription,utilities,synthetic
-LOCAL STORE repair service photocopy,other,synthetic
-WALGREENS consultation fee bandage lab test,health,synthetic
-MTN data bundle electricity bill,utilities,synthetic
-AMC THEATRES arcade credit game console,entertainment,synthetic
-CORNER SHOP photocopy stationery,other,synthetic
-CAFE NEO chapman grilled fish,dining,synthetic
-AIRTEL prepaid meter token gas refill data bundle,utilities,synthetic
-MARKET SQUARE sugar,groceries,synthetic
-NETFLIX concert ticket amusement park ticket movie ticket,entertainment,synthetic
-ALPHA PHARMACY paracetamol face mask first aid,health,synthetic
-donation service fee repair service,other,synthetic
-MEGAPLAZA PARKING vehicle service,transport,synthetic
-HEALTHPLUS,health,synthetic
-H&M perfume charger,shopping,synthetic
-KFC shawarma coffee fried rice,dining,synthetic
-AMC THEATRES popcorn,entertainment,synthetic
-TASTEE FASHION bag headphones shoes,shopping,synthetic
-SMILE water bill,utilities,synthetic
-OANDO diesel petrol,transport,synthetic
-SLOT phone case wristwatch,shopping,synthetic
-MISC VENDOR repair service,other,synthetic
-GENERAL STORE donation gift item photocopy,other,synthetic
-CITY CLINIC lab test antibiotics consultation fee,health,synthetic
-SAFEWAY beans rice,groceries,synthetic
-AMC THEATRES arcade credit,entertainment,synthetic
-SILVERBIRD CINEMAS arcade credit popcorn concert ticket,entertainment,synthetic
-MISC VENDOR,other,synthetic
-GENESIS CINEMAS game console,entertainment,synthetic
-SMILE water bill data bundle electricity bill,utilities,synthetic
-BURGER KING egusi soup,dining,synthetic
-suya,dining,synthetic
-CAFE NEO chicken and chips smoothie coffee,dining,synthetic
-tyre fuel,transport,synthetic
-EBEANO SUPERMARKET chicken (raw) eggs,groceries,synthetic
-TOTAL FILLING STATION toll tyre vehicle service,transport,synthetic
-SPOTIFY video game arcade credit streaming subscription,entertainment,synthetic
-EMZOR PHARMACY hand sanitizer,health,synthetic
-SPAR indomie noodles fish (raw) sugar,groceries,synthetic
-TASTEE FRIED CHICKEN chapman grilled fish fried rice,dining,synthetic
-JIJI,shopping,synthetic
-LAGOS BRT,transport,synthetic
-malaria test first aid,health,synthetic
-shoes bag,shopping,synthetic
-MEGAPLAZA PARKING parking fee fuel engine oil,transport,synthetic
-MISC VENDOR gift item,other,synthetic
-GENESIS DELUXE MALL electronics trousers,shopping,synthetic
-WALMART electronics cosmetics charger,shopping,synthetic
-NEPA airtime,utilities,synthetic
-EBEANO SUPERMARKET beans spaghetti,groceries,synthetic
-petrol,transport,synthetic
-CVS PHARMACY face mask,health,synthetic
-MEDPLUS hand sanitizer consultation fee face mask,health,synthetic
-KROGER eggs vegetables,groceries,synthetic
-STARTIMES,utilities,synthetic
-STARTIMES water bill,utilities,synthetic
-CVS PHARMACY vitamin c hand sanitizer malaria test,health,synthetic
-GOTV airtime internet subscription gas refill,utilities,synthetic
-KONGA headphones wristwatch shirt,shopping,synthetic
-BOLT petrol,transport,synthetic
-pizza suya chicken and chips,dining,synthetic
-NETFLIX movie ticket concert ticket,entertainment,synthetic
-arcade credit,entertainment,synthetic
-FILMHOUSE CINEMAS,entertainment,synthetic
-OCEAN BASKET coffee shawarma sandwich,dining,synthetic
-GENERAL STORE repair service stationery printing,other,synthetic
-EMZOR PHARMACY malaria test antibiotics lab test,health,synthetic
-SLOT shirt,shopping,synthetic
-SILVERBIRD CINEMAS video game streaming subscription movie ticket,entertainment,synthetic
-GENERAL STORE,other,synthetic
-indomie noodles,groceries,synthetic
-TASTEE FASHION,shopping,synthetic
-SPOTIFY popcorn movie ticket video game,entertainment,synthetic
-GENESIS CINEMAS arcade credit video game streaming subscription,entertainment,synthetic
-AIRTEL,utilities,synthetic
-photocopy service fee,other,synthetic
-LOCAL STORE service fee repair service stationery,other,synthetic
-parking fee ride fare toll,transport,synthetic
-FRESH MARKET onions eggs,groceries,synthetic
-SPOTIFY concert ticket,entertainment,synthetic
-GENERAL STORE gift item,other,synthetic
-AMAZON PRIME VIDEO popcorn,entertainment,synthetic
-AIRTEL cable subscription prepaid meter token water bill,utilities,synthetic
-AEDC gas refill electricity bill data bundle,utilities,synthetic
-CORNER SHOP photocopy miscellaneous item,other,synthetic
-SHOWMAX arcade credit,entertainment,synthetic
-GRAND SQUARE cooking oil onions bread,groceries,synthetic
-OANDO,transport,synthetic
-NEPA prepaid meter token electricity bill,utilities,synthetic
-TASTEE FRIED CHICKEN jollof rice chapman,dining,synthetic
-CORNER SHOP photocopy gift item,other,synthetic
-9MOBILE cable subscription,utilities,synthetic
-LAGOS BRT tyre ride fare engine oil,transport,synthetic
-SMILE data bundle prepaid meter token,utilities,synthetic
-REGAL CINEMAS video game streaming subscription,entertainment,synthetic
-JUSTRITE frozen food,groceries,synthetic
-LOCAL STORE gift item,other,synthetic
-EMZOR PHARMACY,health,synthetic
-GENESIS DELUXE MALL electronics headphones,shopping,synthetic
-MEGAPLAZA PARKING petrol ride fare parking fee,transport,synthetic
-GENESIS RESTAURANT,dining,synthetic
-NETFLIX amusement park ticket concert ticket video game,entertainment,synthetic
-HEALTHPLUS antibiotics,health,synthetic
-WALGREENS first aid,health,synthetic
-YUDALA phone case home decor,shopping,synthetic
-MEDPLUS prescription bandage,health,synthetic
-SHOWMAX streaming subscription game console popcorn,entertainment,synthetic
-UBER,transport,synthetic
-NEXT shoes home decor,shopping,synthetic
-REDDINGTON HOSPITAL paracetamol,health,synthetic
-vehicle service diesel,transport,synthetic
-ADDIDE SUPERMARKET frozen food chicken (raw),groceries,synthetic
-FOOD CO fruits yam,groceries,synthetic
-SILVERBIRD CINEMAS amusement park ticket,entertainment,synthetic
-SHOWMAX,entertainment,synthetic
-TASTEE FRIED CHICKEN soft drink pizza egusi soup,dining,synthetic
-STARBUCKS coffee suya,dining,synthetic
-STARBUCKS,dining,synthetic
-TOTAL FILLING STATION toll,transport,synthetic
-GENESIS CINEMAS,entertainment,synthetic
-JUSTRITE bread spaghetti,groceries,synthetic
-GENERAL STORE miscellaneous item stationery gift item,other,synthetic
-IKEDC gas refill electricity bill water bill,utilities,synthetic
-MISC VENDOR miscellaneous item stationery service fee,other,synthetic
-vitamin c face mask,health,synthetic
-HEALTHPLUS hand sanitizer lab test,health,synthetic
-AEDC,utilities,synthetic
-WALGREENS paracetamol malaria test first aid,health,synthetic
-water bill gas refill cable subscription,utilities,synthetic
-data bundle electricity bill,utilities,synthetic
-JUSTRITE beans tomatoes,groceries,synthetic
-MISC VENDOR photocopy gift item,other,synthetic
-NETFLIX popcorn game console,entertainment,synthetic
-photocopy gift item stationery,other,synthetic
-OANDO tyre diesel car wash,transport,synthetic
-EVERYDAY SUPERMARKET yam tomatoes garri,groceries,synthetic
-GENESIS RESTAURANT egusi soup soft drink,dining,synthetic
-SILVERBIRD CINEMAS,entertainment,synthetic
-KFC coffee shawarma combo meal,dining,synthetic
-ALPHA PHARMACY consultation fee vitamin c,health,synthetic
-EKEDC prepaid meter token cable subscription,utilities,synthetic
-SILVERBIRD CINEMAS amusement park ticket game console,entertainment,synthetic
-EMZOR PHARMACY bandage,health,synthetic
-hand sanitizer,health,synthetic
-phone case,shopping,synthetic
-EKEDC electricity bill internet subscription gas refill,utilities,synthetic
-LOCAL STORE stationery,other,synthetic
-printing service fee,other,synthetic
-SPOTIFY movie ticket arcade credit,entertainment,synthetic
-UBER toll engine oil fuel,transport,synthetic
-ST. NICHOLAS HOSPITAL paracetamol,health,synthetic
-SPOTIFY arcade credit,entertainment,synthetic
-DSTV gas refill,utilities,synthetic
-STARBUCKS jollof rice suya shawarma,dining,synthetic
-SILVERBIRD CINEMAS arcade credit movie ticket video game,entertainment,synthetic
-GENERAL STORE printing miscellaneous item,other,synthetic
-AMC THEATRES amusement park ticket movie ticket,entertainment,synthetic
-MTN water bill,utilities,synthetic
-WALGREENS bandage,health,synthetic
-TOTAL FILLING STATION vehicle service car wash,transport,synthetic
-JIJI bag headphones,shopping,synthetic
-SPAR onions,groceries,synthetic
-MISC VENDOR repair service stationery service fee,other,synthetic
-AMAZON headphones wristwatch,shopping,synthetic
-AMAZON home decor perfume headphones,shopping,synthetic
-WALMART perfume charger cosmetics,shopping,synthetic
-TRADER JOE'S onions,groceries,synthetic
-GENERAL STORE service fee,other,synthetic
-AMC THEATRES streaming subscription movie ticket game console,entertainment,synthetic
-TASTEE FRIED CHICKEN soft drink grilled fish,dining,synthetic
-REDDINGTON HOSPITAL lab test malaria test bandage,health,synthetic
-STARBUCKS egusi soup,dining,synthetic
-THE PLACE egusi soup fried rice suya,dining,synthetic
-ST. NICHOLAS HOSPITAL hand sanitizer bandage,health,synthetic
-EMZOR PHARMACY consultation fee,health,synthetic
-MTN water bill electricity bill,utilities,synthetic
-tomatoes salt flour,groceries,synthetic
-MEDPLUS face mask,health,synthetic
-UBER ride fare,transport,synthetic
-WALMART wristwatch charger electronics,shopping,synthetic
-WALMART headphones,shopping,synthetic
-TASTEE FASHION phone case electronics cosmetics,shopping,synthetic
-MEGAPLAZA PARKING tyre engine oil,transport,synthetic
-TARGET home decor cosmetics,shopping,synthetic
-CAFE NEO smoothie,dining,synthetic
-NETFLIX movie ticket streaming subscription,entertainment,synthetic
-GENESIS CINEMAS movie ticket amusement park ticket,entertainment,synthetic
-AMC THEATRES movie ticket amusement park ticket game console,entertainment,synthetic
-LAGOON HOSPITAL vitamin c prescription,health,synthetic
-9MOBILE water bill,utilities,synthetic
-combo meal,dining,synthetic
-SPOTIFY movie ticket game console,entertainment,synthetic
-jollof rice fried rice,dining,synthetic
-SPECTRANET electricity bill cable subscription,utilities,synthetic
-GENERAL STORE service fee miscellaneous item stationery,other,synthetic
-parking fee fuel car wash,transport,synthetic
-ADDIDE SUPERMARKET,groceries,synthetic
-THE PLACE,dining,synthetic
-ride fare,transport,synthetic
-AMAZON PRIME VIDEO movie ticket video game amusement park ticket,entertainment,synthetic
-MISC VENDOR repair service stationery,other,synthetic
-NANDO'S sandwich,dining,synthetic
-WALGREENS prescription,health,synthetic
-JUSTRITE,groceries,synthetic
-NEXT phone case home decor bag,shopping,synthetic
-SPAR indomie noodles,groceries,synthetic
-STARBUCKS combo meal,dining,synthetic
-SPOTIFY amusement park ticket popcorn streaming subscription,entertainment,synthetic
-ST. NICHOLAS HOSPITAL face mask first aid malaria test,health,synthetic
-EVERYDAY SUPERMARKET indomie noodles,groceries,synthetic
-COLD STONE soft drink combo meal,dining,synthetic
-GENERAL STORE miscellaneous item stationery printing,other,synthetic
-internet subscription cable subscription data bundle,utilities,synthetic
-gas refill,utilities,synthetic
-MISC VENDOR photocopy,other,synthetic
-SPOTIFY amusement park ticket,entertainment,synthetic
-REDDINGTON HOSPITAL,health,synthetic
-LAGOS BRT petrol engine oil,transport,synthetic
-LAGOS BRT parking fee fuel,transport,synthetic
-LOCAL STORE photocopy printing miscellaneous item,other,synthetic
-LOCAL STORE printing stationery,other,synthetic
-ADDIDE SUPERMARKET beans,groceries,synthetic
-CONOIL ride fare,transport,synthetic
-EMZOR PHARMACY antibiotics,health,synthetic
-MEGAPLAZA PARKING parking fee car wash engine oil,transport,synthetic
-MEDPLUS prescription,health,synthetic
-GRAND SQUARE milk cheese,groceries,synthetic
-AMC THEATRES movie ticket amusement park ticket,entertainment,synthetic
-TARGET trousers,shopping,synthetic
-GENESIS RESTAURANT pounded yam soft drink,dining,synthetic
-CORNER SHOP service fee,other,synthetic
-WHOLE FOODS flour fruits,groceries,synthetic
-CHEVRON STATION vehicle service,transport,synthetic
-MISC VENDOR printing,other,synthetic
-LAGOS BRT engine oil petrol tyre,transport,synthetic
-OUNCE STORE trousers,shopping,synthetic
-gift item stationery miscellaneous item,other,synthetic
-BURGER KING chapman combo meal burger,dining,synthetic
-EKEDC,utilities,synthetic
-JUMIA FASHION shirt,shopping,synthetic
-KROGER bread onions tomatoes,groceries,synthetic
-GENERAL STORE donation gift item,other,synthetic
-FRESH MARKET,groceries,synthetic
-flour,groceries,synthetic
-ST. NICHOLAS HOSPITAL first aid antibiotics lab test,health,synthetic
-CONOIL,transport,synthetic
-CHEVRON STATION car wash toll,transport,synthetic
-popcorn,entertainment,synthetic
-fried rice chapman burger,dining,synthetic
-GAME STORES perfume charger,shopping,synthetic
-NETFLIX,entertainment,synthetic
-NEXT shoes,shopping,synthetic
-CORNER SHOP repair service photocopy,other,synthetic
-GENESIS CINEMAS concert ticket video game,entertainment,synthetic
-ALPHA PHARMACY lab test consultation fee vitamin c,health,synthetic
-UBER fuel petrol,transport,synthetic
-CITY CLINIC,health,synthetic
-WALGREENS face mask antibiotics consultation fee,health,synthetic
-BEST BUY electronics home decor,shopping,synthetic
-milk,groceries,synthetic
-CORNER SHOP photocopy,other,synthetic
-NANDO'S,dining,synthetic
-NEPA data bundle electricity bill,utilities,synthetic
-JUMIA FASHION,shopping,synthetic
-GRAND SQUARE milk frozen food,groceries,synthetic
-STARTIMES electricity bill,utilities,synthetic
-parking fee,transport,synthetic
-9MOBILE airtime,utilities,synthetic
-SHOPRITE pepper,groceries,synthetic
-prescription,health,synthetic
-H&M,shopping,synthetic
-KILIMANJARO burger sandwich,dining,synthetic
-CHEVRON STATION,transport,synthetic
-NEXT perfume wristwatch charger,shopping,synthetic
-YUDALA headphones,shopping,synthetic
-IKEDC,utilities,synthetic
-SHOPRITE tomatoes eggs sugar,groceries,synthetic
-H&M headphones bag,shopping,synthetic
-BURGER KING jollof rice fried rice pizza,dining,synthetic
-GENESIS CINEMAS arcade credit,entertainment,synthetic
-CHIPOTLE pounded yam egusi soup chicken and chips,dining,synthetic
-LOCAL STORE,other,synthetic
-SHELL vehicle service,transport,synthetic
-AMAZON,shopping,synthetic
-CORNER SHOP service fee photocopy gift item,other,synthetic
-TOTAL FILLING STATION ride fare engine oil diesel,transport,synthetic
-tomatoes beans,groceries,synthetic
-CORNER SHOP,other,synthetic
-EMZOR PHARMACY first aid,health,synthetic
-GENERAL STORE repair service,other,synthetic
-FOOD CO,groceries,synthetic
-MOBIL engine oil tyre,transport,synthetic
-COLD STONE,dining,synthetic
-GLO electricity bill internet subscription cable subscription,utilities,synthetic
-IPNX gas refill,utilities,synthetic
-GENESIS DELUXE MALL shoes phone case,shopping,synthetic
-SHELL vehicle service fuel ride fare,transport,synthetic
-GENERAL STORE photocopy miscellaneous item,other,synthetic
-TOTAL FILLING STATION parking fee fuel toll,transport,synthetic
-GENESIS DELUXE MALL,shopping,synthetic
-photocopy,other,synthetic
-GENERAL STORE photocopy repair service,other,synthetic
+ONE FILE FOLDER,education_work,synthetic
+WRISTWATCH X1,shopping,synthetic
+MEDICAL DRESSING PAYMENT,health_pharmacy,synthetic
+PURCHASE OF VEHICLE INSPECTION,transport,synthetic
+PAYMENT FOR BUTTER,groceries,synthetic
+PURCHASE OF MICROWAVE,home_household,synthetic
+PAYMENT FOR MEMORY CARD,shopping,synthetic
+PUBLIC TRANSPORT FARE PURCHASE,transport,synthetic
+ONE UNCLASSIFIED PURCHASE,other,synthetic
+PURCHASE OF UNIDENTIFIED ITEM,other,synthetic
+VEGETABLES,groceries,synthetic
+TAX PAYMENT PURCHASE,fees_financial,synthetic
+ONE ICE CREAM,dining_takeaway,synthetic
+MOBILE TOP UP,airtime_data,synthetic
+VIDEO GAME PAYMENT,entertainment_subscriptions,synthetic
+USB CABLE,shopping,synthetic
+PURCHASE BANK MAINTENANCE FEE,fees_financial,synthetic
+PURCHASE OF DSTV SUBSCRIPTION,utilities_bills,synthetic
+ONE SUGAR,groceries,synthetic
+PAYMENT FOR MASSAGE,personal_care,synthetic
+PAYMENT FOR OVERDRAFT FEE,fees_financial,synthetic
+PURCHASE SCREWDRIVER,home_household,synthetic
+PAYMENT FOR MISCELLANEOUS EXPENSE,other,synthetic
+PURCHASE EXTENSION SOCKET,home_household,synthetic
+SANITARY PADS X1,personal_care,synthetic
+PURCHASE OF JOLLOF RICE,dining_takeaway,synthetic
+ONE CHARGER,shopping,synthetic
+ONE KETTLE,home_household,synthetic
+COOKING OIL,groceries,synthetic
+UNCLASSIFIED PURCHASE PAYMENT,other,synthetic
+COMPUTER MOUSE PURCHASE,shopping,synthetic
+PAYMENT FOR WATER RATE,utilities_bills,synthetic
+ONE CONDITIONER,personal_care,synthetic
+ONE MUSEUM TICKET,entertainment_subscriptions,synthetic
+ACCOUNT SERVICE FEE PAYMENT,fees_financial,synthetic
+AIRTEL DATA PAYMENT,airtime_data,synthetic
+PURCHASE BEANS,groceries,synthetic
+RIDE FARE PURCHASE,transport,synthetic
+FOOD DELIVERY ORDER PURCHASE,dining_takeaway,synthetic
+PURCHASE MOTORCYCLE FARE,transport,synthetic
+MUSEUM TICKET X1,entertainment_subscriptions,synthetic
+PAYMENT FOR THERMOMETER,health_pharmacy,synthetic
+DOUGHNUT PURCHASE,dining_takeaway,synthetic
+ONE POS CHARGE,fees_financial,synthetic
+PURCHASE OF NAILS,home_household,synthetic
+AIRPORT SHUTTLE,transport,synthetic
+SIM CARD PURCHASE,airtime_data,synthetic
+PURCHASE JEWELLERY,shopping,synthetic
+PURCHASE TEXTBOOK,education_work,synthetic
+TOLL FEE PAYMENT,transport,synthetic
+PURCHASE MAKEUP,personal_care,synthetic
+FACIAL TREATMENT,personal_care,synthetic
+ONE INTERNET SUBSCRIPTION,utilities_bills,synthetic
+ONE KEKE FARE,transport,synthetic
+MOI MOI X1,dining_takeaway,synthetic
+ONE GAS CYLINDER REFILL,fuel,synthetic
+CABLE SUBSCRIPTION PURCHASE,utilities_bills,synthetic
+PURCHASE OF ANTIBIOTICS,health_pharmacy,synthetic
+PURCHASE OF BANK TRANSFER FEE,fees_financial,synthetic
+WATER RATE X1,utilities_bills,synthetic
+PRINTING PURCHASE,education_work,synthetic
+CONDITIONER X1,personal_care,synthetic
+CLOTHING PURCHASE,shopping,synthetic
+PURCHASE OATS,groceries,synthetic
+PAYMENT FOR PUBLIC TRANSPORT FARE,transport,synthetic
+PURCHASE OF SEWAGE BILL,utilities_bills,synthetic
+PAYMENT FOR REFRIGERATOR,home_household,synthetic
+COMEDY SHOW TICKET PURCHASE,entertainment_subscriptions,synthetic
+PURCHASE OF BANDAGE,health_pharmacy,synthetic
+ONE PLANTAIN,groceries,synthetic
+PURCHASE OF OATS,groceries,synthetic
+PURCHASE OF MISCELLANEOUS EXPENSE,other,synthetic
+ONE ATM WITHDRAWAL FEE,fees_financial,synthetic
+SANDWICH,dining_takeaway,synthetic
+BURGER X1,dining_takeaway,synthetic
+PRESCRIPTION MEDICINE X1,health_pharmacy,synthetic
+HAIRCUT PAYMENT,personal_care,synthetic
+ONE GOTV SUBSCRIPTION,utilities_bills,synthetic
+PAYMENT FOR HAIR BRAIDING,personal_care,synthetic
+PAYMENT FOR MOBILE TOP UP,airtime_data,synthetic
+TOOTH EXTRACTION PAYMENT,health_pharmacy,synthetic
+PURCHASE OF MOBILE TOP UP,airtime_data,synthetic
+ONE UNKNOWN SERVICE,other,synthetic
+RAW FISH PAYMENT,groceries,synthetic
+CONFERENCE FEE PURCHASE,education_work,synthetic
+ONE PLUMBING REPAIR,home_household,synthetic
+TRANSACTION CHARGE PURCHASE,fees_financial,synthetic
+TRANSFER CHARGE PURCHASE,fees_financial,synthetic
+MOI MOI PURCHASE,dining_takeaway,synthetic
+BARBING FEE PURCHASE,personal_care,synthetic
+PURCHASE GAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+ESTATE SERVICE CHARGE PAYMENT,utilities_bills,synthetic
+PAYMENT FOR WORKSHOP FEE,education_work,synthetic
+PURCHASE EXAM REGISTRATION,education_work,synthetic
+FASHION ACCESSORIES X1,shopping,synthetic
+PRINTER INK,education_work,synthetic
+PAYMENT FOR NAIL POLISH,personal_care,synthetic
+LABORATORY TEST X1,health_pharmacy,synthetic
+PAYMENT FOR GRILLED FISH,dining_takeaway,synthetic
+ONE CLINIC FEE,health_pharmacy,synthetic
+RAW FISH X1,groceries,synthetic
+SOFT DRINK,dining_takeaway,synthetic
+MECHANIC LABOUR,transport,synthetic
+REFRIGERATOR,home_household,synthetic
+PILLOW X1,home_household,synthetic
+LIPSTICK PURCHASE,personal_care,synthetic
+ONE RAW CHICKEN,groceries,synthetic
+PURCHASE OF TUITION FEE,education_work,synthetic
+ONE PARACETAMOL,health_pharmacy,synthetic
+ONE PROCESSING FEE,fees_financial,synthetic
+PURCHASE FUEL FOR GENERATOR,fuel,synthetic
+KETTLE,home_household,synthetic
+PURCHASE OF WATER SUPPLY BILL,utilities_bills,synthetic
+ONE AIRTIME,airtime_data,synthetic
+MICROWAVE PURCHASE,home_household,synthetic
+CABLE SUBSCRIPTION PAYMENT,utilities_bills,synthetic
+PURCHASE OF CARD REPLACEMENT FEE,fees_financial,synthetic
+ONE SOFT DRINK,dining_takeaway,synthetic
+PURCHASE ANTIBIOTICS,health_pharmacy,synthetic
+TABLE PURCHASE,home_household,synthetic
+PAYMENT FOR TROUSERS,shopping,synthetic
+ONE WATER RATE,utilities_bills,synthetic
+RESTAURANT MEAL PURCHASE,dining_takeaway,synthetic
+GRILLED FISH PURCHASE,dining_takeaway,synthetic
+PAYMENT FOR HAIRCUT,personal_care,synthetic
+PURCHASE OF PROFESSIONAL CERTIFICATION,education_work,synthetic
+PAYMENT FOR PROCESSING FEE,fees_financial,synthetic
+PAYMENT FOR SEWAGE BILL,utilities_bills,synthetic
+ONE AMALA AND EWEDU,dining_takeaway,synthetic
+UTILITY BILL,utilities_bills,synthetic
+ONIONS PAYMENT,groceries,synthetic
+SHOES,shopping,synthetic
+PURCHASE RESTAURANT MEAL,dining_takeaway,synthetic
+PURCHASE OF FUEL FOR GENERATOR,fuel,synthetic
+CORN X1,groceries,synthetic
+CONFERENCE FEE,education_work,synthetic
+BLEACH X1,home_household,synthetic
+PURCHASE FRIED RICE,dining_takeaway,synthetic
+PURCHASE OF PHONE CASE,shopping,synthetic
+PAYMENT FOR STAMP DUTY,fees_financial,synthetic
+PURCHASE OF BLEACH,home_household,synthetic
+PAYMENT FOR EYE EXAMINATION,health_pharmacy,synthetic
+WORKSHOP FEE X1,education_work,synthetic
+ONE DIGITAL ENTERTAINMENT SUBSCRIPTION,entertainment_subscriptions,synthetic
+PAYMENT FOR LPG REFILL,fuel,synthetic
+PRINTING PAYMENT,education_work,synthetic
+TOOTHPASTE PURCHASE,personal_care,synthetic
+PEPPER,groceries,synthetic
+PAYMENT FOR MOTORCYCLE FARE,transport,synthetic
+ONE UNIDENTIFIED ITEM,other,synthetic
+PURCHASE WHITEBOARD MARKER,education_work,synthetic
+ONE INSURANCE PREMIUM,fees_financial,synthetic
+ELECTRICITY TOKEN X1,utilities_bills,synthetic
+CHAPMAN PURCHASE,dining_takeaway,synthetic
+SPAGHETTI PAYMENT,groceries,synthetic
+ONE CLOTHING,shopping,synthetic
+PETROL X1,fuel,synthetic
+PURCHASE COOKING POT,home_household,synthetic
+DOCTOR CONSULTATION X1,health_pharmacy,synthetic
+PURCHASE WATER RATE,utilities_bills,synthetic
+PURCHASE VEHICLE SERVICING,transport,synthetic
+SHOES PAYMENT,shopping,synthetic
+HAIRCUT,personal_care,synthetic
+ICE CREAM X1,dining_takeaway,synthetic
+DATA BUNDLE PURCHASE,airtime_data,synthetic
+VITAMIN C PAYMENT,health_pharmacy,synthetic
+PURCHASE POPCORN AT CINEMA,entertainment_subscriptions,synthetic
+MEMORY CARD X1,shopping,synthetic
+MOI MOI PAYMENT,dining_takeaway,synthetic
+PURCHASE OF COOKING OIL,groceries,synthetic
+TOOTH EXTRACTION X1,health_pharmacy,synthetic
+DOUGHNUT,dining_takeaway,synthetic
+PAYMENT FOR WORK SUPPLIES,education_work,synthetic
+ONE PRINTING,education_work,synthetic
+PAYMENT FOR DISHWASHING LIQUID,home_household,synthetic
+PURCHASE COMPUTER MOUSE,shopping,synthetic
+ONE MONTHLY DATA PLAN,airtime_data,synthetic
+9MOBILE DATA PAYMENT,airtime_data,synthetic
+WEEKLY DATA PLAN PAYMENT,airtime_data,synthetic
+PLATE PURCHASE,home_household,synthetic
+MONTHLY DATA PLAN PURCHASE,airtime_data,synthetic
+PAYMENT FOR ONLINE ORDER,shopping,synthetic
+BAG PURCHASE,shopping,synthetic
+PURCHASE OF SMOOTHIE,dining_takeaway,synthetic
+BLENDER X1,home_household,synthetic
+PAYMENT FOR BANDAGE,health_pharmacy,synthetic
+ONE DIESEL,fuel,synthetic
+ANTIBIOTICS,health_pharmacy,synthetic
+BODY LOTION PURCHASE,personal_care,synthetic
+ONE SUYA,dining_takeaway,synthetic
+STAMP DUTY X1,fees_financial,synthetic
+GRILLED FISH X1,dining_takeaway,synthetic
+ONE EXAM REGISTRATION,education_work,synthetic
+ONE BUTTER,groceries,synthetic
+CHARGER,shopping,synthetic
+PAYMENT FOR WRISTWATCH,shopping,synthetic
+ESTATE SERVICE CHARGE,utilities_bills,synthetic
+GENERAL EXPENSE X1,other,synthetic
+PURCHASE OF STREAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+BLOOD TEST X1,health_pharmacy,synthetic
+PASTRY PAYMENT,dining_takeaway,synthetic
+PAYMENT FOR INDOMIE NOODLES,groceries,synthetic
+PURCHASE OF DISHWASHING LIQUID,home_household,synthetic
+HAIRCUT PURCHASE,personal_care,synthetic
+CONFERENCE FEE PAYMENT,education_work,synthetic
+PURCHASE OF SEASONING CUBES,groceries,synthetic
+ONE BANK MAINTENANCE FEE,fees_financial,synthetic
+PAYMENT FOR ELECTRONICS,shopping,synthetic
+EYE EXAMINATION PURCHASE,health_pharmacy,synthetic
+JOLLOF RICE PAYMENT,dining_takeaway,synthetic
+EYE EXAMINATION,health_pharmacy,synthetic
+JEWELLERY X1,shopping,synthetic
+PURCHASE LOAN REPAYMENT,fees_financial,synthetic
+ONE FUEL FOR GENERATOR,fuel,synthetic
+PHONE CREDIT PAYMENT,airtime_data,synthetic
+PURCHASE OF PHOTOCOPY,education_work,synthetic
+BURGER,dining_takeaway,synthetic
+GENERATOR DIESEL PURCHASE,fuel,synthetic
+ONE MEDICAL INSURANCE,health_pharmacy,synthetic
+PURCHASE OF WATER BILL,utilities_bills,synthetic
+PREPAID METER TOKEN,utilities_bills,synthetic
+PURCHASE OF SHAWARMA,dining_takeaway,synthetic
+PAYMENT FOR LAPTOP,shopping,synthetic
+PURCHASE ENGINE OIL CHANGE,transport,synthetic
+ENGINE OIL CHANGE PURCHASE,transport,synthetic
+VEHICLE INSPECTION PURCHASE,transport,synthetic
+PETROL PURCHASE PAYMENT,fuel,synthetic
+COOKING POT X1,home_household,synthetic
+PAYMENT FOR CEREAL,groceries,synthetic
+COOKED BEANS PURCHASE,dining_takeaway,synthetic
+PURCHASE OF MEDICAL DRESSING,health_pharmacy,synthetic
+PAYMENT FOR POS CHARGE,fees_financial,synthetic
+KEKE FARE PURCHASE,transport,synthetic
+ONE SANITARY PADS,personal_care,synthetic
+HEADPHONES X1,shopping,synthetic
+LAPTOP PURCHASE,shopping,synthetic
+EVENT TICKET X1,entertainment_subscriptions,synthetic
+TRANSFER CHARGE X1,fees_financial,synthetic
+MICROWAVE PAYMENT,home_household,synthetic
+PURCHASE FIRST AID SUPPLIES,health_pharmacy,synthetic
+CONDITIONER PURCHASE,personal_care,synthetic
+POS CHARGE X1,fees_financial,synthetic
+CLINIC FEE PURCHASE,health_pharmacy,synthetic
+PURCHASE OF ELECTRICITY BILL,utilities_bills,synthetic
+PURCHASE OF BOAT FARE,transport,synthetic
+PUBLIC TRANSPORT FARE,transport,synthetic
+PURCHASE OF VEHICLE TOWING,transport,synthetic
+TOMATOES X1,groceries,synthetic
+PURCHASE OF PLANTAIN,groceries,synthetic
+PURCHASE OF AMUSEMENT PARK TICKET,entertainment_subscriptions,synthetic
+VEGETABLES PURCHASE,groceries,synthetic
+PAYMENT FOR TRANSACTION CHARGE,fees_financial,synthetic
+RESTAURANT MEAL X1,dining_takeaway,synthetic
+PURCHASE OF MUSEUM TICKET,entertainment_subscriptions,synthetic
+PURCHASE THEATRE TICKET,entertainment_subscriptions,synthetic
+PURCHASE PARKING FEE,transport,synthetic
+PAYMENT FOR CONDITIONER,personal_care,synthetic
+CHEESE PURCHASE,groceries,synthetic
+EXAM REGISTRATION,education_work,synthetic
+PAYMENT FOR SUNSCREEN,personal_care,synthetic
+PURCHASE OF HAIR TREATMENT,personal_care,synthetic
+PURCHASE GROUNDNUT,groceries,synthetic
+ONE ARCADE CREDIT,entertainment_subscriptions,synthetic
+ELECTRICAL REPAIR X1,home_household,synthetic
+MOBILE PHONE PURCHASE,shopping,synthetic
+PURCHASE ESTATE SERVICE CHARGE,utilities_bills,synthetic
+PURCHASE OF PRINTER INK,education_work,synthetic
+BUS FARE PAYMENT,transport,synthetic
+ENGINE OIL CHANGE,transport,synthetic
+PAYMENT FOR DOUGHNUT,dining_takeaway,synthetic
+TAKEAWAY MEAL PURCHASE,dining_takeaway,synthetic
+POPCORN AT CINEMA PURCHASE,entertainment_subscriptions,synthetic
+CUP,home_household,synthetic
+PURCHASE MONTHLY DATA PLAN,airtime_data,synthetic
+ONE DOCTOR CONSULTATION,health_pharmacy,synthetic
+PURCHASE TOMATOES,groceries,synthetic
+PAYMENT FOR GROUNDNUT,groceries,synthetic
+MANICURE PURCHASE,personal_care,synthetic
+AMUSEMENT PARK TICKET PAYMENT,entertainment_subscriptions,synthetic
+FUEL,fuel,synthetic
+SOFT DRINK PAYMENT,dining_takeaway,synthetic
+PURCHASE OF POTATOES,groceries,synthetic
+DOUGHNUT X1,dining_takeaway,synthetic
+PURCHASE MEDICAL DRESSING,health_pharmacy,synthetic
+PURCHASE SUGAR,groceries,synthetic
+FRUITS PAYMENT,groceries,synthetic
+CONFERENCE FEE X1,education_work,synthetic
+CONDITIONER PAYMENT,personal_care,synthetic
+BELT PURCHASE,shopping,synthetic
+PURCHASE ACCOUNT SERVICE FEE,fees_financial,synthetic
+ONE PERFUME,personal_care,synthetic
+PURCHASE OF PIZZA,dining_takeaway,synthetic
+PAYMENT FOR KEKE FARE,transport,synthetic
+MANICURE X1,personal_care,synthetic
+PURCHASE OF FRIED RICE,dining_takeaway,synthetic
+PAYMENT FOR BLOOD TEST,health_pharmacy,synthetic
+PEN PURCHASE,education_work,synthetic
+PURCHASE OF ENGINE OIL CHANGE,transport,synthetic
+PAYMENT FOR POWER BANK,shopping,synthetic
+ONE DATA BUNDLE,airtime_data,synthetic
+FUEL FOR GENERATOR PURCHASE,fuel,synthetic
+PURCHASE OF PEN,education_work,synthetic
+PEDICURE X1,personal_care,synthetic
+PAYMENT FOR KETTLE,home_household,synthetic
+PURCHASE OF NOTEBOOK,education_work,synthetic
+PURCHASE FUEL,fuel,synthetic
+ONIONS PURCHASE,groceries,synthetic
+PRINTER INK X1,education_work,synthetic
+PURCHASE BODY WASH,personal_care,synthetic
+COFFEE X1,dining_takeaway,synthetic
+NOTEBOOK PURCHASE,education_work,synthetic
+TABLE,home_household,synthetic
+PAYMENT FOR BLEACH,home_household,synthetic
+AIRTEL DATA PURCHASE,airtime_data,synthetic
+PURCHASE OF MALARIA TEST,health_pharmacy,synthetic
+VEHICLE SERVICING X1,transport,synthetic
+ELECTRICAL REPAIR,home_household,synthetic
+PAYMENT FOR MISCELLANEOUS SERVICE,other,synthetic
+PURCHASE SHAWARMA,dining_takeaway,synthetic
+GENERATOR FUEL PAYMENT,fuel,synthetic
+ONE PHOTOCOPY,education_work,synthetic
+ONE VEHICLE INSPECTION,transport,synthetic
+ONE TAXI FARE,transport,synthetic
+SHAMPOO PURCHASE,personal_care,synthetic
+PURCHASE OF SHIRT,shopping,synthetic
+KETTLE PAYMENT,home_household,synthetic
+PURCHASE MILK,groceries,synthetic
+MALARIA TEST X1,health_pharmacy,synthetic
+PURCHASE NOTEBOOK,education_work,synthetic
+PURCHASE BROOM,home_household,synthetic
+COOKED BEANS X1,dining_takeaway,synthetic
+CLINIC FEE PAYMENT,health_pharmacy,synthetic
+ONE BUCKET,home_household,synthetic
+PURCHASE OF PASTRY,dining_takeaway,synthetic
+ONE FUEL REFILL,fuel,synthetic
+PURCHASE OF MOBILE PHONE,shopping,synthetic
+ELECTRONICS PURCHASE,shopping,synthetic
+DOOR LOCK,home_household,synthetic
+PURCHASE TRANSACTION CHARGE,fees_financial,synthetic
+PAYMENT FOR COURSE FEE,education_work,synthetic
+ONE POPCORN AT CINEMA,entertainment_subscriptions,synthetic
+ONE MECHANIC LABOUR,transport,synthetic
+MATTRESS PAYMENT,home_household,synthetic
+TAKEAWAY MEAL,dining_takeaway,synthetic
+ONE COFFEE,dining_takeaway,synthetic
+PURCHASE OF TOOTH EXTRACTION,health_pharmacy,synthetic
+PURCHASE OF JEWELLERY,shopping,synthetic
+THEATRE TICKET PAYMENT,entertainment_subscriptions,synthetic
+KEKE FARE PAYMENT,transport,synthetic
+PURCHASE OF VEGETABLES,groceries,synthetic
+PAYMENT FOR AMALA AND EWEDU,dining_takeaway,synthetic
+PURCHASE OF LPG REFILL,fuel,synthetic
+EVENT TICKET,entertainment_subscriptions,synthetic
+MEDICAL SCAN PURCHASE,health_pharmacy,synthetic
+ONE TUITION FEE,education_work,synthetic
+WATER RATE PAYMENT,utilities_bills,synthetic
+PAYMENT FOR MALARIA TEST,health_pharmacy,synthetic
+PAYMENT FOR VEHICLE SERVICING,transport,synthetic
+EVENT TICKET PURCHASE,entertainment_subscriptions,synthetic
+PURCHASE OF TYRE REPLACEMENT,transport,synthetic
+LIPSTICK,personal_care,synthetic
+PURCHASE CAR WASH,transport,synthetic
+PAYMENT FOR MANICURE,personal_care,synthetic
+CEREAL X1,groceries,synthetic
+SUGAR,groceries,synthetic
+ONIONS,groceries,synthetic
+PURCHASE OF COFFEE,dining_takeaway,synthetic
+PAYMENT FOR BARBING FEE,personal_care,synthetic
+DIGITAL ENTERTAINMENT SUBSCRIPTION,entertainment_subscriptions,synthetic
+PAYMENT FOR PILLOW,home_household,synthetic
+PURCHASE OF COURSE FEE,education_work,synthetic
+COOKING GAS REFILL PAYMENT,fuel,synthetic
+PAYMENT FOR PHONE CREDIT,airtime_data,synthetic
+ONE POTATOES,groceries,synthetic
+ONE MOBILE DATA PLAN,airtime_data,synthetic
+VEHICLE INSPECTION,transport,synthetic
+KETTLE X1,home_household,synthetic
+COUGH SYRUP PURCHASE,health_pharmacy,synthetic
+PURCHASE PLUMBING REPAIR,home_household,synthetic
+PURCHASE OF COOKED BEANS,dining_takeaway,synthetic
+SUYA PAYMENT,dining_takeaway,synthetic
+ONE GARRI,groceries,synthetic
+PURCHASE WATER SUPPLY BILL,utilities_bills,synthetic
+ONE BLOOD TEST,health_pharmacy,synthetic
+PAYMENT FOR INTERNET DATA BUNDLE,airtime_data,synthetic
+PAYMENT FOR CONFERENCE FEE,education_work,synthetic
+OTHER PAYMENT X1,other,synthetic
+ONE GROUNDNUT,groceries,synthetic
+PURCHASE RAW CHICKEN,groceries,synthetic
+WHITEBOARD MARKER,education_work,synthetic
+MONTHLY DATA PLAN PAYMENT,airtime_data,synthetic
+DISHWASHING LIQUID,home_household,synthetic
+PURCHASE MICROWAVE,home_household,synthetic
+ONE ELECTRICITY BILL,utilities_bills,synthetic
+LATE PAYMENT FEE,fees_financial,synthetic
+ONLINE ORDER PURCHASE,shopping,synthetic
+POS CHARGE PAYMENT,fees_financial,synthetic
+MOVIE TICKET PURCHASE,entertainment_subscriptions,synthetic
+PURCHASE OF HAIRCUT,personal_care,synthetic
+INTERNET DATA BUNDLE PURCHASE,airtime_data,synthetic
+WHITEBOARD MARKER PAYMENT,education_work,synthetic
+PURCHASE CORN,groceries,synthetic
+PAYMENT FOR VEHICLE TOWING,transport,synthetic
+PURCHASE OF STATIONERY,education_work,synthetic
+KEYBOARD PAYMENT,shopping,synthetic
+BROOM X1,home_household,synthetic
+MISCELLANEOUS EXPENSE,other,synthetic
+PURCHASE OF ACCOUNT SERVICE FEE,fees_financial,synthetic
+ONE HAIRCUT,personal_care,synthetic
+DEODORANT X1,personal_care,synthetic
+ONE SCREWDRIVER,home_household,synthetic
+MEMORY CARD PAYMENT,shopping,synthetic
+SHAMPOO,personal_care,synthetic
+RESEARCH MATERIALS,education_work,synthetic
+THERMOMETER,health_pharmacy,synthetic
+ARCADE CREDIT PURCHASE,entertainment_subscriptions,synthetic
+PAYMENT FOR ENGINE OIL CHANGE,transport,synthetic
+WORKSHOP FEE PURCHASE,education_work,synthetic
+PURCHASE OF WORK SUPPLIES,education_work,synthetic
+LOAN REPAYMENT PAYMENT,fees_financial,synthetic
+PURCHASE OF SHAMPOO,personal_care,synthetic
+PAYMENT FOR BELT,shopping,synthetic
+PURCHASE OF CHARGER,shopping,synthetic
+CARD REPLACEMENT FEE PURCHASE,fees_financial,synthetic
+FUEL FOR CAR,fuel,synthetic
+PURCHASE MEMORY CARD,shopping,synthetic
+SPORTS EVENT TICKET PAYMENT,entertainment_subscriptions,synthetic
+ONE SPORTS EVENT TICKET,entertainment_subscriptions,synthetic
+KEKE FARE,transport,synthetic
+TRANSACTION CHARGE,fees_financial,synthetic
+PURCHASE OF FUEL FOR CAR,fuel,synthetic
+PAINT PAYMENT,home_household,synthetic
+TAX PAYMENT PAYMENT,fees_financial,synthetic
+FASHION ACCESSORIES PAYMENT,shopping,synthetic
+PAYMENT FOR RICE,groceries,synthetic
+ONE RESTAURANT MEAL,dining_takeaway,synthetic
+LIGHT BULB PURCHASE,home_household,synthetic
+PURCHASE OF PEDICURE,personal_care,synthetic
+FIRST AID SUPPLIES PURCHASE,health_pharmacy,synthetic
+ONE TAKEAWAY MEAL,dining_takeaway,synthetic
+PURCHASE OF TRANSACTION CHARGE,fees_financial,synthetic
+PURCHASE OFFICE PAPER,education_work,synthetic
+PARKING FEE PURCHASE,transport,synthetic
+ONE FOOD DELIVERY ORDER,dining_takeaway,synthetic
+PAYMENT FOR MAKEUP,personal_care,synthetic
+PURCHASE OF MOI MOI,dining_takeaway,synthetic
+FRUITS PURCHASE,groceries,synthetic
+ONE GRILLED FISH,dining_takeaway,synthetic
+PURCHASE RAW FISH,groceries,synthetic
+STATIONERY PAYMENT,education_work,synthetic
+STATIONERY X1,education_work,synthetic
+INSURANCE PREMIUM PAYMENT,fees_financial,synthetic
+ONE PEDICURE,personal_care,synthetic
+RESEARCH MATERIALS PURCHASE,education_work,synthetic
+FRIED RICE,dining_takeaway,synthetic
+PURCHASE OF BODY LOTION,personal_care,synthetic
+MOBILE TOP UP X1,airtime_data,synthetic
+OATS,groceries,synthetic
+PURCHASE OF TOOTHBRUSH,personal_care,synthetic
+PURCHASE DATA BUNDLE,airtime_data,synthetic
+ONE PIZZA,dining_takeaway,synthetic
+HAIR BRAIDING X1,personal_care,synthetic
+UNCLASSIFIED PURCHASE PURCHASE,other,synthetic
+ONE MOI MOI,dining_takeaway,synthetic
+ONE AIRTIME RECHARGE,airtime_data,synthetic
+PRINTER INK PURCHASE,education_work,synthetic
+PAYMENT FOR BUCKET,home_household,synthetic
+ONE PILLOW,home_household,synthetic
+PURCHASE OF TEXTBOOK,education_work,synthetic
+CURTAIN PURCHASE,home_household,synthetic
+PURCHASE OF KEKE FARE,transport,synthetic
+NOTEBOOK PAYMENT,education_work,synthetic
+UNIDENTIFIED ITEM PAYMENT,other,synthetic
+SEASONING CUBES,groceries,synthetic
+WASHING MACHINE PAYMENT,home_household,synthetic
+TAKEAWAY MEAL PAYMENT,dining_takeaway,synthetic
+INTERNET SUBSCRIPTION,utilities_bills,synthetic
+MUSEUM TICKET PAYMENT,entertainment_subscriptions,synthetic
+PAYMENT FOR ONIONS,groceries,synthetic
+SIM REPLACEMENT X1,airtime_data,synthetic
+PHOTOCOPY X1,education_work,synthetic
+VEHICLE TOWING X1,transport,synthetic
+PURCHASE BURGER,dining_takeaway,synthetic
+BAG PAYMENT,shopping,synthetic
+ONE THERMOMETER,health_pharmacy,synthetic
+SHOES X1,shopping,synthetic
+PURCHASE APP SUBSCRIPTION,entertainment_subscriptions,synthetic
+PAINT PURCHASE,home_household,synthetic
+TYRE REPLACEMENT X1,transport,synthetic
+PAYMENT FOR PEPPER,groceries,synthetic
+MTN DATA X1,airtime_data,synthetic
+YAM PURCHASE,groceries,synthetic
+FUEL FOR GENERATOR X1,fuel,synthetic
+HOSPITAL BILL PAYMENT,health_pharmacy,synthetic
+PASTRY X1,dining_takeaway,synthetic
+COUGH SYRUP,health_pharmacy,synthetic
+BEDSHEET PAYMENT,home_household,synthetic
+PAYMENT FOR FROZEN FOOD,groceries,synthetic
+PAYMENT FOR BAG,shopping,synthetic
+PURCHASE DIESEL PURCHASE,fuel,synthetic
+BURGER PURCHASE,dining_takeaway,synthetic
+NAILS PURCHASE,home_household,synthetic
+PAYMENT FOR WEEKLY DATA PLAN,airtime_data,synthetic
+PAYMENT FOR MILK,groceries,synthetic
+TABLET X1,shopping,synthetic
+PURCHASE OF MANICURE,personal_care,synthetic
+ONE BODY WASH,personal_care,synthetic
+VIDEO GAME PURCHASE,entertainment_subscriptions,synthetic
+UTILITY BILL X1,utilities_bills,synthetic
+PAYMENT FOR PETROL,fuel,synthetic
+JOLLOF RICE PURCHASE,dining_takeaway,synthetic
+UNKNOWN SERVICE PURCHASE,other,synthetic
+PURCHASE PRINTING,education_work,synthetic
+AIRTIME RECHARGE PURCHASE,airtime_data,synthetic
+THERMOMETER PURCHASE,health_pharmacy,synthetic
+ONE WATER BILL,utilities_bills,synthetic
+MAKEUP PURCHASE,personal_care,synthetic
+BLEACH PAYMENT,home_household,synthetic
+PURCHASE POUNDED YAM AND EGUSI,dining_takeaway,synthetic
+PAYMENT FOR ICE CREAM,dining_takeaway,synthetic
+PROFESSIONAL CERTIFICATION PAYMENT,education_work,synthetic
+PURCHASE STAMP DUTY,fees_financial,synthetic
+PUBLIC TRANSPORT FARE X1,transport,synthetic
+ONE BOAT FARE,transport,synthetic
+PURCHASE OF RESTAURANT MEAL,dining_takeaway,synthetic
+PUBLIC TRANSPORT FARE PAYMENT,transport,synthetic
+ONE CONFERENCE FEE,education_work,synthetic
+MECHANIC LABOUR X1,transport,synthetic
+PAYMENT FOR PETROL PURCHASE,fuel,synthetic
+PURCHASE SUNGLASSES,shopping,synthetic
+PAYMENT FOR VITAMIN C,health_pharmacy,synthetic
+PURCHASE OF PILLOW,home_household,synthetic
+PURCHASE HEADPHONES,shopping,synthetic
+PURCHASE MECHANIC LABOUR,transport,synthetic
+PURCHASE OF WASTE COLLECTION FEE,utilities_bills,synthetic
+OFFICE PAPER PURCHASE,education_work,synthetic
+MUSIC SUBSCRIPTION PAYMENT,entertainment_subscriptions,synthetic
+SCREWDRIVER PAYMENT,home_household,synthetic
+ONE MILK,groceries,synthetic
+PAYMENT FOR TAX PAYMENT,fees_financial,synthetic
+YAM X1,groceries,synthetic
+CABLE SUBSCRIPTION,utilities_bills,synthetic
+ONE DOUGHNUT,dining_takeaway,synthetic
+STREAMING SUBSCRIPTION X1,entertainment_subscriptions,synthetic
+PURCHASE CLOTHING,shopping,synthetic
+PURCHASE OF FUEL REFILL,fuel,synthetic
+PURCHASE OF LOAN REPAYMENT,fees_financial,synthetic
+BUTTER PURCHASE,groceries,synthetic
+PURCHASE OF MAKEUP,personal_care,synthetic
+ONE SHIRT,shopping,synthetic
+THERMOMETER X1,health_pharmacy,synthetic
+PAYMENT FOR DIESEL PURCHASE,fuel,synthetic
+WASTE COLLECTION FEE PAYMENT,utilities_bills,synthetic
+POUNDED YAM AND EGUSI,dining_takeaway,synthetic
+PURCHASE BARBING FEE,personal_care,synthetic
+PAYMENT FOR SHAVING CREAM,personal_care,synthetic
+PURCHASE CONCERT TICKET,entertainment_subscriptions,synthetic
+UTILITY BILL PAYMENT,utilities_bills,synthetic
+PURCHASE OF VITAMIN C,health_pharmacy,synthetic
+LOAN INTEREST X1,fees_financial,synthetic
+PAYMENT FOR SUNGLASSES,shopping,synthetic
+LOAN REPAYMENT PURCHASE,fees_financial,synthetic
+PURCHASE OF FUEL,fuel,synthetic
+ONE INDOMIE NOODLES,groceries,synthetic
+PROCESSING FEE PAYMENT,fees_financial,synthetic
+PURCHASE OF SHAVING CREAM,personal_care,synthetic
+PAYMENT FOR CAR WASH,transport,synthetic
+PURCHASE OF BROOM,home_household,synthetic
+PURCHASE WASTE COLLECTION FEE,utilities_bills,synthetic
+AMALA AND EWEDU,dining_takeaway,synthetic
+OATS PAYMENT,groceries,synthetic
+MOBILE DATA PLAN X1,airtime_data,synthetic
+COMPUTER MOUSE X1,shopping,synthetic
+PURCHASE OF ONLINE ORDER,shopping,synthetic
+ELECTRICITY TOKEN,utilities_bills,synthetic
+PURCHASE OF THERMOMETER,health_pharmacy,synthetic
+PURCHASE ICE CREAM,dining_takeaway,synthetic
+EXTENSION SOCKET,home_household,synthetic
+APP SUBSCRIPTION,entertainment_subscriptions,synthetic
+AMALA AND EWEDU X1,dining_takeaway,synthetic
+PAYMENT FOR ELECTRICAL REPAIR,home_household,synthetic
+PURCHASE ATM WITHDRAWAL FEE,fees_financial,synthetic
+GROUNDNUT X1,groceries,synthetic
+INTERNET SUBSCRIPTION PAYMENT,utilities_bills,synthetic
+PAYMENT FOR FUEL FOR CAR,fuel,synthetic
+PAYMENT FOR SUGAR,groceries,synthetic
+ONE TOMATOES,groceries,synthetic
+CHAPMAN,dining_takeaway,synthetic
+TOMATOES,groceries,synthetic
+VEHICLE SERVICING,transport,synthetic
+PERFUME PURCHASE,personal_care,synthetic
+MEDICAL INSURANCE,health_pharmacy,synthetic
+BUCKET PAYMENT,home_household,synthetic
+RESTAURANT MEAL,dining_takeaway,synthetic
+POWER BANK PURCHASE,shopping,synthetic
+TAX PAYMENT X1,fees_financial,synthetic
+DOCTOR CONSULTATION PURCHASE,health_pharmacy,synthetic
+FUEL FOR CAR PAYMENT,fuel,synthetic
+PURCHASE WASHING MACHINE,home_household,synthetic
+PURCHASE DISHWASHING LIQUID,home_household,synthetic
+ONE SHAWARMA,dining_takeaway,synthetic
+ONE MALARIA TEST,health_pharmacy,synthetic
+ONE GAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+USB CABLE PAYMENT,shopping,synthetic
+PURCHASE FASHION ACCESSORIES,shopping,synthetic
+BANDAGE PAYMENT,health_pharmacy,synthetic
+BODY LOTION PAYMENT,personal_care,synthetic
+ONE BEANS,groceries,synthetic
+SIM CARD X1,airtime_data,synthetic
+FRUITS X1,groceries,synthetic
+ONE MOBILE PHONE,shopping,synthetic
+PURCHASE ONLINE COURSE,education_work,synthetic
+INTERNET SUBSCRIPTION PURCHASE,utilities_bills,synthetic
+PLATE PAYMENT,home_household,synthetic
+PURCHASE OF LOAN INTEREST,fees_financial,synthetic
+TROUSERS X1,shopping,synthetic
+ONE CAR WASH,transport,synthetic
+PAYMENT FOR TOOTHPASTE,personal_care,synthetic
+PURCHASE OF RIDE FARE,transport,synthetic
+BODY WASH X1,personal_care,synthetic
+PURCHASE BUTTER,groceries,synthetic
+PURCHASE OF CEREAL,groceries,synthetic
+ONE COOKED BEANS,dining_takeaway,synthetic
+CHARGER X1,shopping,synthetic
+RAW CHICKEN X1,groceries,synthetic
+BARBING FEE,personal_care,synthetic
+PAYMENT FOR JEWELLERY,shopping,synthetic
+COOKING OIL PAYMENT,groceries,synthetic
+STATIONERY,education_work,synthetic
+ONE EVENT TICKET,entertainment_subscriptions,synthetic
+FIRST AID SUPPLIES X1,health_pharmacy,synthetic
+PAYMENT FOR AIRTIME RECHARGE,airtime_data,synthetic
+PAYMENT FOR CHAPMAN,dining_takeaway,synthetic
+ENGINE OIL CHANGE PAYMENT,transport,synthetic
+PAYMENT FOR CONCERT TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR GENERAL EXPENSE,other,synthetic
+PURCHASE HAIR TREATMENT,personal_care,synthetic
+PIZZA PAYMENT,dining_takeaway,synthetic
+PURCHASE OF ESTATE SERVICE CHARGE,utilities_bills,synthetic
+ONE FROZEN FOOD,groceries,synthetic
+ONE PAINT,home_household,synthetic
+PURCHASE OF SCHOOL FEES,education_work,synthetic
+PURCHASE OF COOKING GAS REFILL,fuel,synthetic
+PAYMENT FOR BOAT FARE,transport,synthetic
+PURCHASE OF CHICKEN AND CHIPS,dining_takeaway,synthetic
+MOBILE PHONE,shopping,synthetic
+PURCHASE EVENT TICKET,entertainment_subscriptions,synthetic
+PURCHASE OF DATA BUNDLE,airtime_data,synthetic
+PURCHASE OF UNCLASSIFIED PURCHASE,other,synthetic
+ONE DETERGENT,home_household,synthetic
+PURCHASE OVERDRAFT FEE,fees_financial,synthetic
+PURCHASE LAPTOP,shopping,synthetic
+ONE SALT,groceries,synthetic
+MAKEUP,personal_care,synthetic
+DIESEL X1,fuel,synthetic
+ONE TYRE REPLACEMENT,transport,synthetic
+COMBO MEAL PURCHASE,dining_takeaway,synthetic
+DOCTOR CONSULTATION,health_pharmacy,synthetic
+GARRI PAYMENT,groceries,synthetic
+PAYMENT FOR JOLLOF RICE,dining_takeaway,synthetic
+PETROL,fuel,synthetic
+PURCHASE MUSEUM TICKET,entertainment_subscriptions,synthetic
+PURCHASE OF PERFUME,personal_care,synthetic
+ONE FUEL FOR CAR,fuel,synthetic
+PURCHASE SOFT DRINK,dining_takeaway,synthetic
+PAYMENT FOR SCREWDRIVER,home_household,synthetic
+PAYMENT FOR PEN,education_work,synthetic
+STAMP DUTY PURCHASE,fees_financial,synthetic
+PURCHASE OF ATM WITHDRAWAL FEE,fees_financial,synthetic
+PURCHASE PERFUME,personal_care,synthetic
+PAYMENT FOR TELEVISION,shopping,synthetic
+PURCHASE OF ELECTRICITY RECHARGE,utilities_bills,synthetic
+PURCHASE OF DENTAL CHECKUP,health_pharmacy,synthetic
+PURCHASE TROUSERS,shopping,synthetic
+FUEL REFILL PURCHASE,fuel,synthetic
+ONE VIDEO GAME,entertainment_subscriptions,synthetic
+MUSIC SUBSCRIPTION X1,entertainment_subscriptions,synthetic
+VEGETABLES X1,groceries,synthetic
+POTATOES X1,groceries,synthetic
+PURCHASE MOI MOI,dining_takeaway,synthetic
+MALARIA TEST PURCHASE,health_pharmacy,synthetic
+MOBILE TOP UP PURCHASE,airtime_data,synthetic
+ONE PEN,education_work,synthetic
+HOME REPAIR X1,home_household,synthetic
+ONE BODY LOTION,personal_care,synthetic
+PAINT,home_household,synthetic
+ONE TOOTHPASTE,personal_care,synthetic
+CAR WASH PURCHASE,transport,synthetic
+PURCHASE TRANSFER CHARGE,fees_financial,synthetic
+PAYMENT FOR MUSIC SUBSCRIPTION,entertainment_subscriptions,synthetic
+PURCHASE CARD REPLACEMENT FEE,fees_financial,synthetic
+SEWAGE BILL PURCHASE,utilities_bills,synthetic
+PURCHASE LPG REFILL,fuel,synthetic
+ONE LOAN INTEREST,fees_financial,synthetic
+PURCHASE EGGS,groceries,synthetic
+CEREAL PURCHASE,groceries,synthetic
+PURCHASE OF WATER RATE,utilities_bills,synthetic
+PURCHASE PRESCRIPTION MEDICINE,health_pharmacy,synthetic
+PAYMENT FOR SALT,groceries,synthetic
+PAYMENT FOR SMOOTHIE,dining_takeaway,synthetic
+CHEESE,groceries,synthetic
+PAYMENT FOR ACCOUNT SERVICE FEE,fees_financial,synthetic
+PAYMENT FOR VIDEO GAME,entertainment_subscriptions,synthetic
+ONE TROUSERS,shopping,synthetic
+MUSIC SUBSCRIPTION,entertainment_subscriptions,synthetic
+ONE COOKING POT,home_household,synthetic
+CLOTHING X1,shopping,synthetic
+ONE TABLE,home_household,synthetic
+PURCHASE PIZZA,dining_takeaway,synthetic
+PAYMENT FOR BREAD,groceries,synthetic
+PURCHASE PUBLIC TRANSPORT FARE,transport,synthetic
+ONE SHAVING CREAM,personal_care,synthetic
+PURCHASE OF FILE FOLDER,education_work,synthetic
+PURCHASE OF ELECTRICAL REPAIR,home_household,synthetic
+MEDICAL DRESSING X1,health_pharmacy,synthetic
+SHIRT PAYMENT,shopping,synthetic
+ONE TRANSACTION CHARGE,fees_financial,synthetic
+PURCHASE RICE,groceries,synthetic
+SUNGLASSES X1,shopping,synthetic
+PURCHASE VEHICLE TOWING,transport,synthetic
+ELECTRICITY BILL X1,utilities_bills,synthetic
+PURCHASE RIDE FARE,transport,synthetic
+PURCHASE FACIAL TREATMENT,personal_care,synthetic
+COOKING GAS REFILL X1,fuel,synthetic
+PURCHASE MTN DATA,airtime_data,synthetic
+CARD REPLACEMENT FEE X1,fees_financial,synthetic
+PURCHASE OF TOLL FEE,transport,synthetic
+PLATE X1,home_household,synthetic
+ONE FLOUR,groceries,synthetic
+PURCHASE EYE EXAMINATION,health_pharmacy,synthetic
+ONE HAIR BRAIDING,personal_care,synthetic
+BODY LOTION X1,personal_care,synthetic
+SIM REPLACEMENT PURCHASE,airtime_data,synthetic
+ONE INTERNET DATA BUNDLE,airtime_data,synthetic
+PURCHASE OF TAKEAWAY MEAL,dining_takeaway,synthetic
+ESTATE SERVICE CHARGE PURCHASE,utilities_bills,synthetic
+PURCHASE CHARGER,shopping,synthetic
+ONE PRINTER INK,education_work,synthetic
+BUS FARE X1,transport,synthetic
+PURCHASE OF FIRST AID SUPPLIES,health_pharmacy,synthetic
+ONE BELT,shopping,synthetic
+ONE CURTAIN,home_household,synthetic
+PLATE,home_household,synthetic
+LIGHT BULB,home_household,synthetic
+CONCERT TICKET X1,entertainment_subscriptions,synthetic
+MOI MOI,dining_takeaway,synthetic
+PURCHASE OF DOUGHNUT,dining_takeaway,synthetic
+PAYMENT FOR ELECTRICITY TOKEN,utilities_bills,synthetic
+ARCADE CREDIT,entertainment_subscriptions,synthetic
+PURCHASE OF STAMP DUTY,fees_financial,synthetic
+ONE YAM,groceries,synthetic
+PARACETAMOL X1,health_pharmacy,synthetic
+OFFICE PAPER,education_work,synthetic
+PURCHASE OF SIM REPLACEMENT,airtime_data,synthetic
+PURCHASE OF LIPSTICK,personal_care,synthetic
+INCOME TAX PAYMENT,fees_financial,synthetic
+MISCELLANEOUS SERVICE,other,synthetic
+GARRI,groceries,synthetic
+MEDICAL INSURANCE PURCHASE,health_pharmacy,synthetic
+PURCHASE TABLET,shopping,synthetic
+PURCHASE UNIDENTIFIED ITEM,other,synthetic
+DIGITAL ENTERTAINMENT SUBSCRIPTION PAYMENT,entertainment_subscriptions,synthetic
+RAW CHICKEN PAYMENT,groceries,synthetic
+ONE GENERAL EXPENSE,other,synthetic
+PAYMENT FOR DIESEL,fuel,synthetic
+RAW CHICKEN PURCHASE,groceries,synthetic
+ONE OATS,groceries,synthetic
+SALT PAYMENT,groceries,synthetic
+PURCHASE ELECTRICITY BILL,utilities_bills,synthetic
+TAKEAWAY MEAL X1,dining_takeaway,synthetic
+PURCHASE SHIRT,shopping,synthetic
+PHONE CASE X1,shopping,synthetic
+FROZEN FOOD,groceries,synthetic
+PAYMENT FOR DATA BUNDLE,airtime_data,synthetic
+PAYMENT FOR SCHOOL FEES,education_work,synthetic
+PURCHASE OF SUYA,dining_takeaway,synthetic
+TROUSERS PURCHASE,shopping,synthetic
+PASTRY,dining_takeaway,synthetic
+PURCHASE OF OFFICE PAPER,education_work,synthetic
+PURCHASE OF HEADPHONES,shopping,synthetic
+EXAM REGISTRATION PAYMENT,education_work,synthetic
+BELT PAYMENT,shopping,synthetic
+PAYMENT FOR SIM CARD,airtime_data,synthetic
+LATE PAYMENT FEE PURCHASE,fees_financial,synthetic
+PURCHASE OF CLINIC FEE,health_pharmacy,synthetic
+PAYMENT FOR MEDICAL SCAN,health_pharmacy,synthetic
+SUYA,dining_takeaway,synthetic
+PHOTOCOPY PAYMENT,education_work,synthetic
+PAYMENT FOR PARACETAMOL,health_pharmacy,synthetic
+PAYMENT FOR BODY LOTION,personal_care,synthetic
+CAR REPAIR X1,transport,synthetic
+ATM WITHDRAWAL FEE,fees_financial,synthetic
+TRANSACTION CHARGE PAYMENT,fees_financial,synthetic
+CABLE SUBSCRIPTION X1,utilities_bills,synthetic
+PURCHASE 9MOBILE DATA,airtime_data,synthetic
+PURCHASE OF FRUITS,groceries,synthetic
+COOKING GAS REFILL,fuel,synthetic
+SANDWICH PURCHASE,dining_takeaway,synthetic
+PURCHASE BAG,shopping,synthetic
+ONE RIDE FARE,transport,synthetic
+PURCHASE OF BELT,shopping,synthetic
+DSTV SUBSCRIPTION,utilities_bills,synthetic
+PURCHASE DOOR LOCK,home_household,synthetic
+PAYMENT FOR GOTV SUBSCRIPTION,utilities_bills,synthetic
+RESEARCH MATERIALS X1,education_work,synthetic
+RIDE FARE X1,transport,synthetic
+PURCHASE BUCKET,home_household,synthetic
+ONE GLO DATA,airtime_data,synthetic
+TOOTHBRUSH,personal_care,synthetic
+PURCHASE OF GROUNDNUT,groceries,synthetic
+ONE MEDICAL DRESSING,health_pharmacy,synthetic
+PIZZA,dining_takeaway,synthetic
+NAILS X1,home_household,synthetic
+ONE COURSE FEE,education_work,synthetic
+ONE JOLLOF RICE,dining_takeaway,synthetic
+ONE AIRTEL DATA,airtime_data,synthetic
+ONE ONLINE COURSE,education_work,synthetic
+TOMATOES PAYMENT,groceries,synthetic
+HEADPHONES,shopping,synthetic
+TRAIN TICKET PAYMENT,transport,synthetic
+PAYMENT FOR WATER SUPPLY BILL,utilities_bills,synthetic
+KEYBOARD PURCHASE,shopping,synthetic
+PURCHASE OF OVERDRAFT FEE,fees_financial,synthetic
+PURCHASE OF CHAPMAN,dining_takeaway,synthetic
+PROCESSING FEE,fees_financial,synthetic
+CONDITIONER,personal_care,synthetic
+SMOOTHIE X1,dining_takeaway,synthetic
+PALM OIL PURCHASE,groceries,synthetic
+ELECTRICITY RECHARGE X1,utilities_bills,synthetic
+PAYMENT FOR TOOTHBRUSH,personal_care,synthetic
+PURCHASE SHAMPOO,personal_care,synthetic
+ONE CHAPMAN,dining_takeaway,synthetic
+PURCHASE GLO DATA,airtime_data,synthetic
+PURCHASE OF ARCADE CREDIT,entertainment_subscriptions,synthetic
+PAYMENT FOR COUGH SYRUP,health_pharmacy,synthetic
+PURCHASE OF SCREWDRIVER,home_household,synthetic
+SALT PURCHASE,groceries,synthetic
+PALM OIL PAYMENT,groceries,synthetic
+PURCHASE OF THEATRE TICKET,entertainment_subscriptions,synthetic
+ONE DSTV SUBSCRIPTION,utilities_bills,synthetic
+PURCHASE OF VIDEO GAME,entertainment_subscriptions,synthetic
+PURCHASE OF DIGITAL ENTERTAINMENT SUBSCRIPTION,entertainment_subscriptions,synthetic
+PURCHASE OF MEMORY CARD,shopping,synthetic
+GRILLED FISH,dining_takeaway,synthetic
+PAYMENT FOR SHIRT,shopping,synthetic
+PURCHASE OF CABLE SUBSCRIPTION,utilities_bills,synthetic
+PURCHASE OF POUNDED YAM AND EGUSI,dining_takeaway,synthetic
+PURCHASE PHOTOCOPY,education_work,synthetic
+PARKING FEE X1,transport,synthetic
+COMEDY SHOW TICKET PAYMENT,entertainment_subscriptions,synthetic
+THEATRE TICKET X1,entertainment_subscriptions,synthetic
+PARKING FEE,transport,synthetic
+LIPSTICK X1,personal_care,synthetic
+PURCHASE OF GAS CYLINDER REFILL,fuel,synthetic
+PURCHASE OF CONCERT TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR SIM REPLACEMENT,airtime_data,synthetic
+MOISTURIZER PURCHASE,personal_care,synthetic
+WORK SUPPLIES PAYMENT,education_work,synthetic
+PURCHASE OF WASHING MACHINE,home_household,synthetic
+PAYMENT FOR 9MOBILE DATA,airtime_data,synthetic
+PALM OIL X1,groceries,synthetic
+STAMP DUTY PAYMENT,fees_financial,synthetic
+OVERDRAFT FEE PAYMENT,fees_financial,synthetic
+ONE ACCOUNT SERVICE FEE,fees_financial,synthetic
+MISCELLANEOUS SERVICE X1,other,synthetic
+LPG REFILL X1,fuel,synthetic
+PURCHASE PRINTER INK,education_work,synthetic
+POPCORN AT CINEMA,entertainment_subscriptions,synthetic
+PEDICURE PAYMENT,personal_care,synthetic
+PAYMENT FOR GENERATOR FUEL,fuel,synthetic
+ELECTRICITY BILL,utilities_bills,synthetic
+PAYMENT FOR MEDICAL DRESSING,health_pharmacy,synthetic
+TUITION FEE PAYMENT,education_work,synthetic
+PROCESSING FEE PURCHASE,fees_financial,synthetic
+PURCHASE DOCTOR CONSULTATION,health_pharmacy,synthetic
+PHOTOCOPY PURCHASE,education_work,synthetic
+PURCHASE ONLINE ORDER,shopping,synthetic
+PURCHASE OF MECHANIC LABOUR,transport,synthetic
+RAW FISH PURCHASE,groceries,synthetic
+PURCHASE NAIL POLISH,personal_care,synthetic
+PLUMBING REPAIR PAYMENT,home_household,synthetic
+SUYA X1,dining_takeaway,synthetic
+FILE FOLDER PURCHASE,education_work,synthetic
+PURCHASE POWER BANK,shopping,synthetic
+JEWELLERY,shopping,synthetic
+ONE BURGER,dining_takeaway,synthetic
+PURCHASE MASSAGE,personal_care,synthetic
+PAYMENT FOR ESTATE SERVICE CHARGE,utilities_bills,synthetic
+PAYMENT FOR AIRTIME,airtime_data,synthetic
+UTILITY BILL PURCHASE,utilities_bills,synthetic
+PURCHASE INCOME TAX,fees_financial,synthetic
+BUS FARE PURCHASE,transport,synthetic
+PURCHASE OF COUGH SYRUP,health_pharmacy,synthetic
+INCOME TAX,fees_financial,synthetic
+CAR WASH X1,transport,synthetic
+CUP X1,home_household,synthetic
+PURCHASE OF FACIAL TREATMENT,personal_care,synthetic
+ONE PALM OIL,groceries,synthetic
+ONE SIM CARD,airtime_data,synthetic
+VITAMIN C PURCHASE,health_pharmacy,synthetic
+ATM WITHDRAWAL FEE X1,fees_financial,synthetic
+PAYMENT FOR SHAWARMA,dining_takeaway,synthetic
+PURCHASE SIM REPLACEMENT,airtime_data,synthetic
+ONLINE COURSE PURCHASE,education_work,synthetic
+AIRTIME RECHARGE X1,airtime_data,synthetic
+HAIR BRAIDING,personal_care,synthetic
+ONE MEMORY CARD,shopping,synthetic
+ONE FUEL,fuel,synthetic
+PURCHASE OF WORKSHOP FEE,education_work,synthetic
+PURCHASE DIGITAL ENTERTAINMENT SUBSCRIPTION,entertainment_subscriptions,synthetic
+PAYMENT FOR MEDICAL INSURANCE,health_pharmacy,synthetic
+TYRE REPLACEMENT,transport,synthetic
+PAYMENT FOR GLO DATA,airtime_data,synthetic
+PURCHASE LATE PAYMENT FEE,fees_financial,synthetic
+PURCHASE ELECTRICITY RECHARGE,utilities_bills,synthetic
+ANTIBIOTICS PAYMENT,health_pharmacy,synthetic
+WRISTWATCH PAYMENT,shopping,synthetic
+PURCHASE MOBILE DATA PLAN,airtime_data,synthetic
+ONE FRUITS,groceries,synthetic
+PAYMENT FOR TABLET,shopping,synthetic
+TABLET PAYMENT,shopping,synthetic
+ONE WORK SUPPLIES,education_work,synthetic
+PURCHASE CLINIC FEE,health_pharmacy,synthetic
+PURCHASE MEDICAL INSURANCE,health_pharmacy,synthetic
+MISCELLANEOUS EXPENSE PURCHASE,other,synthetic
+PURCHASE PENCIL,education_work,synthetic
+COURSE FEE PURCHASE,education_work,synthetic
+AIRTEL DATA X1,airtime_data,synthetic
+MEDICAL SCAN X1,health_pharmacy,synthetic
+GENERATOR DIESEL PAYMENT,fuel,synthetic
+SUGAR PAYMENT,groceries,synthetic
+PURCHASE OF RAW FISH,groceries,synthetic
+PURCHASE OF TAXI FARE,transport,synthetic
+ONE WHITEBOARD MARKER,education_work,synthetic
+PURCHASE OF MOISTURIZER,personal_care,synthetic
+LABORATORY TEST,health_pharmacy,synthetic
+CAR REPAIR,transport,synthetic
+PAYMENT FOR LIPSTICK,personal_care,synthetic
+PEN X1,education_work,synthetic
+ONE COUGH SYRUP,health_pharmacy,synthetic
+BODY WASH PAYMENT,personal_care,synthetic
+LIGHT BULB PAYMENT,home_household,synthetic
+DETERGENT PURCHASE,home_household,synthetic
+FUEL REFILL PAYMENT,fuel,synthetic
+PARACETAMOL,health_pharmacy,synthetic
+9MOBILE DATA X1,airtime_data,synthetic
+ONE ELECTRONICS,shopping,synthetic
+PRESCRIPTION MEDICINE PURCHASE,health_pharmacy,synthetic
+REFRIGERATOR PAYMENT,home_household,synthetic
+PURCHASE OF DEODORANT,personal_care,synthetic
+PERFUME,personal_care,synthetic
+PURCHASE OF AIRTIME,airtime_data,synthetic
+LOAN REPAYMENT,fees_financial,synthetic
+GENERATOR FUEL,fuel,synthetic
+HAIR TREATMENT PURCHASE,personal_care,synthetic
+ONE OTHER PAYMENT,other,synthetic
+COMBO MEAL,dining_takeaway,synthetic
+PURCHASE DENTAL CHECKUP,health_pharmacy,synthetic
+ONE ONIONS,groceries,synthetic
+MICROWAVE X1,home_household,synthetic
+OTHER PAYMENT PURCHASE,other,synthetic
+SEASONING CUBES PURCHASE,groceries,synthetic
+PURCHASE OF PETROL,fuel,synthetic
+WORK SUPPLIES X1,education_work,synthetic
+PURCHASE OF COMEDY SHOW TICKET,entertainment_subscriptions,synthetic
+ONE ESTATE SERVICE CHARGE,utilities_bills,synthetic
+TUITION FEE PURCHASE,education_work,synthetic
+TOOTHPASTE PAYMENT,personal_care,synthetic
+BUCKET,home_household,synthetic
+PETROL PURCHASE,fuel,synthetic
+HOSPITAL BILL,health_pharmacy,synthetic
+PAYMENT FOR SPORTS EVENT TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR ANTIBIOTICS,health_pharmacy,synthetic
+PAYMENT FOR VEHICLE INSPECTION,transport,synthetic
+PAYMENT FOR PROFESSIONAL CERTIFICATION,education_work,synthetic
+BLENDER,home_household,synthetic
+PETROL PURCHASE PURCHASE,fuel,synthetic
+PURCHASE TYRE REPLACEMENT,transport,synthetic
+PURCHASE OF TABLET,shopping,synthetic
+VEHICLE INSPECTION PAYMENT,transport,synthetic
+SPAGHETTI PURCHASE,groceries,synthetic
+PURCHASE OF PREPAID METER TOKEN,utilities_bills,synthetic
+PURCHASE PAINT,home_household,synthetic
+BROOM,home_household,synthetic
+SALT X1,groceries,synthetic
+PAYMENT FOR HOSPITAL BILL,health_pharmacy,synthetic
+COFFEE PAYMENT,dining_takeaway,synthetic
+TOOTH EXTRACTION PURCHASE,health_pharmacy,synthetic
+CLOTHING PAYMENT,shopping,synthetic
+KEYBOARD,shopping,synthetic
+PURCHASE UNKNOWN SERVICE,other,synthetic
+PROFESSIONAL CERTIFICATION,education_work,synthetic
+ONE HOME REPAIR,home_household,synthetic
+PURCHASE OF GENERATOR DIESEL,fuel,synthetic
+PURCHASE HOSPITAL BILL,health_pharmacy,synthetic
+PURCHASE VITAMIN C,health_pharmacy,synthetic
+GLO DATA PAYMENT,airtime_data,synthetic
+ELECTRICITY BILL PAYMENT,utilities_bills,synthetic
+ONE WASTE COLLECTION FEE,utilities_bills,synthetic
+PROFESSIONAL CERTIFICATION PURCHASE,education_work,synthetic
+CHEESE PAYMENT,groceries,synthetic
+PAYMENT FOR FUEL REFILL,fuel,synthetic
+PURCHASE OF BAG,shopping,synthetic
+MTN DATA PURCHASE,airtime_data,synthetic
+PAYMENT FOR TUITION FEE,education_work,synthetic
+PURCHASE OF FOOD DELIVERY ORDER,dining_takeaway,synthetic
+PURCHASE MOBILE PHONE,shopping,synthetic
+GENERATOR FUEL PURCHASE,fuel,synthetic
+ONE MOVIE TICKET,entertainment_subscriptions,synthetic
+GENERATOR DIESEL X1,fuel,synthetic
+PARKING FEE PAYMENT,transport,synthetic
+DEODORANT,personal_care,synthetic
+ONE FRIED RICE,dining_takeaway,synthetic
+ONE MISCELLANEOUS SERVICE,other,synthetic
+PAYMENT FOR CARD REPLACEMENT FEE,fees_financial,synthetic
+VEHICLE INSPECTION X1,transport,synthetic
+SANITARY PADS,personal_care,synthetic
+PURCHASE OF SIM CARD,airtime_data,synthetic
+PAYMENT FOR AMUSEMENT PARK TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR TAKEAWAY MEAL,dining_takeaway,synthetic
+CHEESE X1,groceries,synthetic
+MOTORCYCLE FARE PURCHASE,transport,synthetic
+PRINTER INK PAYMENT,education_work,synthetic
+EXTENSION SOCKET X1,home_household,synthetic
+LOAN REPAYMENT X1,fees_financial,synthetic
+PURCHASE CHICKEN AND CHIPS,dining_takeaway,synthetic
+PURCHASE OF COMBO MEAL,dining_takeaway,synthetic
+PAYMENT FOR CORN,groceries,synthetic
+PURCHASE PETROL,fuel,synthetic
+BOAT FARE X1,transport,synthetic
+ONE CAR REPAIR,transport,synthetic
+PAYMENT FOR FLOUR,groceries,synthetic
+PAYMENT FOR TABLE,home_household,synthetic
+MOBILE DATA PLAN,airtime_data,synthetic
+PURCHASE OF KEYBOARD,shopping,synthetic
+VEHICLE SERVICING PAYMENT,transport,synthetic
+BREAD PAYMENT,groceries,synthetic
+PAYMENT FOR PLATE,home_household,synthetic
+WEEKLY DATA PLAN X1,airtime_data,synthetic
+PAYMENT FOR EVENT TICKET,entertainment_subscriptions,synthetic
+COOKED BEANS PAYMENT,dining_takeaway,synthetic
+PURCHASE AIRTIME RECHARGE,airtime_data,synthetic
+TAXI FARE X1,transport,synthetic
+PURCHASE OF HAIR BRAIDING,personal_care,synthetic
+PHONE CREDIT,airtime_data,synthetic
+DIGITAL ENTERTAINMENT SUBSCRIPTION PURCHASE,entertainment_subscriptions,synthetic
+PURCHASE MOVIE TICKET,entertainment_subscriptions,synthetic
+CHICKEN AND CHIPS,dining_takeaway,synthetic
+BOAT FARE,transport,synthetic
+SPORTS EVENT TICKET,entertainment_subscriptions,synthetic
+ONE LIPSTICK,personal_care,synthetic
+PURCHASE PHONE CASE,shopping,synthetic
+FACIAL TREATMENT PURCHASE,personal_care,synthetic
+PAYMENT FOR RESTAURANT MEAL,dining_takeaway,synthetic
+FROZEN FOOD PAYMENT,groceries,synthetic
+PARACETAMOL PAYMENT,health_pharmacy,synthetic
+PURCHASE BODY LOTION,personal_care,synthetic
+NAIL POLISH PURCHASE,personal_care,synthetic
+PURCHASE OF POWER BANK,shopping,synthetic
+COOKING POT PURCHASE,home_household,synthetic
+PAYMENT FOR LATE PAYMENT FEE,fees_financial,synthetic
+FASHION ACCESSORIES PURCHASE,shopping,synthetic
+ONE POWER BANK,shopping,synthetic
+DENTAL CHECKUP,health_pharmacy,synthetic
+AIRPORT SHUTTLE PAYMENT,transport,synthetic
+ELECTRONICS PAYMENT,shopping,synthetic
+PAYMENT FOR WASTE COLLECTION FEE,utilities_bills,synthetic
+PURCHASE OF DIESEL PURCHASE,fuel,synthetic
+ONE UTILITY BILL,utilities_bills,synthetic
+PIZZA X1,dining_takeaway,synthetic
+FOOD DELIVERY ORDER,dining_takeaway,synthetic
+ELECTRICAL REPAIR PURCHASE,home_household,synthetic
+PAYMENT FOR ARCADE CREDIT,entertainment_subscriptions,synthetic
+ONE LPG REFILL,fuel,synthetic
+FRIED RICE PAYMENT,dining_takeaway,synthetic
+PURCHASE OF SHOES,shopping,synthetic
+PAYMENT FOR SEASONING CUBES,groceries,synthetic
+PURCHASE OF RESEARCH MATERIALS,education_work,synthetic
+ONE POUNDED YAM AND EGUSI,dining_takeaway,synthetic
+ONE LOAN REPAYMENT,fees_financial,synthetic
+ONE LATE PAYMENT FEE,fees_financial,synthetic
+PURCHASE OF AIRTIME RECHARGE,airtime_data,synthetic
+STREAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+TOOTHBRUSH PURCHASE,personal_care,synthetic
+PURCHASE SANITARY PADS,personal_care,synthetic
+WORKSHOP FEE PAYMENT,education_work,synthetic
+ONE COMEDY SHOW TICKET,entertainment_subscriptions,synthetic
+PURCHASE TOLL FEE,transport,synthetic
+ONE PUBLIC TRANSPORT FARE,transport,synthetic
+PAYMENT FOR LABORATORY TEST,health_pharmacy,synthetic
+VEGETABLES PAYMENT,groceries,synthetic
+AMALA AND EWEDU PURCHASE,dining_takeaway,synthetic
+PURCHASE OF MISCELLANEOUS SERVICE,other,synthetic
+DISHWASHING LIQUID X1,home_household,synthetic
+PURCHASE WEEKLY DATA PLAN,airtime_data,synthetic
+HAIR TREATMENT X1,personal_care,synthetic
+PURCHASE AMALA AND EWEDU,dining_takeaway,synthetic
+WATER SUPPLY BILL X1,utilities_bills,synthetic
+PAYMENT FOR THEATRE TICKET,entertainment_subscriptions,synthetic
+PEN PAYMENT,education_work,synthetic
+PURCHASE OF EGGS,groceries,synthetic
+AMUSEMENT PARK TICKET X1,entertainment_subscriptions,synthetic
+DENTAL CHECKUP PURCHASE,health_pharmacy,synthetic
+GARRI X1,groceries,synthetic
+INTERNET DATA BUNDLE,airtime_data,synthetic
+CHARGER PURCHASE,shopping,synthetic
+PAYMENT FOR CHAIR,home_household,synthetic
+PURCHASE OF EVENT TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR WHITEBOARD MARKER,education_work,synthetic
+ONE FIRST AID SUPPLIES,health_pharmacy,synthetic
+PURCHASE OF CORN,groceries,synthetic
+PURCHASE OF PARACETAMOL,health_pharmacy,synthetic
+PURCHASE OF MOBILE DATA PLAN,airtime_data,synthetic
+UNKNOWN SERVICE X1,other,synthetic
+BUS FARE,transport,synthetic
+PURCHASE TAXI FARE,transport,synthetic
+PURCHASE CONFERENCE FEE,education_work,synthetic
+PASTRY PURCHASE,dining_takeaway,synthetic
+FIRST AID SUPPLIES,health_pharmacy,synthetic
+PURCHASE PEDICURE,personal_care,synthetic
+PURCHASE PROCESSING FEE,fees_financial,synthetic
+PURCHASE OF TABLE,home_household,synthetic
+WRISTWATCH,shopping,synthetic
+PURCHASE FLIGHT TICKET,transport,synthetic
+PURCHASE OF LAPTOP,shopping,synthetic
+INDOMIE NOODLES,groceries,synthetic
+SANITARY PADS PAYMENT,personal_care,synthetic
+ONE PLATE,home_household,synthetic
+TOLL FEE PURCHASE,transport,synthetic
+PURCHASE OF SOFT DRINK,dining_takeaway,synthetic
+WATER BILL,utilities_bills,synthetic
+LIPSTICK PAYMENT,personal_care,synthetic
+PURCHASE OF DOOR LOCK,home_household,synthetic
+BODY WASH,personal_care,synthetic
+PURCHASE PREPAID METER TOKEN,utilities_bills,synthetic
+ONE PENCIL,education_work,synthetic
+SHIRT PURCHASE,shopping,synthetic
+PETROL PURCHASE X1,fuel,synthetic
+PURCHASE TOOTHBRUSH,personal_care,synthetic
+UNIDENTIFIED ITEM X1,other,synthetic
+PURCHASE CHAPMAN,dining_takeaway,synthetic
+ONE PETROL,fuel,synthetic
+COUGH SYRUP PAYMENT,health_pharmacy,synthetic
+PURCHASE OF PARKING FEE,transport,synthetic
+NAIL POLISH X1,personal_care,synthetic
+PURCHASE HAIRCUT,personal_care,synthetic
+PAYMENT FOR PASTRY,dining_takeaway,synthetic
+PURCHASE OF BLOOD TEST,health_pharmacy,synthetic
+PREPAID METER TOKEN PAYMENT,utilities_bills,synthetic
+PURCHASE OF USB CABLE,shopping,synthetic
+WATER BILL PURCHASE,utilities_bills,synthetic
+ONE OVERDRAFT FEE,fees_financial,synthetic
+GOTV SUBSCRIPTION,utilities_bills,synthetic
+ONE BANK TRANSFER FEE,fees_financial,synthetic
+LABORATORY TEST PURCHASE,health_pharmacy,synthetic
+PURCHASE OF GENERATOR FUEL,fuel,synthetic
+HAIR TREATMENT PAYMENT,personal_care,synthetic
+PAYMENT FOR DOCTOR CONSULTATION,health_pharmacy,synthetic
+ONLINE ORDER,shopping,synthetic
+RIDE FARE,transport,synthetic
+PURCHASE OF CONDITIONER,personal_care,synthetic
+AIRPORT SHUTTLE X1,transport,synthetic
+PURCHASE OF AIRPORT SHUTTLE,transport,synthetic
+PURCHASE GOTV SUBSCRIPTION,utilities_bills,synthetic
+PAYMENT FOR ONLINE COURSE,education_work,synthetic
+NOTEBOOK X1,education_work,synthetic
+BANK TRANSFER FEE,fees_financial,synthetic
+ONE WEEKLY DATA PLAN,airtime_data,synthetic
+GAS CYLINDER REFILL PAYMENT,fuel,synthetic
+MOBILE DATA PLAN PURCHASE,airtime_data,synthetic
+PAYMENT FOR PIZZA,dining_takeaway,synthetic
+PAYMENT FOR VEGETABLES,groceries,synthetic
+PAYMENT FOR PERFUME,personal_care,synthetic
+PURCHASE KEYBOARD,shopping,synthetic
+SUNSCREEN,personal_care,synthetic
+PURCHASE OF PETROL PURCHASE,fuel,synthetic
+FLIGHT TICKET PURCHASE,transport,synthetic
+FRIED RICE PURCHASE,dining_takeaway,synthetic
+HOME REPAIR,home_household,synthetic
+MALARIA TEST PAYMENT,health_pharmacy,synthetic
+PAYMENT FOR SANDWICH,dining_takeaway,synthetic
+PURCHASE MANICURE,personal_care,synthetic
+CHAIR PURCHASE,home_household,synthetic
+BARBING FEE X1,personal_care,synthetic
+PAYMENT FOR DETERGENT,home_household,synthetic
+MILK PURCHASE,groceries,synthetic
+WEEKLY DATA PLAN PURCHASE,airtime_data,synthetic
+TEXTBOOK PURCHASE,education_work,synthetic
+ONE GENERATOR DIESEL,fuel,synthetic
+PURCHASE OF PEPPER,groceries,synthetic
+PURCHASE AIRTIME,airtime_data,synthetic
+PURCHASE CABLE SUBSCRIPTION,utilities_bills,synthetic
+BUTTER X1,groceries,synthetic
+BLEACH PURCHASE,home_household,synthetic
+PAYMENT FOR ELECTRICITY RECHARGE,utilities_bills,synthetic
+NOTEBOOK,education_work,synthetic
+RICE,groceries,synthetic
+ICE CREAM PAYMENT,dining_takeaway,synthetic
+MISCELLANEOUS EXPENSE X1,other,synthetic
+TROUSERS PAYMENT,shopping,synthetic
+PURCHASE OF REFRIGERATOR,home_household,synthetic
+PURCHASE LIPSTICK,personal_care,synthetic
+MOBILE PHONE PAYMENT,shopping,synthetic
+9MOBILE DATA PURCHASE,airtime_data,synthetic
+PAYMENT FOR SOFT DRINK,dining_takeaway,synthetic
+PURCHASE BREAD,groceries,synthetic
+PAYMENT FOR CHICKEN AND CHIPS,dining_takeaway,synthetic
+SMOOTHIE PURCHASE,dining_takeaway,synthetic
+DIESEL PURCHASE PURCHASE,fuel,synthetic
+PAYMENT FOR WATER BILL,utilities_bills,synthetic
+PAYMENT FOR PHONE CASE,shopping,synthetic
+LABORATORY TEST PAYMENT,health_pharmacy,synthetic
+EXAM REGISTRATION X1,education_work,synthetic
+PEPPER X1,groceries,synthetic
+DOUGHNUT PAYMENT,dining_takeaway,synthetic
+GOTV SUBSCRIPTION X1,utilities_bills,synthetic
+LPG REFILL PAYMENT,fuel,synthetic
+PHONE CREDIT PURCHASE,airtime_data,synthetic
+EVENT TICKET PAYMENT,entertainment_subscriptions,synthetic
+MOP PAYMENT,home_household,synthetic
+ONE SMOOTHIE,dining_takeaway,synthetic
+BANK TRANSFER FEE PAYMENT,fees_financial,synthetic
+PURCHASE PLANTAIN,groceries,synthetic
+ATM WITHDRAWAL FEE PAYMENT,fees_financial,synthetic
+PROFESSIONAL CERTIFICATION X1,education_work,synthetic
+THERMOMETER PAYMENT,health_pharmacy,synthetic
+PURCHASE OF TOMATOES,groceries,synthetic
+ONE STAMP DUTY,fees_financial,synthetic
+DOOR LOCK PAYMENT,home_household,synthetic
+SHAWARMA,dining_takeaway,synthetic
+ONE SIM REPLACEMENT,airtime_data,synthetic
+WASTE COLLECTION FEE PURCHASE,utilities_bills,synthetic
+CUP PURCHASE,home_household,synthetic
+ELECTRICITY RECHARGE PAYMENT,utilities_bills,synthetic
+PAYMENT FOR AIRPORT SHUTTLE,transport,synthetic
+BLOOD TEST PAYMENT,health_pharmacy,synthetic
+POS CHARGE,fees_financial,synthetic
+PURCHASE OF DIESEL,fuel,synthetic
+PAYMENT FOR YAM,groceries,synthetic
+PURCHASE INTERNET SUBSCRIPTION,utilities_bills,synthetic
+PAYMENT FOR MOVIE TICKET,entertainment_subscriptions,synthetic
+PURCHASE NAILS,home_household,synthetic
+BEDSHEET PURCHASE,home_household,synthetic
+PAYMENT FOR ELECTRICITY BILL,utilities_bills,synthetic
+PEPPER PURCHASE,groceries,synthetic
+TEXTBOOK X1,education_work,synthetic
+PURCHASE OF FASHION ACCESSORIES,shopping,synthetic
+SANDWICH PAYMENT,dining_takeaway,synthetic
+POTATOES PURCHASE,groceries,synthetic
+TOOTHPASTE X1,personal_care,synthetic
+PURCHASE BELT,shopping,synthetic
+INDOMIE NOODLES PAYMENT,groceries,synthetic
+PURCHASE BANDAGE,health_pharmacy,synthetic
+PURCHASE PHONE CREDIT,airtime_data,synthetic
+ONE ELECTRICITY TOKEN,utilities_bills,synthetic
+SCREWDRIVER,home_household,synthetic
+MTN DATA PAYMENT,airtime_data,synthetic
+CHAIR X1,home_household,synthetic
+GAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+DISHWASHING LIQUID PURCHASE,home_household,synthetic
+APP SUBSCRIPTION PAYMENT,entertainment_subscriptions,synthetic
+PURCHASE OF BANK MAINTENANCE FEE,fees_financial,synthetic
+PURCHASE FROZEN FOOD,groceries,synthetic
+PURCHASE OF MONTHLY DATA PLAN,airtime_data,synthetic
+TUITION FEE,education_work,synthetic
+CUP PAYMENT,home_household,synthetic
+FILE FOLDER X1,education_work,synthetic
+MEDICAL DRESSING PURCHASE,health_pharmacy,synthetic
+PAYMENT FOR GENERATOR DIESEL,fuel,synthetic
+ONE VITAMIN C,health_pharmacy,synthetic
+PALM OIL,groceries,synthetic
+SANITARY PADS PURCHASE,personal_care,synthetic
+APP SUBSCRIPTION X1,entertainment_subscriptions,synthetic
+DIESEL PAYMENT,fuel,synthetic
+PAYMENT FOR FIRST AID SUPPLIES,health_pharmacy,synthetic
+FLOUR PURCHASE,groceries,synthetic
+SCHOOL FEES PURCHASE,education_work,synthetic
+PHONE CASE PURCHASE,shopping,synthetic
+PILLOW,home_household,synthetic
+TAXI FARE PAYMENT,transport,synthetic
+GAMING SUBSCRIPTION PURCHASE,entertainment_subscriptions,synthetic
+BEANS,groceries,synthetic
+PAYMENT FOR STREAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+PRINTING,education_work,synthetic
+PURCHASE OF BEDSHEET,home_household,synthetic
+OVERDRAFT FEE X1,fees_financial,synthetic
+PAYMENT FOR AIRTEL DATA,airtime_data,synthetic
+MEMORY CARD PURCHASE,shopping,synthetic
+CORN PAYMENT,groceries,synthetic
+PURCHASE FOOD DELIVERY ORDER,dining_takeaway,synthetic
+PAYMENT FOR BEANS,groceries,synthetic
+PURCHASE OF FROZEN FOOD,groceries,synthetic
+PURCHASE OF PRINTING,education_work,synthetic
+PURCHASE OF PLATE,home_household,synthetic
+EYE EXAMINATION X1,health_pharmacy,synthetic
+CARD REPLACEMENT FEE,fees_financial,synthetic
+TRANSFER CHARGE PAYMENT,fees_financial,synthetic
+ONE CEREAL,groceries,synthetic
+GENERAL EXPENSE,other,synthetic
+PURCHASE OF BEANS,groceries,synthetic
+PAYMENT FOR GAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+ONE TEXTBOOK,education_work,synthetic
+CAR REPAIR PAYMENT,transport,synthetic
+PURCHASE CHAIR,home_household,synthetic
+PAYMENT FOR KEYBOARD,shopping,synthetic
+PURCHASE OF GLO DATA,airtime_data,synthetic
+PAYMENT FOR OTHER PAYMENT,other,synthetic
+NAIL POLISH PAYMENT,personal_care,synthetic
+MALARIA TEST,health_pharmacy,synthetic
+PURCHASE OF FLIGHT TICKET,transport,synthetic
+WORK SUPPLIES PURCHASE,education_work,synthetic
+PURCHASE TRAIN TICKET,transport,synthetic
+ONE USB CABLE,shopping,synthetic
+ACCOUNT SERVICE FEE PURCHASE,fees_financial,synthetic
+PEN,education_work,synthetic
+MANICURE,personal_care,synthetic
+BURGER PAYMENT,dining_takeaway,synthetic
+SCHOOL FEES X1,education_work,synthetic
+SUGAR X1,groceries,synthetic
+POPCORN AT CINEMA PAYMENT,entertainment_subscriptions,synthetic
+FOOD DELIVERY ORDER X1,dining_takeaway,synthetic
+PURCHASE LOAN INTEREST,fees_financial,synthetic
+PURCHASE OF SUNGLASSES,shopping,synthetic
+PURCHASE POTATOES,groceries,synthetic
+PAYMENT FOR ATM WITHDRAWAL FEE,fees_financial,synthetic
+ELECTRICAL REPAIR PAYMENT,home_household,synthetic
+DIESEL PURCHASE PAYMENT,fuel,synthetic
+BAG,shopping,synthetic
+PURCHASE BANK TRANSFER FEE,fees_financial,synthetic
+PAYMENT FOR RAW CHICKEN,groceries,synthetic
+PURCHASE OF PHONE CREDIT,airtime_data,synthetic
+CURTAIN X1,home_household,synthetic
+ONE MANICURE,personal_care,synthetic
+GAMING SUBSCRIPTION X1,entertainment_subscriptions,synthetic
+MASSAGE X1,personal_care,synthetic
+BELT,shopping,synthetic
+WRISTWATCH PURCHASE,shopping,synthetic
+PURCHASE MISCELLANEOUS SERVICE,other,synthetic
+PURCHASE OF ONLINE COURSE,education_work,synthetic
+BROOM PURCHASE,home_household,synthetic
+PERFUME X1,personal_care,synthetic
+ACCOUNT SERVICE FEE X1,fees_financial,synthetic
+ONE KEYBOARD,shopping,synthetic
+PURCHASE OF MUSIC SUBSCRIPTION,entertainment_subscriptions,synthetic
+GAMING SUBSCRIPTION PAYMENT,entertainment_subscriptions,synthetic
+PURCHASE WORK SUPPLIES,education_work,synthetic
+PURCHASE OF BURGER,dining_takeaway,synthetic
+INDOMIE NOODLES PURCHASE,groceries,synthetic
+PURCHASE VEHICLE INSPECTION,transport,synthetic
+PURCHASE MALARIA TEST,health_pharmacy,synthetic
+WHITEBOARD MARKER PURCHASE,education_work,synthetic
+PHONE CREDIT X1,airtime_data,synthetic
+OTHER PAYMENT PAYMENT,other,synthetic
+PURCHASE OF BARBING FEE,personal_care,synthetic
+PAYMENT FOR OATS,groceries,synthetic
+PURCHASE OF YAM,groceries,synthetic
+ONE STREAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+PURCHASE OF RICE,groceries,synthetic
+MEDICAL SCAN,health_pharmacy,synthetic
+PLUMBING REPAIR X1,home_household,synthetic
+PENCIL PAYMENT,education_work,synthetic
+PURCHASE OF GAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+PAYMENT FOR DOOR LOCK,home_household,synthetic
+MAKEUP X1,personal_care,synthetic
+SMOOTHIE,dining_takeaway,synthetic
+WASTE COLLECTION FEE X1,utilities_bills,synthetic
+PAYMENT FOR MOI MOI,dining_takeaway,synthetic
+PURCHASE OF POPCORN AT CINEMA,entertainment_subscriptions,synthetic
+PAYMENT FOR COMPUTER MOUSE,shopping,synthetic
+ONE HOSPITAL BILL,health_pharmacy,synthetic
+ONE SUNGLASSES,shopping,synthetic
+PURCHASE BOAT FARE,transport,synthetic
+PURCHASE SEWAGE BILL,utilities_bills,synthetic
+DOCTOR CONSULTATION PAYMENT,health_pharmacy,synthetic
+ONE OFFICE PAPER,education_work,synthetic
+POWER BANK X1,shopping,synthetic
+MECHANIC LABOUR PAYMENT,transport,synthetic
+REFRIGERATOR PURCHASE,home_household,synthetic
+PURCHASE STATIONERY,education_work,synthetic
+PAYMENT FOR TRAIN TICKET,transport,synthetic
+ONE CONCERT TICKET,entertainment_subscriptions,synthetic
+PURCHASE OF TRAIN TICKET,transport,synthetic
+SUYA PURCHASE,dining_takeaway,synthetic
+ONE THEATRE TICKET,entertainment_subscriptions,synthetic
+STATIONERY PURCHASE,education_work,synthetic
+PAYMENT FOR UNIDENTIFIED ITEM,other,synthetic
+COOKING POT,home_household,synthetic
+ONE CARD REPLACEMENT FEE,fees_financial,synthetic
+ONE AMUSEMENT PARK TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR LOAN INTEREST,fees_financial,synthetic
+PURCHASE OTHER PAYMENT,other,synthetic
+PAYMENT FOR CAR REPAIR,transport,synthetic
+OVERDRAFT FEE PURCHASE,fees_financial,synthetic
+PURCHASE FRUITS,groceries,synthetic
+PURCHASE OF INTERNET DATA BUNDLE,airtime_data,synthetic
+FUEL PAYMENT,fuel,synthetic
+PURCHASE OF EXAM REGISTRATION,education_work,synthetic
+PURCHASE SUNSCREEN,personal_care,synthetic
+WATER BILL X1,utilities_bills,synthetic
+TABLET,shopping,synthetic
+PURCHASE OF SANDWICH,dining_takeaway,synthetic
+VITAMIN C,health_pharmacy,synthetic
+ONE JEWELLERY,shopping,synthetic
+PURCHASE OF TELEVISION,shopping,synthetic
+SPORTS EVENT TICKET PURCHASE,entertainment_subscriptions,synthetic
+MUSIC SUBSCRIPTION PURCHASE,entertainment_subscriptions,synthetic
+PAYMENT FOR MOISTURIZER,personal_care,synthetic
+PAYMENT FOR CABLE SUBSCRIPTION,utilities_bills,synthetic
+PURCHASE MEDICAL SCAN,health_pharmacy,synthetic
+ONE REFRIGERATOR,home_household,synthetic
+CHARGER PAYMENT,shopping,synthetic
+GLO DATA,airtime_data,synthetic
+PURCHASE PETROL PURCHASE,fuel,synthetic
+WATER SUPPLY BILL,utilities_bills,synthetic
+PURCHASE OF PLUMBING REPAIR,home_household,synthetic
+COURSE FEE,education_work,synthetic
+INTERNET DATA BUNDLE PAYMENT,airtime_data,synthetic
+TOLL FEE,transport,synthetic
+PAYMENT FOR UNKNOWN SERVICE,other,synthetic
+PENCIL,education_work,synthetic
+ONLINE ORDER X1,shopping,synthetic
+PAYMENT FOR COMEDY SHOW TICKET,entertainment_subscriptions,synthetic
+COOKED BEANS,dining_takeaway,synthetic
+PURCHASE CAR REPAIR,transport,synthetic
+PAYMENT FOR PLANTAIN,groceries,synthetic
+FUEL FOR GENERATOR PAYMENT,fuel,synthetic
+DSTV SUBSCRIPTION X1,utilities_bills,synthetic
+ONE VEHICLE TOWING,transport,synthetic
+PAYMENT FOR STATIONERY,education_work,synthetic
+PURCHASE CONDITIONER,personal_care,synthetic
+FACIAL TREATMENT X1,personal_care,synthetic
+BANDAGE X1,health_pharmacy,synthetic
+ONE MICROWAVE,home_household,synthetic
+PAYMENT FOR COOKED BEANS,dining_takeaway,synthetic
+FACIAL TREATMENT PAYMENT,personal_care,synthetic
+FROZEN FOOD PURCHASE,groceries,synthetic
+PURCHASE ARCADE CREDIT,entertainment_subscriptions,synthetic
+PAYMENT FOR BLENDER,home_household,synthetic
+PAYMENT FOR DIGITAL ENTERTAINMENT SUBSCRIPTION,entertainment_subscriptions,synthetic
+WATER RATE,utilities_bills,synthetic
+PURCHASE BUS FARE,transport,synthetic
+ACCOUNT SERVICE FEE,fees_financial,synthetic
+PURCHASE COURSE FEE,education_work,synthetic
+PURCHASE OF COOKING POT,home_household,synthetic
+PURCHASE OF SALT,groceries,synthetic
+DSTV SUBSCRIPTION PURCHASE,utilities_bills,synthetic
+TABLET PURCHASE,shopping,synthetic
+PURCHASE PEN,education_work,synthetic
+HOSPITAL BILL X1,health_pharmacy,synthetic
+WHITEBOARD MARKER X1,education_work,synthetic
+MECHANIC LABOUR PURCHASE,transport,synthetic
+ONE MOTORCYCLE FARE,transport,synthetic
+PAYMENT FOR RIDE FARE,transport,synthetic
+SIM REPLACEMENT,airtime_data,synthetic
+PURCHASE OF SPORTS EVENT TICKET,entertainment_subscriptions,synthetic
+LAPTOP,shopping,synthetic
+HOME REPAIR PAYMENT,home_household,synthetic
+PURCHASE INSURANCE PREMIUM,fees_financial,synthetic
+OFFICE PAPER PAYMENT,education_work,synthetic
+COURSE FEE PAYMENT,education_work,synthetic
+GENERAL EXPENSE PAYMENT,other,synthetic
+MASSAGE,personal_care,synthetic
+BANK MAINTENANCE FEE,fees_financial,synthetic
+PURCHASE HAIR BRAIDING,personal_care,synthetic
+ONE PROFESSIONAL CERTIFICATION,education_work,synthetic
+CAR WASH,transport,synthetic
+PURCHASE OF BUS FARE,transport,synthetic
+ONE LAPTOP,shopping,synthetic
+MATTRESS,home_household,synthetic
+CHICKEN AND CHIPS X1,dining_takeaway,synthetic
+ONE ELECTRICITY RECHARGE,utilities_bills,synthetic
+DIESEL,fuel,synthetic
+POS CHARGE PURCHASE,fees_financial,synthetic
+DATA BUNDLE PAYMENT,airtime_data,synthetic
+GLO DATA X1,airtime_data,synthetic
+MEDICAL INSURANCE PAYMENT,health_pharmacy,synthetic
+BANK MAINTENANCE FEE X1,fees_financial,synthetic
+TROUSERS,shopping,synthetic
+PAYMENT FOR MTN DATA,airtime_data,synthetic
+ONE BANDAGE,health_pharmacy,synthetic
+EXAM REGISTRATION PURCHASE,education_work,synthetic
+PURCHASE SHAVING CREAM,personal_care,synthetic
+SALT,groceries,synthetic
+PURCHASE MISCELLANEOUS EXPENSE,other,synthetic
+PURCHASE OF MATTRESS,home_household,synthetic
+PURCHASE INTERNET DATA BUNDLE,airtime_data,synthetic
+ONE DENTAL CHECKUP,health_pharmacy,synthetic
+PURCHASE MATTRESS,home_household,synthetic
+PURCHASE OF WHITEBOARD MARKER,education_work,synthetic
+PAYMENT FOR PLUMBING REPAIR,home_household,synthetic
+PURCHASE KETTLE,home_household,synthetic
+PURCHASE UNCLASSIFIED PURCHASE,other,synthetic
+COOKING GAS REFILL PURCHASE,fuel,synthetic
+GAS CYLINDER REFILL,fuel,synthetic
+ONLINE COURSE X1,education_work,synthetic
+STAMP DUTY,fees_financial,synthetic
+SHIRT,shopping,synthetic
+ONE MOISTURIZER,personal_care,synthetic
+PAYMENT FOR BURGER,dining_takeaway,synthetic
+POPCORN AT CINEMA X1,entertainment_subscriptions,synthetic
+FLIGHT TICKET,transport,synthetic
+PURCHASE WATER BILL,utilities_bills,synthetic
+MOISTURIZER X1,personal_care,synthetic
+PURCHASE OF TOOTHPASTE,personal_care,synthetic
+LOAN INTEREST PURCHASE,fees_financial,synthetic
+PAYMENT FOR FUEL,fuel,synthetic
+BLEACH,home_household,synthetic
+TAX PAYMENT,fees_financial,synthetic
+ONE HAIR TREATMENT,personal_care,synthetic
+RESEARCH MATERIALS PAYMENT,education_work,synthetic
+ONE FASHION ACCESSORIES,shopping,synthetic
+LATE PAYMENT FEE X1,fees_financial,synthetic
+PLANTAIN,groceries,synthetic
+PAYMENT FOR MECHANIC LABOUR,transport,synthetic
+BROOM PAYMENT,home_household,synthetic
+PAYMENT FOR BUS FARE,transport,synthetic
+ONE WRISTWATCH,shopping,synthetic
+PURCHASE OF WEEKLY DATA PLAN,airtime_data,synthetic
+PURCHASE SALT,groceries,synthetic
+PAYMENT FOR SANITARY PADS,personal_care,synthetic
+GENERAL EXPENSE PURCHASE,other,synthetic
+RICE PURCHASE,groceries,synthetic
+PURCHASE OF APP SUBSCRIPTION,entertainment_subscriptions,synthetic
+ANTIBIOTICS X1,health_pharmacy,synthetic
+PAYMENT FOR COOKING POT,home_household,synthetic
+MOVIE TICKET X1,entertainment_subscriptions,synthetic
+BEANS PURCHASE,groceries,synthetic
+PURCHASE TABLE,home_household,synthetic
+PURCHASE SANDWICH,dining_takeaway,synthetic
+RICE PAYMENT,groceries,synthetic
+KEKE FARE X1,transport,synthetic
+VEHICLE TOWING,transport,synthetic
+PAYMENT FOR POTATOES,groceries,synthetic
+KETTLE PURCHASE,home_household,synthetic
+MOBILE DATA PLAN PAYMENT,airtime_data,synthetic
+VITAMIN C X1,health_pharmacy,synthetic
+PURCHASE SEASONING CUBES,groceries,synthetic
+ONE PASTRY,dining_takeaway,synthetic
+PERFUME PAYMENT,personal_care,synthetic
+PIZZA PURCHASE,dining_takeaway,synthetic
+DIESEL PURCHASE,fuel,synthetic
+PURCHASE PASTRY,dining_takeaway,synthetic
+PURCHASE OF GOTV SUBSCRIPTION,utilities_bills,synthetic
+SUNGLASSES,shopping,synthetic
+PURCHASE OF MOVIE TICKET,entertainment_subscriptions,synthetic
+PURCHASE OF CAR REPAIR,transport,synthetic
+ONE MOBILE TOP UP,airtime_data,synthetic
+PAYMENT FOR WASHING MACHINE,home_household,synthetic
+ONE 9MOBILE DATA,airtime_data,synthetic
+WASHING MACHINE,home_household,synthetic
+PURCHASE MOISTURIZER,personal_care,synthetic
+PAYMENT FOR INCOME TAX,fees_financial,synthetic
+COMPUTER MOUSE PAYMENT,shopping,synthetic
+PURCHASE FILE FOLDER,education_work,synthetic
+PAYMENT FOR TOMATOES,groceries,synthetic
+FILE FOLDER,education_work,synthetic
+PURCHASE GARRI,groceries,synthetic
+TYRE REPLACEMENT PURCHASE,transport,synthetic
+PURCHASE TOOTHPASTE,personal_care,synthetic
+GRILLED FISH PAYMENT,dining_takeaway,synthetic
+BANK MAINTENANCE FEE PURCHASE,fees_financial,synthetic
+LOAN INTEREST PAYMENT,fees_financial,synthetic
+SPORTS EVENT TICKET X1,entertainment_subscriptions,synthetic
+ICE CREAM PURCHASE,dining_takeaway,synthetic
+PURCHASE SPORTS EVENT TICKET,entertainment_subscriptions,synthetic
+ESTATE SERVICE CHARGE X1,utilities_bills,synthetic
+DIGITAL ENTERTAINMENT SUBSCRIPTION X1,entertainment_subscriptions,synthetic
+PAYMENT FOR COMBO MEAL,dining_takeaway,synthetic
+PURCHASE PLATE,home_household,synthetic
+PURCHASE OF LABORATORY TEST,health_pharmacy,synthetic
+ONE EYE EXAMINATION,health_pharmacy,synthetic
+ONE VEGETABLES,groceries,synthetic
+SEWAGE BILL,utilities_bills,synthetic
+SEWAGE BILL PAYMENT,utilities_bills,synthetic
+PAYMENT FOR HEADPHONES,shopping,synthetic
+PURCHASE AIRTEL DATA,airtime_data,synthetic
+ONE CABLE SUBSCRIPTION,utilities_bills,synthetic
+SIM CARD PAYMENT,airtime_data,synthetic
+PURCHASE OF PENCIL,education_work,synthetic
+PURCHASE OF MASSAGE,personal_care,synthetic
+THEATRE TICKET PURCHASE,entertainment_subscriptions,synthetic
+HAIR BRAIDING PURCHASE,personal_care,synthetic
+PURCHASE JOLLOF RICE,dining_takeaway,synthetic
+TUITION FEE X1,education_work,synthetic
+UNCLASSIFIED PURCHASE,other,synthetic
+DATA BUNDLE,airtime_data,synthetic
+PURCHASE GENERATOR DIESEL,fuel,synthetic
+PURCHASE OF TAX PAYMENT,fees_financial,synthetic
+HEADPHONES PURCHASE,shopping,synthetic
+PURCHASE INDOMIE NOODLES,groceries,synthetic
+ONE BREAD,groceries,synthetic
+PLUMBING REPAIR,home_household,synthetic
+OATS X1,groceries,synthetic
+WORKSHOP FEE,education_work,synthetic
+PURCHASE DSTV SUBSCRIPTION,utilities_bills,synthetic
+ONE MTN DATA,airtime_data,synthetic
+PURCHASE OF TRANSFER CHARGE,fees_financial,synthetic
+POTATOES,groceries,synthetic
+ATM WITHDRAWAL FEE PURCHASE,fees_financial,synthetic
+PAYMENT FOR FLIGHT TICKET,transport,synthetic
+SUNSCREEN X1,personal_care,synthetic
+BUTTER PAYMENT,groceries,synthetic
+PURCHASE OF CAR WASH,transport,synthetic
+PURCHASE MOBILE TOP UP,airtime_data,synthetic
+PLANTAIN PURCHASE,groceries,synthetic
+SHAVING CREAM PAYMENT,personal_care,synthetic
+GAS CYLINDER REFILL X1,fuel,synthetic
+PARACETAMOL PURCHASE,health_pharmacy,synthetic
+TELEVISION X1,shopping,synthetic
+PURCHASE OF EXTENSION SOCKET,home_household,synthetic
+PAYMENT FOR EGGS,groceries,synthetic
+ONE WASHING MACHINE,home_household,synthetic
+PAYMENT FOR INSURANCE PREMIUM,fees_financial,synthetic
+INTERNET DATA BUNDLE X1,airtime_data,synthetic
+USB CABLE PURCHASE,shopping,synthetic
+ICE CREAM,dining_takeaway,synthetic
+SHOES PURCHASE,shopping,synthetic
+PEPPER PAYMENT,groceries,synthetic
+BELT X1,shopping,synthetic
+ONLINE ORDER PAYMENT,shopping,synthetic
+EGGS X1,groceries,synthetic
+PAYMENT FOR NOTEBOOK,education_work,synthetic
+CURTAIN,home_household,synthetic
+SUNSCREEN PAYMENT,personal_care,synthetic
+MOTORCYCLE FARE,transport,synthetic
+CONCERT TICKET PAYMENT,entertainment_subscriptions,synthetic
+PAYMENT FOR COFFEE,dining_takeaway,synthetic
+JEWELLERY PAYMENT,shopping,synthetic
+SUNGLASSES PAYMENT,shopping,synthetic
+COMEDY SHOW TICKET,entertainment_subscriptions,synthetic
+FRIED RICE X1,dining_takeaway,synthetic
+ONE SANDWICH,dining_takeaway,synthetic
+PAYMENT FOR NAILS,home_household,synthetic
+INSURANCE PREMIUM X1,fees_financial,synthetic
+TYRE REPLACEMENT PAYMENT,transport,synthetic
+PAYMENT FOR CHARGER,shopping,synthetic
+PURCHASE PILLOW,home_household,synthetic
+GARRI PURCHASE,groceries,synthetic
+SHAWARMA X1,dining_takeaway,synthetic
+PILLOW PURCHASE,home_household,synthetic
+ONE CHEESE,groceries,synthetic
+ELECTRICITY RECHARGE PURCHASE,utilities_bills,synthetic
+ONE LABORATORY TEST,health_pharmacy,synthetic
+TELEVISION,shopping,synthetic
+PAYMENT FOR UNCLASSIFIED PURCHASE,other,synthetic
+COURSE FEE X1,education_work,synthetic
+PURCHASE SPAGHETTI,groceries,synthetic
+SHAVING CREAM X1,personal_care,synthetic
+TABLE X1,home_household,synthetic
+MANICURE PAYMENT,personal_care,synthetic
+PROCESSING FEE X1,fees_financial,synthetic
+ONE BUS FARE,transport,synthetic
+MAKEUP PAYMENT,personal_care,synthetic
+ONE PARKING FEE,transport,synthetic
+ONE MEDICAL SCAN,health_pharmacy,synthetic
+PAYMENT FOR MUSEUM TICKET,entertainment_subscriptions,synthetic
+EXTENSION SOCKET PURCHASE,home_household,synthetic
+TOOTHPASTE,personal_care,synthetic
+KEYBOARD X1,shopping,synthetic
+MATTRESS X1,home_household,synthetic
+DENTAL CHECKUP X1,health_pharmacy,synthetic
+SIM REPLACEMENT PAYMENT,airtime_data,synthetic
+WATER RATE PURCHASE,utilities_bills,synthetic
+PURCHASE CUP,home_household,synthetic
+ONE TOOTHBRUSH,personal_care,synthetic
+LAPTOP X1,shopping,synthetic
+SHAWARMA PURCHASE,dining_takeaway,synthetic
+PAYMENT FOR PENCIL,education_work,synthetic
+PURCHASE GRILLED FISH,dining_takeaway,synthetic
+TRAIN TICKET PURCHASE,transport,synthetic
+PURCHASE AIRPORT SHUTTLE,transport,synthetic
+PAYMENT FOR MICROWAVE,home_household,synthetic
+DSTV SUBSCRIPTION PAYMENT,utilities_bills,synthetic
+MUSEUM TICKET,entertainment_subscriptions,synthetic
+PURCHASE AMUSEMENT PARK TICKET,entertainment_subscriptions,synthetic
+COMBO MEAL PAYMENT,dining_takeaway,synthetic
+TEXTBOOK,education_work,synthetic
+GENERATOR DIESEL,fuel,synthetic
+ONE SHAMPOO,personal_care,synthetic
+MEDICAL DRESSING,health_pharmacy,synthetic
+SHIRT X1,shopping,synthetic
+ANTIBIOTICS PURCHASE,health_pharmacy,synthetic
+PURCHASE VIDEO GAME,entertainment_subscriptions,synthetic
+PURCHASE COOKED BEANS,dining_takeaway,synthetic
+DIESEL PURCHASE X1,fuel,synthetic
+PURCHASE SHOES,shopping,synthetic
+PURCHASE SUYA,dining_takeaway,synthetic
+BLOOD TEST PURCHASE,health_pharmacy,synthetic
+FILE FOLDER PAYMENT,education_work,synthetic
+BOAT FARE PAYMENT,transport,synthetic
+FIRST AID SUPPLIES PAYMENT,health_pharmacy,synthetic
+WATER SUPPLY BILL PURCHASE,utilities_bills,synthetic
+PRESCRIPTION MEDICINE PAYMENT,health_pharmacy,synthetic
+UNIDENTIFIED ITEM PURCHASE,other,synthetic
+EGGS PAYMENT,groceries,synthetic
+DISHWASHING LIQUID PAYMENT,home_household,synthetic
+PHOTOCOPY,education_work,synthetic
+ONE ELECTRICAL REPAIR,home_household,synthetic
+GAS CYLINDER REFILL PURCHASE,fuel,synthetic
+ELECTRICITY RECHARGE,utilities_bills,synthetic
+MOTORCYCLE FARE X1,transport,synthetic
+MASSAGE PURCHASE,personal_care,synthetic
+PAYMENT FOR FASHION ACCESSORIES,shopping,synthetic
+VEHICLE TOWING PAYMENT,transport,synthetic
+PURCHASE OF AIRTEL DATA,airtime_data,synthetic
+FLIGHT TICKET X1,transport,synthetic
+PURCHASE ONIONS,groceries,synthetic
+PURCHASE OF MOTORCYCLE FARE,transport,synthetic
+WASTE COLLECTION FEE,utilities_bills,synthetic
+ONE STATIONERY,education_work,synthetic
+COFFEE,dining_takeaway,synthetic
+RESTAURANT MEAL PAYMENT,dining_takeaway,synthetic
+CORN,groceries,synthetic
+PURCHASE TOOTH EXTRACTION,health_pharmacy,synthetic
+PURCHASE GENERAL EXPENSE,other,synthetic
+GROUNDNUT PAYMENT,groceries,synthetic
+BANK TRANSFER FEE PURCHASE,fees_financial,synthetic
+PURCHASE OF LATE PAYMENT FEE,fees_financial,synthetic
+MONTHLY DATA PLAN X1,airtime_data,synthetic
+AMUSEMENT PARK TICKET PURCHASE,entertainment_subscriptions,synthetic
+AIRTIME,airtime_data,synthetic
+PURCHASE OF EYE EXAMINATION,health_pharmacy,synthetic
+PURCHASE OF INSURANCE PREMIUM,fees_financial,synthetic
+PURCHASE OF GRILLED FISH,dining_takeaway,synthetic
+VEHICLE TOWING PURCHASE,transport,synthetic
+PAYMENT FOR HAIR TREATMENT,personal_care,synthetic
+PURCHASE OF MEDICAL SCAN,health_pharmacy,synthetic
+PURCHASE ELECTRICAL REPAIR,home_household,synthetic
+PURCHASE DIESEL,fuel,synthetic
+BARBING FEE PAYMENT,personal_care,synthetic
+ONE WATER SUPPLY BILL,utilities_bills,synthetic
+MASSAGE PAYMENT,personal_care,synthetic
+PAYMENT FOR PALM OIL,groceries,synthetic
+ONE WORKSHOP FEE,education_work,synthetic
+HAIR BRAIDING PAYMENT,personal_care,synthetic
+PAYMENT FOR TOLL FEE,transport,synthetic
+BANDAGE,health_pharmacy,synthetic
+CLOTHING,shopping,synthetic
+MOISTURIZER,personal_care,synthetic
+PAYMENT FOR BANK TRANSFER FEE,fees_financial,synthetic
+PURCHASE UTILITY BILL,utilities_bills,synthetic
+PURCHASE OF AMALA AND EWEDU,dining_takeaway,synthetic
+PAYMENT FOR APP SUBSCRIPTION,entertainment_subscriptions,synthetic
+ONE TOLL FEE,transport,synthetic
+ONE PETROL PURCHASE,fuel,synthetic
+PAYMENT FOR MOBILE PHONE,shopping,synthetic
+ONE INCOME TAX,fees_financial,synthetic
+VIDEO GAME,entertainment_subscriptions,synthetic
+SHAWARMA PAYMENT,dining_takeaway,synthetic
+POWER BANK PAYMENT,shopping,synthetic
+INSURANCE PREMIUM PURCHASE,fees_financial,synthetic
+PAYMENT FOR TEXTBOOK,education_work,synthetic
+PURCHASE THERMOMETER,health_pharmacy,synthetic
+PAYMENT FOR USB CABLE,shopping,synthetic
+ONE COOKING GAS REFILL,fuel,synthetic
+PREPAID METER TOKEN PURCHASE,utilities_bills,synthetic
+PURCHASE SMOOTHIE,dining_takeaway,synthetic
+BUCKET PURCHASE,home_household,synthetic
+CHAIR PAYMENT,home_household,synthetic
+PAYMENT FOR OFFICE PAPER,education_work,synthetic
+PAYMENT FOR FRUITS,groceries,synthetic
+PAYMENT FOR PRINTER INK,education_work,synthetic
+ONE DIESEL PURCHASE,fuel,synthetic
+SUNSCREEN PURCHASE,personal_care,synthetic
+CHICKEN AND CHIPS PAYMENT,dining_takeaway,synthetic
+LAPTOP PAYMENT,shopping,synthetic
+DEODORANT PAYMENT,personal_care,synthetic
+AIRTEL DATA,airtime_data,synthetic
+MISCELLANEOUS EXPENSE PAYMENT,other,synthetic
+ONE SEASONING CUBES,groceries,synthetic
+POUNDED YAM AND EGUSI PAYMENT,dining_takeaway,synthetic
+PAYMENT FOR POPCORN AT CINEMA,entertainment_subscriptions,synthetic
+MTN DATA,airtime_data,synthetic
+SMOOTHIE PAYMENT,dining_takeaway,synthetic
+RICE X1,groceries,synthetic
+VIDEO GAME X1,entertainment_subscriptions,synthetic
+PURCHASE OF SANITARY PADS,personal_care,synthetic
+PURCHASE OF SUNSCREEN,personal_care,synthetic
+UNKNOWN SERVICE PAYMENT,other,synthetic
+ONE FLIGHT TICKET,transport,synthetic
+PURCHASE OF BLENDER,home_household,synthetic
+PURCHASE BLOOD TEST,health_pharmacy,synthetic
+PLANTAIN X1,groceries,synthetic
+NAIL POLISH,personal_care,synthetic
+PURCHASE OF INDOMIE NOODLES,groceries,synthetic
+PAYMENT FOR CLINIC FEE,health_pharmacy,synthetic
+PAYMENT FOR GAS CYLINDER REFILL,fuel,synthetic
+PREPAID METER TOKEN X1,utilities_bills,synthetic
+MISCELLANEOUS SERVICE PAYMENT,other,synthetic
+ONE DEODORANT,personal_care,synthetic
+TOLL FEE X1,transport,synthetic
+ONE PRESCRIPTION MEDICINE,health_pharmacy,synthetic
+ONE COMPUTER MOUSE,shopping,synthetic
+JEWELLERY PURCHASE,shopping,synthetic
+TOOTH EXTRACTION,health_pharmacy,synthetic
+PURCHASE OF MTN DATA,airtime_data,synthetic
+PURCHASE OF ICE CREAM,dining_takeaway,synthetic
+SCREWDRIVER X1,home_household,synthetic
+BEANS X1,groceries,synthetic
+PURCHASE PROFESSIONAL CERTIFICATION,education_work,synthetic
+ONE MASSAGE,personal_care,synthetic
+BLOOD TEST,health_pharmacy,synthetic
+PAYMENT FOR RESEARCH MATERIALS,education_work,synthetic
+BAG X1,shopping,synthetic
+DEODORANT PURCHASE,personal_care,synthetic
+PAYMENT FOR INTERNET SUBSCRIPTION,utilities_bills,synthetic
+MONTHLY DATA PLAN,airtime_data,synthetic
+SANDWICH X1,dining_takeaway,synthetic
+GROUNDNUT,groceries,synthetic
+FLIGHT TICKET PAYMENT,transport,synthetic
+PURCHASE LABORATORY TEST,health_pharmacy,synthetic
+MOTORCYCLE FARE PAYMENT,transport,synthetic
+BLENDER PURCHASE,home_household,synthetic
+PAYMENT FOR TOOTH EXTRACTION,health_pharmacy,synthetic
+FLOUR,groceries,synthetic
+PAYMENT FOR LOAN REPAYMENT,fees_financial,synthetic
+PAYMENT FOR TAXI FARE,transport,synthetic
+PAYMENT FOR CURTAIN,home_household,synthetic
+UNCLASSIFIED PURCHASE X1,other,synthetic
+DETERGENT PAYMENT,home_household,synthetic
+ONE CHICKEN AND CHIPS,dining_takeaway,synthetic
+CHAPMAN PAYMENT,dining_takeaway,synthetic
+LPG REFILL,fuel,synthetic
+MEDICAL INSURANCE X1,health_pharmacy,synthetic
+ONE CHAIR,home_household,synthetic
+FUEL FOR GENERATOR,fuel,synthetic
+ONE MOP,home_household,synthetic
+ONE MUSIC SUBSCRIPTION,entertainment_subscriptions,synthetic
+TAXI FARE PURCHASE,transport,synthetic
+TAXI FARE,transport,synthetic
+PURCHASE OF COMPUTER MOUSE,shopping,synthetic
+MOISTURIZER PAYMENT,personal_care,synthetic
+ONE VEHICLE SERVICING,transport,synthetic
+DENTAL CHECKUP PAYMENT,health_pharmacy,synthetic
+PURCHASE USB CABLE,shopping,synthetic
+ONE SEWAGE BILL,utilities_bills,synthetic
+ONE SPAGHETTI,groceries,synthetic
+PURCHASE DEODORANT,personal_care,synthetic
+PENCIL PURCHASE,education_work,synthetic
+FLOUR PAYMENT,groceries,synthetic
+FUEL REFILL,fuel,synthetic
+PAYMENT FOR SUYA,dining_takeaway,synthetic
+COMEDY SHOW TICKET X1,entertainment_subscriptions,synthetic
+PURCHASE OF BODY WASH,personal_care,synthetic
+GOTV SUBSCRIPTION PURCHASE,utilities_bills,synthetic
+MOVIE TICKET PAYMENT,entertainment_subscriptions,synthetic
+AIRTIME PAYMENT,airtime_data,synthetic
+ONLINE COURSE PAYMENT,education_work,synthetic
+PURCHASE OF UNKNOWN SERVICE,other,synthetic
+PAYMENT FOR EXTENSION SOCKET,home_household,synthetic
+PURCHASE OF DOCTOR CONSULTATION,health_pharmacy,synthetic
+PURCHASE LIGHT BULB,home_household,synthetic
+PURCHASE COMBO MEAL,dining_takeaway,synthetic
+GENERATOR FUEL X1,fuel,synthetic
+FUEL FOR CAR X1,fuel,synthetic
+BANK TRANSFER FEE X1,fees_financial,synthetic
+SHAVING CREAM,personal_care,synthetic
+MOP PURCHASE,home_household,synthetic
+PURCHASE OF UTILITY BILL,utilities_bills,synthetic
+ONE PHONE CASE,shopping,synthetic
+PURCHASE COOKING GAS REFILL,fuel,synthetic
+PAYMENT FOR SHOES,shopping,synthetic
+ONE SCHOOL FEES,education_work,synthetic
+PURCHASE OF HOSPITAL BILL,health_pharmacy,synthetic
+PAYMENT FOR PRINTING,education_work,synthetic
+CLINIC FEE X1,health_pharmacy,synthetic
+PURCHASE TAX PAYMENT,fees_financial,synthetic
+HAIR TREATMENT,personal_care,synthetic
+PURCHASE GAS CYLINDER REFILL,fuel,synthetic
+RIDE FARE PAYMENT,transport,synthetic
+FUEL PURCHASE,fuel,synthetic
+PURCHASE OF POS CHARGE,fees_financial,synthetic
+LPG REFILL PURCHASE,fuel,synthetic
+CAR REPAIR PURCHASE,transport,synthetic
+PURCHASE OF PUBLIC TRANSPORT FARE,transport,synthetic
+PURCHASE ELECTRONICS,shopping,synthetic
+REFRIGERATOR X1,home_household,synthetic
+BOAT FARE PURCHASE,transport,synthetic
+PURCHASE OF MEDICAL INSURANCE,health_pharmacy,synthetic
+PURCHASE COMEDY SHOW TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR DENTAL CHECKUP,health_pharmacy,synthetic
+LOAN INTEREST,fees_financial,synthetic
+PAYMENT FOR BANK MAINTENANCE FEE,fees_financial,synthetic
+ONE NOTEBOOK,education_work,synthetic
+PAYMENT FOR FACIAL TREATMENT,personal_care,synthetic
+ONE TOOTH EXTRACTION,health_pharmacy,synthetic
+WATER SUPPLY BILL PAYMENT,utilities_bills,synthetic
+CURTAIN PAYMENT,home_household,synthetic
+ONE PREPAID METER TOKEN,utilities_bills,synthetic
+ONE BLEACH,home_household,synthetic
+PURCHASE OF CONFERENCE FEE,education_work,synthetic
+PURCHASE OF TROUSERS,shopping,synthetic
+COMBO MEAL X1,dining_takeaway,synthetic
+PURCHASE TUITION FEE,education_work,synthetic
+PAYMENT FOR DSTV SUBSCRIPTION,utilities_bills,synthetic
+ONE HEADPHONES,shopping,synthetic
+PURCHASE TELEVISION,shopping,synthetic
+PURCHASE COUGH SYRUP,health_pharmacy,synthetic
+PAYMENT FOR UTILITY BILL,utilities_bills,synthetic
+PURCHASE OF DETERGENT,home_household,synthetic
+TRAIN TICKET,transport,synthetic
+HEADPHONES PAYMENT,shopping,synthetic
+PAYMENT FOR FOOD DELIVERY ORDER,dining_takeaway,synthetic
+TRANSFER CHARGE,fees_financial,synthetic
+PURCHASE CEREAL,groceries,synthetic
+SHAMPOO PAYMENT,personal_care,synthetic
+BODY LOTION,personal_care,synthetic
+PURCHASE MUSIC SUBSCRIPTION,entertainment_subscriptions,synthetic
+PURCHASE WORKSHOP FEE,education_work,synthetic
+TELEVISION PURCHASE,shopping,synthetic
+PURCHASE SCHOOL FEES,education_work,synthetic
+PURCHASE REFRIGERATOR,home_household,synthetic
+SHAVING CREAM PURCHASE,personal_care,synthetic
+MEMORY CARD,shopping,synthetic
+GLO DATA PURCHASE,airtime_data,synthetic
+AIRPORT SHUTTLE PURCHASE,transport,synthetic
+PURCHASE OF OTHER PAYMENT,other,synthetic
+AIRTIME RECHARGE PAYMENT,airtime_data,synthetic
+JOLLOF RICE X1,dining_takeaway,synthetic
+AIRTIME X1,airtime_data,synthetic
+PETROL PAYMENT,fuel,synthetic
+PURCHASE OF ELECTRONICS,shopping,synthetic
+CEREAL,groceries,synthetic
+JOLLOF RICE,dining_takeaway,synthetic
+PURCHASE COFFEE,dining_takeaway,synthetic
+CLINIC FEE,health_pharmacy,synthetic
+EXTENSION SOCKET PAYMENT,home_household,synthetic
+EGGS PURCHASE,groceries,synthetic
+ONE TRAIN TICKET,transport,synthetic
+ONE ANTIBIOTICS,health_pharmacy,synthetic
+ARCADE CREDIT PAYMENT,entertainment_subscriptions,synthetic
+SOFT DRINK PURCHASE,dining_takeaway,synthetic
+AIRTIME PURCHASE,airtime_data,synthetic
+APP SUBSCRIPTION PURCHASE,entertainment_subscriptions,synthetic
+PEDICURE,personal_care,synthetic
+MOP,home_household,synthetic
+ONE SUNSCREEN,personal_care,synthetic
+LATE PAYMENT FEE PAYMENT,fees_financial,synthetic
+ONE TELEVISION,shopping,synthetic
+PURCHASE DOUGHNUT,dining_takeaway,synthetic
+FASHION ACCESSORIES,shopping,synthetic
+INCOME TAX PURCHASE,fees_financial,synthetic
+PURCHASE OF FLOUR,groceries,synthetic
+HAIRCUT X1,personal_care,synthetic
+VEHICLE SERVICING PURCHASE,transport,synthetic
+PAYMENT FOR HOME REPAIR,home_household,synthetic
+ONE LIGHT BULB,home_household,synthetic
+PEDICURE PURCHASE,personal_care,synthetic
+PAYMENT FOR DEODORANT,personal_care,synthetic
+PURCHASE PARACETAMOL,health_pharmacy,synthetic
+ONE ENGINE OIL CHANGE,transport,synthetic
+PURCHASE OF WRISTWATCH,shopping,synthetic
+PURCHASE OF MOP,home_household,synthetic
+BREAD,groceries,synthetic
+PRESCRIPTION MEDICINE,health_pharmacy,synthetic
+PAYMENT FOR PRESCRIPTION MEDICINE,health_pharmacy,synthetic
+PAYMENT FOR FILE FOLDER,education_work,synthetic
+ONE BARBING FEE,personal_care,synthetic
+TEXTBOOK PAYMENT,education_work,synthetic
+AMUSEMENT PARK TICKET,entertainment_subscriptions,synthetic
+PURCHASE FUEL REFILL,fuel,synthetic
+MOP X1,home_household,synthetic
+PAYMENT FOR MONTHLY DATA PLAN,airtime_data,synthetic
+ONE COMBO MEAL,dining_takeaway,synthetic
+HOSPITAL BILL PURCHASE,health_pharmacy,synthetic
+ELECTRICITY TOKEN PURCHASE,utilities_bills,synthetic
+SEWAGE BILL X1,utilities_bills,synthetic
+PAYMENT FOR RAW FISH,groceries,synthetic
+MUSEUM TICKET PURCHASE,entertainment_subscriptions,synthetic
+COMPUTER MOUSE,shopping,synthetic
+FUEL X1,fuel,synthetic
+PURCHASE OF PROCESSING FEE,fees_financial,synthetic
+ONE FACIAL TREATMENT,personal_care,synthetic
+PURCHASE OF GENERAL EXPENSE,other,synthetic
+PILLOW PAYMENT,home_household,synthetic
+ONE SHOES,shopping,synthetic
+ARCADE CREDIT X1,entertainment_subscriptions,synthetic
+ELECTRONICS,shopping,synthetic
+PURCHASE OF INTERNET SUBSCRIPTION,utilities_bills,synthetic
+MATTRESS PURCHASE,home_household,synthetic
+PAYMENT FOR FUEL FOR GENERATOR,fuel,synthetic
+STREAMING SUBSCRIPTION PAYMENT,entertainment_subscriptions,synthetic
+BODY WASH PURCHASE,personal_care,synthetic
+ONE DOOR LOCK,home_household,synthetic
+ONE PHONE CREDIT,airtime_data,synthetic
+CHICKEN AND CHIPS PURCHASE,dining_takeaway,synthetic
+ONE MISCELLANEOUS EXPENSE,other,synthetic
+DOOR LOCK PURCHASE,home_household,synthetic
+PRINTING X1,education_work,synthetic
+PAYMENT FOR PREPAID METER TOKEN,utilities_bills,synthetic
+PAYMENT FOR FRIED RICE,dining_takeaway,synthetic
+TELEVISION PAYMENT,shopping,synthetic
+WORK SUPPLIES,education_work,synthetic
+PAYMENT FOR BEDSHEET,home_household,synthetic
+POUNDED YAM AND EGUSI X1,dining_takeaway,synthetic
+PHONE CASE PAYMENT,shopping,synthetic
+POWER BANK,shopping,synthetic
+PAYMENT FOR CLOTHING,shopping,synthetic
+THEATRE TICKET,entertainment_subscriptions,synthetic
+PURCHASE OF ELECTRICITY TOKEN,utilities_bills,synthetic
+ONE MAKEUP,personal_care,synthetic
+AMALA AND EWEDU PAYMENT,dining_takeaway,synthetic
+RAW CHICKEN,groceries,synthetic
+OVERDRAFT FEE,fees_financial,synthetic
+CEREAL PAYMENT,groceries,synthetic
+ONE TABLET,shopping,synthetic
+WEEKLY DATA PLAN,airtime_data,synthetic
+PURCHASE OF CLOTHING,shopping,synthetic
+PURCHASE OF CUP,home_household,synthetic
+PURCHASE OF VEHICLE SERVICING,transport,synthetic
+FOOD DELIVERY ORDER PAYMENT,dining_takeaway,synthetic
+PAYMENT FOR BODY WASH,personal_care,synthetic
+GOTV SUBSCRIPTION PAYMENT,utilities_bills,synthetic
+SCHOOL FEES PAYMENT,education_work,synthetic
+DOOR LOCK X1,home_household,synthetic
+ELECTRICITY TOKEN PAYMENT,utilities_bills,synthetic
+TOOTHBRUSH PAYMENT,personal_care,synthetic
+ELECTRICITY BILL PURCHASE,utilities_bills,synthetic
+DATA BUNDLE X1,airtime_data,synthetic
+TOMATOES PURCHASE,groceries,synthetic
+CARD REPLACEMENT FEE PAYMENT,fees_financial,synthetic
+PAYMENT FOR POUNDED YAM AND EGUSI,dining_takeaway,synthetic
+COFFEE PURCHASE,dining_takeaway,synthetic
+PLUMBING REPAIR PURCHASE,home_household,synthetic
+UNIDENTIFIED ITEM,other,synthetic
+WASHING MACHINE X1,home_household,synthetic
+BANK MAINTENANCE FEE PAYMENT,fees_financial,synthetic
+STREAMING SUBSCRIPTION PURCHASE,entertainment_subscriptions,synthetic
+PURCHASE FUEL FOR CAR,fuel,synthetic
+ONE DISHWASHING LIQUID,home_household,synthetic
+PAYMENT FOR PEDICURE,personal_care,synthetic
+SUNGLASSES PURCHASE,shopping,synthetic
+ELECTRONICS X1,shopping,synthetic
+MOBILE TOP UP PAYMENT,airtime_data,synthetic
+ONE COOKING OIL,groceries,synthetic
+ONE GENERATOR FUEL,fuel,synthetic
+MICROWAVE,home_household,synthetic
+WATER BILL PAYMENT,utilities_bills,synthetic
+CAR WASH PAYMENT,transport,synthetic
+TABLE PAYMENT,home_household,synthetic
+WASHING MACHINE PURCHASE,home_household,synthetic
+SEASONING CUBES PAYMENT,groceries,synthetic
+PURCHASE SIM CARD,airtime_data,synthetic
+ONIONS X1,groceries,synthetic
+INTERNET SUBSCRIPTION X1,utilities_bills,synthetic
+9MOBILE DATA,airtime_data,synthetic
+SHAMPOO X1,personal_care,synthetic
+PURCHASE OF NAIL POLISH,personal_care,synthetic
+PHONE CASE,shopping,synthetic
+TRAIN TICKET X1,transport,synthetic
+SCHOOL FEES,education_work,synthetic
+PURCHASE KEKE FARE,transport,synthetic
+PURCHASE OF BUTTER,groceries,synthetic
+PURCHASE OF CURTAIN,home_household,synthetic
+INCOME TAX X1,fees_financial,synthetic
+PURCHASE OF INCOME TAX,fees_financial,synthetic
+PURCHASE OF HOME REPAIR,home_household,synthetic
+UNKNOWN SERVICE,other,synthetic
+ONE RAW FISH,groceries,synthetic
+PURCHASE OF PRESCRIPTION MEDICINE,health_pharmacy,synthetic
+AIRTIME RECHARGE,airtime_data,synthetic
+USB CABLE X1,shopping,synthetic
+PENCIL X1,education_work,synthetic
+TOOTHBRUSH X1,personal_care,synthetic
+POUNDED YAM AND EGUSI PURCHASE,dining_takeaway,synthetic
+ONE PEPPER,groceries,synthetic
+ONE TRANSFER CHARGE,fees_financial,synthetic
+ONE CUP,home_household,synthetic
+PAYMENT FOR TRANSFER CHARGE,fees_financial,synthetic
+ONE RESEARCH MATERIALS,education_work,synthetic
+ONE TAX PAYMENT,fees_financial,synthetic
+PURCHASE GENERATOR FUEL,fuel,synthetic
+PAYMENT FOR MOBILE DATA PLAN,airtime_data,synthetic
+OTHER PAYMENT,other,synthetic
+EYE EXAMINATION PAYMENT,health_pharmacy,synthetic
+PURCHASE ELECTRICITY TOKEN,utilities_bills,synthetic
+ONE BAG,shopping,synthetic
+MOVIE TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR SHAMPOO,personal_care,synthetic
+ONE BROOM,home_household,synthetic
+CHAPMAN X1,dining_takeaway,synthetic
+ENGINE OIL CHANGE X1,transport,synthetic
+FUEL REFILL X1,fuel,synthetic
+PURCHASE WRISTWATCH,shopping,synthetic
+ONLINE COURSE,education_work,synthetic
+BEDSHEET,home_household,synthetic
+PAYMENT FOR PARKING FEE,transport,synthetic
+OFFICE PAPER X1,education_work,synthetic
+ONE ONLINE ORDER,shopping,synthetic
+MISCELLANEOUS SERVICE PURCHASE,other,synthetic
+PAYMENT FOR TYRE REPLACEMENT,transport,synthetic
+ONE NAIL POLISH,personal_care,synthetic
+ONE AIRPORT SHUTTLE,transport,synthetic
+PURCHASE STREAMING SUBSCRIPTION,entertainment_subscriptions,synthetic
+BANDAGE PURCHASE,health_pharmacy,synthetic
+COUGH SYRUP X1,health_pharmacy,synthetic
+HOME REPAIR PURCHASE,home_household,synthetic
+FUEL FOR CAR PURCHASE,fuel,synthetic
+MEDICAL SCAN PAYMENT,health_pharmacy,synthetic
+SIM CARD,airtime_data,synthetic
+PURCHASE RESEARCH MATERIALS,education_work,synthetic
+INSURANCE PREMIUM,fees_financial,synthetic
+CONCERT TICKET,entertainment_subscriptions,synthetic
+PAYMENT FOR EXAM REGISTRATION,education_work,synthetic
+PAYMENT FOR COOKING GAS REFILL,fuel,synthetic
+SOFT DRINK X1,dining_takeaway,synthetic
+PURCHASE TAKEAWAY MEAL,dining_takeaway,synthetic
+PAYMENT FOR PHOTOCOPY,education_work,synthetic
+PAYMENT FOR LIGHT BULB,home_household,synthetic
+ONE APP SUBSCRIPTION,entertainment_subscriptions,synthetic
+MOBILE PHONE X1,shopping,synthetic
+PURCHASE POS CHARGE,fees_financial,synthetic
+PURCHASE OF LIGHT BULB,home_household,synthetic
+NAILS,home_household,synthetic
+TRANSACTION CHARGE X1,fees_financial,synthetic
+PURCHASE OF MILK,groceries,synthetic
+CONCERT TICKET PURCHASE,entertainment_subscriptions,synthetic
+PURCHASE OF 9MOBILE DATA,airtime_data,synthetic
+Ozonecinemafee,entertainment_subscriptions,real
+Ayapad,personal_care,real
+Nivearollon,personal_care,real
+Mosufperfume,personal_care,real
+Onepacketofindomie,groceries,real
+Item7go,dining_takeaway,real
+Eggrol,dining_takeaway,real
+Fuel,transport,real
+Boyfriendjeans,shopping,real
+Nontarnishearring,shopping,real
+TemuHaul,shopping,real
+Paracetamol,health_pharmacy,real
+Shavingstick,personal_care,real
+Netflix,entertainment_subscriptions,real
+Spotify,entertainment_subscriptions,real
+Cookinggas,home_household,real
+Waterbill,utilities_bills,real
+Tomatopaste,groceries,real
+Iphonecord,shopping,real
+FrenchCurls,personal_care,real
+Boltride,transport,real
+Hostelfee,education_work,real

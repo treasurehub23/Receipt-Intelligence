@@ -1,126 +1,214 @@
-"""Category definitions and a keyword map used to bootstrap training data.
 
-CATEGORY_KEYWORDS maps each category to (a) merchant-name patterns and
-(b) item/product words that tend to appear on that kind of receipt.
-This isn't meant to be a classifier itself - it's raw material for
-generating synthetic labeled examples, since real labeled receipts are
-scarce right now.
-"""
-
-CATEGORIES = [
-    "groceries",
-    "dining",
-    "transport",
-    "utilities",
-    "shopping",
-    "health",
-    "entertainment",
-    "other",
-]
-
-# Merchant names below confirmed against real Nigerian bank-transaction data
-# (merchant_category_code / MCC - the standard banks use to classify
-# businesses), via electricsheepafrica/nigerian-banking-retail-transactions
-# on HuggingFace. These are verified merchant->category pairs, not guesses:
-# Airtel/MTN/Glo/9mobile=4814(telecom), DSTV=4899(cable), AEDC/EKEDC=4900
-# (electricity), Shoprite/Spar/Grand Square=5311/5411(grocery), NNPC/Conoil/
-# Mobil/Oando=5541(fuel), Jumia Fashion/Yudala/Slot=5651(retail/electronics),
-# The Place/Bukka Hut/Mama Cass=5812(restaurant), MedPlus/HealthPlus=5912
-# (pharmacy), Jiji/Jumia=5999(misc retail), MegaPlaza Parking=7523(parking).
-
-CATEGORY_KEYWORDS: dict[str, dict[str, list[str]]] = {
+CATEGORIES = {
     "groceries": {
         "merchants": [
-            "Shoprite", "Spar", "Grand Square",                       # verified (MCC 5311/5411)
-            "Justrite", "Ebeano Supermarket", "Prince Ebeano",
-            "Market Square", "Everyday Supermarket", "Addide Supermarket",
-            "Fresh Market", "Food Co", "Whole Foods", "Trader Joe's", "Safeway", "Kroger",
+            "Shoprite", "Spar", "Justrite", "Ebeano Supermarket",
+            "Market Square", "Addide", "FoodCo", "local market",
         ],
         "items": [
-            "rice", "beans", "garri", "yam", "bread", "milk", "eggs", "tomatoes",
-            "onions", "pepper", "cooking oil", "spaghetti", "indomie noodles",
-            "flour", "sugar", "salt", "butter", "cheese", "chicken (raw)", "fish (raw)",
-            "vegetables", "fruits", "cereal", "frozen food",
+            "rice", "beans", "garri", "yam", "bread", "milk", "eggs",
+            "tomatoes", "onions", "pepper", "cooking oil", "spaghetti",
+            "indomie noodles", "flour", "sugar", "salt", "butter",
+            "cheese", "raw chicken", "raw fish", "vegetables", "fruits",
+            "cereal", "frozen food", "plantain", "potatoes", "corn",
+            "groundnut", "palm oil", "seasoning cubes", "oats",
         ],
     },
-    "dining": {
+
+    "dining_takeaway": {
         "merchants": [
-            "The Place", "Bukka Hut", "Mama Cass",                    # verified (MCC 5812)
-            "Chicken Republic", "Mr Biggs", "Domino's Pizza", "KFC", "Cold Stone",
-            "Tastee Fried Chicken", "Sweet Sensation", "Kilimanjaro", "Ocean Basket",
-            "Cafe Neo", "Starbucks", "McDonald's", "Burger King", "Chipotle",
-            "Nando's", "Genesis Restaurant",
+            "The Place", "Bukka Hut", "Mama Cass", "Chicken Republic",
+            "Mr Biggs", "Domino's Pizza", "KFC", "Cold Stone",
+            "Tastee Fried Chicken", "Kilimanjaro", "Cafe Neo",
+            "Starbucks", "food delivery",
         ],
         "items": [
-            "jollof rice", "fried rice", "chicken and chips", "burger", "pizza",
-            "shawarma", "suya", "soft drink", "chapman", "smoothie", "coffee",
-            "sandwich", "combo meal", "grilled fish", "pounded yam", "egusi soup",
+            "jollof rice", "fried rice", "chicken and chips", "burger",
+            "pizza", "shawarma", "suya", "soft drink", "chapman",
+            "smoothie", "coffee", "sandwich", "combo meal", "grilled fish",
+            "pounded yam and egusi", "restaurant meal", "takeaway meal",
+            "food delivery order", "ice cream", "pastry", "doughnut",
+            "cooked beans", "moi moi", "amala and ewedu",
         ],
     },
+
     "transport": {
         "merchants": [
-            "NNPC", "Conoil", "Mobil", "Oando", "MegaPlaza Parking",   # verified (MCC 5541/7523)
-            "Uber", "Bolt", "Total Filling Station", "Shell", "Lagos BRT", "Chevron Station",
+            "Uber", "Bolt", "Lagos BRT", "Lagbus", "ABC Transport",
+            "Peace Mass Transit", "Air Peace", "Arik Air",
+            "parking operator", "toll gate",
         ],
         "items": [
-            "fuel", "petrol", "diesel", "ride fare", "parking fee", "toll",
-            "vehicle service", "engine oil", "car wash", "tyre",
+            "ride fare", "bus fare", "taxi fare", "flight ticket",
+            "train ticket", "parking fee", "toll fee", "vehicle servicing",
+            "car wash", "tyre replacement", "engine oil change",
+            "vehicle inspection", "mechanic labour", "boat fare",
+            "motorcycle fare", "keke fare", "airport shuttle",
+            "vehicle towing", "car repair", "public transport fare",
         ],
     },
-    "utilities": {
+
+    "fuel": {
         "merchants": [
-            "AEDC", "EKEDC", "DSTV", "MTN", "Airtel", "Glo", "9mobile",  # verified (MCC 4814/4899/4900)
-            "IKEDC", "PHCN", "NEPA", "GOtv", "Startimes",
-            "Lagos Water Corporation", "Spectranet", "Smile", "IPNX",
+            "NNPC", "Conoil", "Mobil", "Oando", "TotalEnergies",
+            "MRS", "Ardova", "Shell", "filling station",
         ],
         "items": [
-            "electricity bill", "prepaid meter token", "cable subscription",
-            "internet subscription", "airtime", "data bundle", "water bill",
-            "gas refill",
+            "petrol", "fuel", "diesel", "generator fuel",
+            "petrol purchase", "diesel purchase", "fuel refill",
+            "cooking gas refill", "LPG refill", "gas cylinder refill",
+            "generator diesel", "fuel for car", "fuel for generator",
         ],
     },
+
+    "utilities_bills": {
+        "merchants": [
+            "IKEDC", "EKEDC", "AEDC", "IBEDC", "PHED",
+            "Lagos Water Corporation", "DSTV", "GOtv", "Startimes",
+            "waste management company", "internet provider",
+        ],
+        "items": [
+            "electricity bill", "prepaid meter token", "electricity token",
+            "water bill", "water supply bill", "cable subscription",
+            "DSTV subscription", "GOtv subscription", "waste collection fee",
+            "sewage bill", "estate service charge", "internet subscription",
+            "utility bill", "electricity recharge", "water rate",
+        ],
+    },
+
+    "airtime_data": {
+        "merchants": [
+            "MTN", "Airtel", "Glo", "9mobile", "telecom provider",
+        ],
+        "items": [
+            "airtime", "airtime recharge", "data bundle",
+            "mobile data plan", "internet data bundle", "SIM card",
+            "SIM replacement", "mobile top up", "phone credit",
+            "MTN data", "Airtel data", "Glo data", "9mobile data",
+            "weekly data plan", "monthly data plan",
+        ],
+    },
+
     "shopping": {
         "merchants": [
-            "Jumia", "Jumia Fashion", "Yudala", "Slot", "Jiji",          # verified (MCC 5651/5732/5999)
-            "Konga", "Game Stores", "H&M", "Zara", "Next",
-            "Genesis Deluxe Mall", "Ounce Store", "Tastee Fashion", "Best Buy",
-            "Amazon", "Target", "Walmart",
+            "Jumia", "Konga", "Slot", "Jiji", "H&M", "Zara",
+            "Game Stores", "Amazon", "Best Buy", "retail store",
         ],
         "items": [
-            "shirt", "trousers", "shoes", "phone case", "charger", "headphones",
-            "bag", "wristwatch", "perfume", "cosmetics", "home decor", "electronics",
+            "shirt", "trousers", "shoes", "phone case", "charger",
+            "headphones", "bag", "wristwatch", "fashion accessories",
+            "electronics", "mobile phone", "laptop", "tablet",
+            "power bank", "USB cable", "television", "clothing",
+            "sunglasses", "belt", "jewellery", "online order",
+            "computer mouse", "keyboard", "memory card",
         ],
     },
-    "health": {
+
+    "home_household": {
         "merchants": [
-            "MedPlus", "HealthPlus",                                    # verified (MCC 5912)
-            "Alpha Pharmacy", "Reddington Hospital",
-            "Lagoon Hospital", "St. Nicholas Hospital", "Emzor Pharmacy",
-            "CVS Pharmacy", "Walgreens", "City Clinic",
+            "IKEA", " furniture store", "hardware store",
+            "building materials shop", "household goods store",
+            "cleaning supplies shop",
         ],
         "items": [
-            "paracetamol", "vitamin c", "antibiotics", "consultation fee",
-            "lab test", "malaria test", "first aid", "hand sanitizer", "face mask",
-            "prescription", "bandage",
+            "chair", "table", "mattress", "bedsheet", "pillow",
+            "curtain", "broom", "mop", "detergent", "dishwashing liquid",
+            "bleach", "bucket", "plate", "cup", "cooking pot",
+            "kettle", "blender", "microwave", "refrigerator",
+            "washing machine", "light bulb", "extension socket",
+            "door lock", "plumbing repair", "electrical repair",
+            "paint", "nails", "screwdriver", "home repair",
         ],
     },
-    "entertainment": {
+
+    "health_pharmacy": {
         "merchants": [
-            "FilmHouse Cinemas", "Genesis Cinemas", "Silverbird Cinemas", "Netflix",
-            "Spotify", "Showmax", "Amazon Prime Video", "AMC Theatres", "Regal Cinemas",
+            "MedPlus", "HealthPlus", "Alpha Pharmacy",
+            "Emzor Pharmacy", "Reddington Hospital",
+            "Lagoon Hospital", "St Nicholas Hospital", "local clinic",
+            "diagnostic laboratory", "dental clinic",
         ],
         "items": [
-            "movie ticket", "popcorn", "streaming subscription", "concert ticket",
-            "game console", "video game", "arcade credit", "amusement park ticket",
+            "paracetamol", "vitamin c", "prescription medicine",
+            "antibiotics", "cough syrup", "malaria test",
+            "laboratory test", "doctor consultation", "hospital bill",
+            "dental checkup", "tooth extraction", "bandage",
+            "first aid supplies", "blood test", "medical scan",
+            "eye examination", "medical insurance", "clinic fee",
+            "medical dressing", "thermometer",
         ],
     },
+
+    "personal_care": {
+        "merchants": [
+            "beauty salon", "barber shop", "spa", "beauty store",
+            "skincare shop", "cosmetics store",
+        ],
+        "items": [
+            "haircut", "hair braiding", "hair treatment", "manicure",
+            "pedicure", "facial treatment", "massage", "body lotion",
+            "moisturizer", "sunscreen", "perfume", "deodorant",
+            "toothpaste", "toothbrush", "body wash", "shampoo",
+            "conditioner", "sanitary pads", "makeup", "lipstick",
+            "nail polish", "shaving cream", "barbing fee",
+        ],
+    },
+
+    "entertainment_subscriptions": {
+        "merchants": [
+            "FilmHouse Cinemas", "Genesis Cinemas", "Silverbird Cinemas",
+            "Netflix", "Spotify", "Showmax", "YouTube Premium",
+            "Apple Music", "PlayStation Store", "event ticket vendor",
+        ],
+        "items": [
+            "movie ticket", "popcorn at cinema", "streaming subscription",
+            "concert ticket", "video game", "arcade credit",
+            "amusement park ticket", "music subscription",
+            "gaming subscription", "event ticket", "comedy show ticket",
+            "museum ticket", "sports event ticket", "theatre ticket",
+            "app subscription", "digital entertainment subscription",
+        ],
+    },
+
+    "education_work": {
+        "merchants": [
+            "bookshop", "school", "university", "training provider",
+            "printing shop", "stationery store", "office supplies store",
+            "online course platform",
+        ],
+        "items": [
+            "school fees", "tuition fee", "textbook", "notebook",
+            "pen", "pencil", "stationery", "printing", "photocopy",
+            "course fee", "online course", "professional certification",
+            "exam registration", "workshop fee", "conference fee",
+            "office paper", "printer ink", "file folder",
+            "whiteboard marker", "research materials", "work supplies",
+        ],
+    },
+
+    "fees_financial": {
+        "merchants": [
+            "bank", "payment processor", "tax authority",
+            "insurance company", "loan provider",
+        ],
+        "items": [
+            "bank transfer fee", "transfer charge", "ATM withdrawal fee",
+            "bank maintenance fee", "card replacement fee",
+            "stamp duty", "loan repayment", "loan interest",
+            "tax payment", "income tax", "transaction charge",
+            "POS charge", "account service fee", "late payment fee",
+            "insurance premium", "overdraft fee", "processing fee",
+        ],
+    },
+
     "other": {
         "merchants": [
             "Local Store", "General Store", "Corner Shop", "Misc Vendor",
         ],
         "items": [
-            "stationery", "printing", "photocopy", "gift item", "donation",
-            "service fee", "repair service", "miscellaneous item",
+            "miscellaneous expense", "unclassified purchase",
+            "unknown service", "general expense", "unidentified item",
+            "other payment", "miscellaneous service",
         ],
     },
 }
